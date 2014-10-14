@@ -1,20 +1,25 @@
-@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
 
-.transition-bgc-setting(@action:background-color,@time:.3s){
+
+@font-family: dax-regular;
+
+.transition-setting(@action:boder-color,@time:ease-in-out .15s){
   -webkit-transition: @arguments;
   -moz-transition: @arguments;
   transition: @arguments;
 }
+//----------------------------------------
 
-form {
-  span {
-    display: inline-block;
-    max-width: 100%;
-    margin: 0.5em;
-    font-family: @font-family;
-    font-size: 100%;
-    text-align: right;
-  }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1em;
+  font-size: 150%;
+  line-height: 3em;
+  color: #000000;
+  border: 0;
+  border-bottom: 1px solid #000000;
 }
 
 fieldset {
@@ -38,46 +43,60 @@ legend {
 
 label {
   display: inline-block;
-  width: 6em;
-  max-width: 100%;
-  margin: 0.5em;
+  margin-bottom: 5px;
   font-weight: bold;
   font-family: @font-family;
   font-size: 100%;
-  text-align: right;
+//  text-align: right;
 }
 
+input:focus, textarea:focus {//去除Chrome等浏览器文本框默认发光边框
+  outline: none;
+}
+
+
 .form input[type="email"],
-.form input[type="date"],
-.form input[type="datetime"],
-.form input[type="datetime-local"],
-.form input[type="month"],
-.form input[type="number"],
+//.form input[type="date"],
+//.form input[type="datetime"],
+//.form input[type="datetime-local"],
+//.form input[type="month"],
+//.form input[type="number"],
 .form input[type="password"],
-.form input[type="search"],
+//.form input[type="search"],
 .form input[type="tel"],
 .form input[type="text"],
-.form input[type="time"],
+//.form input[type="time"],
 .form input[type="url"],
-.form input[type="week"],
-.form input[type="color"],
-.form input:not([type]),
+//.form input[type="week"],
+//.form input[type="color"],
 .form textarea {
-  display: inline-block;
-  padding: 0.3em;
-  margin: 0.3em;
-  border: 2px solid #dedede;
-  border-radius: 2px;
+  display: block;
+  padding: 0.36em;
+  margin-bottom:1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
-  .transition-bgc-setting(border,.3s);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  background-image: none;
+  .transition-setting(border-color.3s);
   &:hover {
-    border-color: #d1d1d1;
+    border-color: #d0d0d0;
   }
   &:focus {
-    border: 2px solid #b0e4ff;
-    box-shadow: none;
+    border-radius: 0px;
+    border: 1px solid #8fe1fd;
+    box-shadow: 0px 0px 10px rgba(143,225,253,0.6);
+    .transition-setting();
+//    .transition-setting(box-shadow,ease-in-out .15s);//transition竟然不支持box-shadow的过度
   }
+}
+
+
+
+.form-block{
+  display: block;
+  width: 100%;
 }
 
 //these three type using button style
@@ -85,8 +104,8 @@ label {
 .form input[type="submit"],
 .form input[type="reset"] {
   display: inline-block;
-  padding: 0.3em;
-  margin: 0.4em;
+  padding: 0.36em;
+  margin-bottom:1em;
 }
 
 .input-checkbox,
@@ -95,8 +114,8 @@ label {
   display: inline-block;
   margin: 0.3em;
   padding-top: 0.3em;
-  padding-right: 0.3em;
-  padding-left: 1.8em;
+  padding-right: 0.5em;
+  padding-left: 2em;
   text-align: left;
   &:before {
     position: absolute;
@@ -115,8 +134,9 @@ label {
 
 .input-radio {
   &:before {
-    width: 0.8em;
-    height: 0.8em;
+    padding: 0.12em 0.12em;
+//    height: 0.6em;
+//    width: 0.6em;
     border-radius: 20px;
   }
 }
@@ -126,7 +146,7 @@ label {
   display: none;
   &:checked + label:before {
     background: #a8ecff;
-    .transition-bgc-setting;
+    .transition-setting;
   }
 }
 
@@ -141,7 +161,7 @@ label {
   text-align: center;
   &:hover {
     background-color: #eeeeee;
-    .transition-bgc-setting;
+    .transition-setting;
   }
 }
 
@@ -151,8 +171,8 @@ label {
   height: 2em;
   padding: 0.3em;
   margin: 0.3em 0.3em 0.3em;
-  border: 2px solid #dedede;
-  border-radius: 2px;
+  border: 1px solid #dedede;
+  border-radius: 1px;
   vertical-align: middle;
 }
 
@@ -168,4 +188,12 @@ label {
 .input-disabled {
   cursor: not-allowed;
   pointer-events: none; //取消hover的效果，在IE上不生效...
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-top: 5px;
+  background-color: #73dcff;
+  border-radius: 20px;
+  width: 400px;
 }
