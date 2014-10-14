@@ -1,0 +1,171 @@
+@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+
+.transition-bgc-setting(@action:background-color,@time:.3s){
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  transition: @arguments;
+}
+
+form {
+  span {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0.5em;
+    font-family: @font-family;
+    font-size: 100%;
+    text-align: right;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 200%;
+  line-height: inherit;
+  color: #777777;
+  border: 0;
+  border-bottom: 1px solid #73dcff;
+}
+
+label {
+  display: inline-block;
+  width: 6em;
+  max-width: 100%;
+  margin: 0.5em;
+  font-weight: bold;
+  font-family: @font-family;
+  font-size: 100%;
+  text-align: right;
+}
+
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="datetime"],
+.form input[type="datetime-local"],
+.form input[type="month"],
+.form input[type="number"],
+.form input[type="password"],
+.form input[type="search"],
+.form input[type="tel"],
+.form input[type="text"],
+.form input[type="time"],
+.form input[type="url"],
+.form input[type="week"],
+.form input[type="color"],
+.form input:not([type]),
+.form textarea {
+  display: inline-block;
+  padding: 0.3em;
+  margin: 0.3em;
+  border: 2px solid #dedede;
+  border-radius: 2px;
+  font-size: 100%;
+  font-family: @font-family;
+  .transition-bgc-setting(border,.3s);
+  &:hover {
+    border-color: #d1d1d1;
+  }
+  &:focus {
+    border: 2px solid #b0e4ff;
+    box-shadow: none;
+  }
+}
+
+//these three type using button style
+.form input[type="button"],
+.form input[type="submit"],
+.form input[type="reset"] {
+  display: inline-block;
+  padding: 0.3em;
+  margin: 0.4em;
+}
+
+.input-checkbox,
+.input-radio {
+  position: relative;
+  display: inline-block;
+  margin: 0.3em;
+  padding-top: 0.3em;
+  padding-right: 0.3em;
+  padding-left: 1.8em;
+  text-align: left;
+  &:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    padding: 0.3em;
+    margin-right: 0.3em;
+    display: block;
+    content: '';
+    cursor: pointer;
+    border: 1px solid #a8ecff;
+  }
+}
+
+.input-radio {
+  &:before {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 20px;
+  }
+}
+
+.form input[type="checkbox"],
+.form input[type="radio"] {
+  display: none;
+  &:checked + label:before {
+    background: #a8ecff;
+    .transition-bgc-setting;
+  }
+}
+
+.form input[type="file"] {
+  display: none;
+}
+
+.input_file {
+  border: 1px solid #cccccc;
+  padding: 0.3em;
+  margin: 0.3em;
+  text-align: center;
+  &:hover {
+    background-color: #eeeeee;
+    .transition-bgc-setting;
+  }
+}
+
+.form input[type="image"] {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding: 0.3em;
+  margin: 0.3em 0.3em 0.3em;
+  border: 2px solid #dedede;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.form textarea {
+   vertical-align: middle;
+ }
+
+.form select {
+  display: inline-block;
+  outline:none; /* remove focus ring from Webkit */
+}
+
+.input-disabled {
+  cursor: not-allowed;
+  pointer-events: none; //取消hover的效果，在IE上不生效...
+}

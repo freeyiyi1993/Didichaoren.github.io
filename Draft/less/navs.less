@@ -1,0 +1,109 @@
+@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+
+.transition-bgc-setting(@action:background-color,@time:.3s){
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  transition: @arguments;
+}
+
+nav.vertical {
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 8em;
+    background-color: #a8ecff;
+    > li {
+      > a {
+        display: block;
+        padding: 0.5em 1em;
+        color: #ffffff;
+        text-decoration: none;
+        border-top: 1px solid #ffffff;
+        font-size: 100%;
+        font-family: @font-family;
+        &:hover {
+          background-color: #d3e3bd;
+          .transition-bgc-setting;
+        }
+        &:focus {
+          background-color: #e8e2a0;
+          .transition-bgc-setting;
+        }
+      }
+    }
+  }
+}
+
+.horizon {
+  > ul {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 335px;//!!
+    list-style-type: none;
+    background-color: #a8ecff;
+    overflow: hidden;
+    > li {
+      float: left;
+      padding: 0.5em 0;
+      border-right: 1px solid #ffffff;
+      a {
+        padding: 0.5em 1em;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 100%;
+        font-family: @font-family;
+        &:hover {
+          background-color: #d3e3bd;
+          .transition-bgc-setting;
+        }
+        &:focus {
+          background-color: #e8e2a0;
+          .transition-bgc-setting;
+        }
+      }
+    }
+  }
+}
+
+.smooth {
+  > ul {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #4e9fff;
+    list-style-type: none;
+    > li {
+      float: left;
+      margin: 0 0.5em;
+      padding: 0.5em 0;
+      a {
+        padding: 0.5em 1em;
+        color: #d3d3d3;
+        text-decoration: none;
+        font-size: 100%;
+        font-family: @font-family;
+        border-top: 1px solid #d3d3d3;
+        border-right: 1px solid #d3d3d3;
+        border-left: 1px solid #d3d3d3;
+        &:hover {
+          color: #969696;
+        }
+        &:focus {
+          color: #4e9fff;
+          border-top: 3px solid #4e9fff;
+          border-right: 1px solid #4e9fff;
+          border-left: 1px solid #4e9fff;
+          border-bottom: 1px solid #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.cl-fl {
+  clear: both;
+}

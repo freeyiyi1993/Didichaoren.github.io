@@ -1,0 +1,130 @@
+@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+
+* {
+   margin: 0;
+   padding: 0;
+ }
+
+.calendar {
+  margin: 2em;
+  padding: 0.5em 0;
+  width: 30em;
+  height: 18.75em;
+  background-color: #7be0ff;
+  color: #ffffff;
+  >div:nth-child(1) {
+    height: 2.5em;
+    background-color: #e7e7e7;
+    >i:nth-child(1){
+      margin: 5px 20px;
+      color: #ffffff;
+    }
+    >i:nth-child(2) {
+      margin-left: 360px;
+      color: #ffffff;
+    }
+  }
+  >table {
+    padding: 5px 30px;
+    >thead {
+      >tr {
+        td {
+          box-sizing: border-box;
+          width: 60px;
+          text-align: center;
+          font-family: @font-family;
+          font-size: 120%;
+        }
+      }
+    }
+  }
+}
+
+.number {
+  padding: 0.3em;
+  margin: 0.3em;
+  overflow: auto;
+  font-family: @font-family;
+  >input {
+    width: 100px;
+    height: 40px;
+    padding: 0 0.3em;
+    border: 1px solid #e3e3e3;
+    border-right: 0;
+    font-size: 120%;
+    float: left;
+  }
+  >div {
+    height: 42px;
+    float: left;
+    background-color: #e7e7e7;
+    color: #d4d4d4;
+    cursor: pointer;
+    >div {
+      padding: 0px 5px;
+      &:hover {
+        color: #3da5f5;
+        transition: all 0.3s;
+      }
+      &:active {
+        background-color: #3da5f5;
+        color: #d4d4d4;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.color {
+  padding: 0.3em;
+  margin: 0.3em;
+  >div:nth-child(1) {
+    position: relative;
+    height: 40px;
+    width: 100px;
+    border: 1px solid #e7e7e7;
+    >div {
+      height: 30px;
+      width: 30px;
+      margin: 5px 15px;
+      border-radius: 20px;
+      background-color: #71dbff;
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 11px;
+      border-bottom: 1px solid #e7e7e7;
+      content: "▼";
+      color: #d4d4d4;
+      background-color: #e7e7e7;
+      cursor: pointer;
+    }
+    &:hover:after {
+      color: #3da5f5;
+      transition: all 0.3s;
+    }
+    &:active:after {
+      border-bottom-color: #3da5f5;
+      background-color: #3da5f5;
+      color: #d4d4d4;
+      transition: all 0.3s;
+    }
+  }
+}
+//色盘
+.colors {
+  height: 6em;
+  width: 16.8em;
+  margin: .1em 0;
+  padding: .1em;
+  border: 1px solid #e7e7e7;
+  >span {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0 .1em;
+  }
+}
+

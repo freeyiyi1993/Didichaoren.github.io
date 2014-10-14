@@ -1,0 +1,436 @@
+
+@default-a:#e6e6e6;
+@default-b:#d9d9d9;
+@default-c:#b8b8b8;
+@default-d:#ebebeb;
+
+@primary-a:#73dcff;
+@primary-b:#50c0e6;
+@primary-c:#43a0bf;
+@primary-d:#a6e9ff;
+
+@info-a:#259bf5;
+@info-b:#0a7acf;
+@info-c:#0863a8;
+@info-d:#87c5f5;
+
+@success-a:#65e1a3;
+@success-b:#46c786;
+@success-c:#34ad71;
+@success-d:#92e0b9;
+
+@warning-a:#ffb24c;
+@warning-b:#ffa126;
+@warning-c:#bf7d26;
+@warning-d:#ffc880;
+
+@error-a:#ee3b3b;
+@error-b:#d42020;
+@error-c:#ad1a1a;
+@error-d:#ed8e8e;
+
+@link-b:#008bf5;
+@link-d:#6ebaf5;
+//link-a,link-b分别使用info-a和info-b。
+
+@yl-d:#e0e0e0;
+
+@font:dax-regular;
+@font-size:100%;
+@font-size-xl:125%;
+@font-size-lg:110%;
+@font-size-sm:85%;
+@font-size-xs:70%;
+//------------------------------------------------------
+
+.btn(){
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  letter-spacing: 1px;
+  font-family:@font;
+  font-size:@font-size;
+  -webkit-tap-highlight-color: transparent;/*苹果设备的点击阴影屏蔽，使效果统一*/
+  -moz-transition:text-shadow 0.3s,background-color 0.4s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  -webkit-transition: text-shadow 0.3s,background-color 0.4s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: text-shadow 0.3s,background-color 0.4s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  &:focus{
+    outline: 0;
+  }
+  &[disabled]{
+    cursor: not-allowed;
+    pointer-events:none;
+  }
+}
+
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-fl-s,.btn-fl-r,
+.btn-lu-s,.btn-lu-r,.btn-link{
+  .btn;
+}
+
+
+//inset-box-shadow
+.box-shadow-inset-setting(@inset:inset,@x:0,@y:2,@radius:8px,@color:@default-c) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+//default: 0.5em,1em;
+.btn-size(@top:0.5em,@right:1em,@bottom:0.5em,@left:1em) {
+  padding: @arguments;
+}
+
+
+/*...................................透明边框系列类....................................*/
+
+.btn-lu-r {
+  border-radius: 60px;
+}
+
+.btn-lu-s {
+  border-radius: 0px;
+}
+
+.btn-lu-r,
+.btn-lu-s {
+  background: transparent;
+}
+
+/*...................................无边框扁平系列类....................................*/
+
+.btn-fl-r {
+  border-radius: 60px;
+}
+
+.btn-fl-s {
+  border-radius: 0px;
+}
+
+/*........................................Link按钮类...................................*/
+
+.btn-link {/*Link按钮*/
+  border: 0px solid ;
+  background: transparent;
+  color: @info-a;
+  &:hover ,&:focus {
+    text-decoration: underline;
+    color: @link-b;
+  }
+  &:active,&.active{
+    text-decoration: underline;
+    color: @info-c;
+  }
+}
+
+.btn-link-disabled {
+  border: 0px solid ;
+  background: transparent;
+  color: @link-d;
+}
+
+/*...................................幽霊按钮系列类....................................*/
+.btn-yl {
+  background-color: transparent;
+  border-radius: 0px;
+  color: white;
+  border: 1px solid;
+  .btn;
+  &:hover ,&:focus{
+    text-shadow:0 0 5px #000;
+  }
+  &:active,&.active{
+    text-shadow:0 0 5px #000;
+    background-color: white;
+  }
+  &[disabled]{
+    border: 1px solid @yl-d;
+    color: @yl-d;
+  }
+}
+/*.....................................按钮大小类.....................................*/
+
+.btn-xl {
+  font-size: @font-size-xl;
+}
+
+.btn-lg {
+  font-size: @font-size-lg;
+}
+
+.btn-sm {
+  font-size: @font-size-sm;
+}
+
+.btn-xs {
+  font-size: @font-size-xs;
+}
+/*......................................透明按钮颜色的分类动作.....................................*/
+
+
+.btn-lu-default {
+  border: 1px solid @default-a;
+  color:black;
+  &:hover ,&:focus {
+    background-color:@default-a ;
+    color: white;
+  }
+  &:active,&.active{
+    border: 1px solid @default-b;
+    background-color: @default-b;
+    color: white;
+  }
+  &[disabled]{
+    border: 1px solid @default-b;
+    color: @default-b;
+  }
+}
+
+
+.btn-lu-info {
+  border: 1px solid @info-a;
+  color: @info-a;
+  &:hover ,&:focus {
+    background-color: @info-a;
+    color: white;
+  }
+  &:active,&.active {
+    color: white;
+    border: 1px solid @info-b;
+    background-color: @info-b;
+  }
+  &[disabled]{
+    border: 1px solid @info-d;
+    color:@info-d;
+  }
+}
+
+
+.btn-lu-primary {
+  /*primary颜色类*/
+  border: 1px solid @primary-a;
+  color: @primary-a;
+  &:hover ,&:focus {
+    background-color: @primary-a;
+    color: white;
+  }
+  &:active,&.active {
+    color: white;
+    border: 1px solid @primary-b;
+    background-color: @primary-b;
+  }
+  &[disabled]{
+    border: 1px solid @primary-d;
+    color:@primary-d;
+  }
+}
+
+.btn-lu-success {
+  /*success颜色类*/
+  border: 1px solid @success-a;
+  color: @success-a;
+  &:hover ,&:focus {
+    background-color: @success-a;
+    color: white;
+  }
+  &:active,&.active {
+    color: white;
+    border: 1px solid @success-b;
+    background-color: @success-b;
+  }
+  &[disabled]{
+    border: 1px solid @success-d;
+    color:@success-d;
+  }
+}
+
+
+.btn-lu-warning{
+  border: 1px solid @warning-a;
+  color:@warning-a;
+  &:hover ,&:focus {
+    background-color: @warning-a;
+    color: white;
+  }
+  &:active,&.active {
+    color: white;
+    border: 1px solid @warning-b;
+    background-color: @warning-b;
+  }
+  &[disabled]{
+    border: 1px solid @warning-d;
+    color:@warning-d;
+  }
+}
+
+.btn-lu-error {
+  border: 1px solid @error-a;
+  color: @error-a;
+  &:hover ,&:focus {
+    background-color: @error-a;
+    color: white;
+  }
+  &:active,&.active {
+    color: white;
+    border: 1px solid @error-b;
+    background-color: @error-b;
+  }
+  &[disabled]{
+    border: 1px solid @error-d;
+    color:@error-d;
+  }
+}
+
+
+/*......................................全色按钮颜色的分类动作.....................................*/
+
+.btn-fl-default {
+  border: 1px solid transparent;
+  background: @default-a;
+  color:black;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @default-b;
+    color:black;
+  }
+  &:active,&.active {
+    border: 1px solid transparent;
+    background: @default-b;
+    color:black;
+    .box-shadow-inset-setting(inset,0,2px,8px,@default-c);
+  }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @default-d;
+    color: @default-c;
+  }
+}
+
+.btn-fl-info {
+  border: 1px solid transparent;
+  background: @info-a;
+  color: white;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @info-b;
+    color: white;
+  }
+  &:active,&.active {
+    border: 1px solid transparent;
+    background: @info-b;
+    color: white;
+    .box-shadow-inset-setting(inset, 0, 2px, 8px, @info-c);
+  }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @info-d;
+    color: white;
+  }
+}
+
+.btn-fl-primary {
+  border: 1px solid transparent;
+  background: @primary-a;
+  color: white;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @primary-b;
+    color:white;
+  }
+  &:active,&.active {
+    border: 1px solid transparent;
+    background: @primary-b;
+    color:white;
+   .box-shadow-inset-setting(inset,0,2px,8px,@primary-c);
+  }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @primary-d;
+    color: white;
+  }
+}
+
+.btn-fl-success {
+  border: 1px solid transparent;
+  background: @success-a;
+  color: white;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @success-b;
+    color:white;
+  }
+  &:active,&.active {
+     border: 1px solid transparent;
+     background: @success-b;
+     color:white;
+     .box-shadow-inset-setting(inset,0,2px,8px,@success-c);
+   }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @success-d;
+    color: white;
+  }
+}
+
+.btn-fl-warning {
+  border: 1px solid transparent;
+  background: @warning-a;
+  color: white;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @warning-b;
+    color:white;
+  }
+  &:active,&.active {
+     border: 1px solid transparent;
+     background: @warning-b;
+     color:white;
+     .box-shadow-inset-setting(inset,0,2px,8px,@warning-c);
+   }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @warning-d;
+    color: white;
+  }
+}
+
+.btn-fl-error {
+  border: 1px solid transparent;
+  background: @error-a;
+  color: white;
+  &:hover ,&:focus {
+    border: 1px solid transparent;
+    background: @error-b;
+    color:white;
+  }
+  &:active,&.active {
+    border: 1px solid transparent;
+    background: @error-b;
+    color:white;
+    .box-shadow-inset-setting(inset,0,2px,8px,@error-c);
+  }
+  &[disabled]{
+    border: 1px solid transparent;
+    background: @error-d;
+    color: white;
+  }
+}
+
+/*A标签的按钮类问题解决*/
+a.btn-fl-s,.btn-fl-r,
+.btn-lu-s,.btn-lu-r,.btn-yl:link{
+  text-decoration:none;
+}
+a.btn-fl-s,.btn-fl-r,
+.btn-lu-s,.btn-lu-r,.btn-yl:visited{
+  text-decoration:none;
+}
+a.btn-fl-s,.btn-fl-r,
+.btn-lu-s,.btn-lu-r,.btn-yl:active,&.active{
+  text-decoration:none;
+}
