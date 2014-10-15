@@ -1,5 +1,4 @@
 
-
 @font-family: dax-regular;
 
 .transition-setting(@action:boder-color,@time:ease-in-out .15s){
@@ -7,73 +6,50 @@
   -moz-transition: @arguments;
   transition: @arguments;
 }
-//----------------------------------------
+//---------------------------------------------------------------
 
 
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 1em;
-  font-size: 150%;
-  line-height: 3em;
-  color: #000000;
-  border: 0;
-  border-bottom: 1px solid #000000;
+
+//----------------------------修改所有input的placeholder的默认色-----------------------------------
+::-webkit-input-placeholder {
+  color: #e0e0e0;
+}
+:-moz-placeholder {/* Firefox 18- */
+  color: #e0e0e0;
+}
+::-moz-placeholder{/* Firefox 19+ */
+  color: #e0e0e0;
+}
+:-ms-input-placeholder {//IE私有属性
+  color: #e0e0e0;
 }
 
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  min-width: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 200%;
-  line-height: inherit;
-  color: #777777;
-  border: 0;
-  border-bottom: 1px solid #73dcff;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-family: @font-family;
-  font-size: 100%;
-//  text-align: right;
-}
-
-input:focus, textarea:focus {//去除Chrome等浏览器文本框默认发光边框
+input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默认发光边框
   outline: none;
 }
 
 
-.form input[type="email"],
-//.form input[type="date"],
-//.form input[type="datetime"],
-//.form input[type="datetime-local"],
-//.form input[type="month"],
-//.form input[type="number"],
-.form input[type="password"],
-//.form input[type="search"],
-.form input[type="tel"],
+//----------------------------定义normal表单样式-----------------------------------
 .form input[type="text"],
-//.form input[type="time"],
+.form input[type="password"],
+.form input[type="email"],
 .form input[type="url"],
-//.form input[type="week"],
-//.form input[type="color"],
-.form textarea {
-  display: block;
-  padding: 0.36em;
-  margin-bottom:1em;
-  border: 1px solid #e0e0e0;
+.form input[type="date"],
+.form input[type="month"],
+.form input[type="time"],
+.form input[type="datetime"],
+.form input[type="datetime-local"],
+.form input[type="week"],
+.form input[type="number"],
+.form input[type="search"],
+.form input[type="tel"],
+.form input[type="color"],
+.form select,
+.form textarea,
+.form input:not([type]){
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #d8d8d8;
   border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
@@ -87,113 +63,305 @@ input:focus, textarea:focus {//去除Chrome等浏览器文本框默认发光边�
     border-radius: 0px;
     border: 1px solid #8fe1fd;
     box-shadow: 0px 0px 10px rgba(143,225,253,0.6);
-    .transition-setting();
-//    .transition-setting(box-shadow,ease-in-out .15s);//transition竟然不支持box-shadow的过度
+    .transition-setting();//transition竟然不支持box-shadow的过度!疯了@！
+  }
+  &[disabled]{
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: #f6f6f6;
+    border: 1px solid #f6f6f6;
+    color: #e0e0e0;
   }
 }
 
+//----------------------------Type="Color"-----------------------------------
+.form input[type="color"],
+.form select{//聿菡在做 宽度与表单一致 长度待定
+  padding: 0.4em 1em;
+}
 
-
-.form-block{
+.form input[type="file"],
+.form input[type="radio"],
+.form input[type="checkbox"]{
+  &:focus {
+    outline: thin dotted #333; //点组成的虚线 Firework 疑似没有作用
+    outline: 1px auto #73dcff; //边,配合基础色系的焦点状态 Chrome
+  }
+}
+.form .checkbox,
+.form .radio {//去掉box-shadow
+  margin: 0.5em 0;
   display: block;
-  width: 100%;
 }
 
-//these three type using button style
-.form input[type="button"],
-.form input[type="submit"],
-.form input[type="reset"] {
-  display: inline-block;
-  padding: 0.36em;
-  margin-bottom:1em;
+.form input[readonly],//只读读文本
+.form select[readonly],
+.form textarea[readonly] {
+  background: #eee; /* menu hover bg color */
+  color: #777; /* menu text color */
+  border-color: #ccc;
 }
 
-.input-checkbox,
-.input-radio {
-  position: relative;
-  display: inline-block;
-  margin: 0.3em;
-  padding-top: 0.3em;
-  padding-right: 0.5em;
-  padding-left: 2em;
-  text-align: left;
-  &:before {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    padding: 0.3em;
-    margin-right: 0.3em;
-    display: block;
-    content: '';
-    cursor: pointer;
-    border: 1px solid #a8ecff;
-  }
+
+//----------------------------消息提示-----------------------------------
+.form input:focus:invalid,
+.form textarea:focus:invalid,
+.form select:focus:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+.form input:focus:invalid:focus,
+.form textarea:focus:invalid:focus,
+.form select:focus:invalid:focus {
+  border-color: #e9322d;
+}
+.form input[type="file"]:focus:invalid:focus,
+.form input[type="radio"]:focus:invalid:focus,
+.form input[type="checkbox"]:focus:invalid:focus {
+  outline-color: #e9322d;
 }
 
-.input-radio {
-  &:before {
-    padding: 0.12em 0.12em;
-//    height: 0.6em;
-//    width: 0.6em;
-    border-radius: 20px;
-  }
-}
 
-.form input[type="checkbox"],
-.form input[type="radio"] {
-  display: none;
-  &:checked + label:before {
-    background: #a8ecff;
-    .transition-setting;
-  }
-}
-
-.form input[type="file"] {
-  display: none;
-}
-
-.input_file {
-  border: 1px solid #cccccc;
-  padding: 0.3em;
-  margin: 0.3em;
-  text-align: center;
-  &:hover {
-    background-color: #eeeeee;
-    .transition-setting;
-  }
-}
-
-.form input[type="image"] {
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  padding: 0.3em;
-  margin: 0.3em 0.3em 0.3em;
-  border: 1px solid #dedede;
-  border-radius: 1px;
-  vertical-align: middle;
-}
-
-.form textarea {
-   vertical-align: middle;
- }
 
 .form select {
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.form select[multiple] {
+  height: auto;
+}
+.form label {
+  margin: 0.5em 0 0.2em;
+  font-family: @font-family;
+}
+.form fieldset {
+  margin: 0;
+  padding: 0.35em 0 0.75em;
+  border: 0;
+}
+.form legend {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0;
+  margin-bottom: 0.4em;
+  font-family: @font-family;
+  font-size: 110%;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+//----------------------------form-order类 进行块组织-----------------------------------
+.form-order input[type="text"],
+.form-order input[type="password"],
+.form-order input[type="email"],
+.form-order input[type="url"],
+.form-order input[type="date"],
+.form-order input[type="month"],
+.form-order input[type="time"],
+.form-order input[type="datetime"],
+.form-order input[type="datetime-local"],
+.form-order input[type="week"],
+.form-order input[type="number"],
+.form-order input[type="search"],
+.form-order input[type="tel"],
+.form-order input[type="color"],
+.form-order select,
+.form-order label,
+.form-order textarea,
+.form-order input:not([type]){
+  display: block;
+  margin-top: 0.25em;//要不要换成0.5em 0；
+}
+
+//----------------------------form-block类 进行块组织-----------------------------------
+.form-block input[type="text"],
+.form-block input[type="password"],
+.form-block input[type="email"],
+.form-block input[type="url"],
+.form-block input[type="date"],
+.form-block input[type="month"],
+.form-block input[type="time"],
+.form-block input[type="datetime"],
+.form-block input[type="datetime-local"],
+.form-block input[type="week"],
+.form-block input[type="number"],
+.form-block input[type="search"],
+.form-block input[type="tel"],
+.form-block input[type="color"],
+.form-block select,
+.form-block label,
+.form-block textarea,
+.form-block input:not([type]){
+  display: block;
+  width:100%;
+}
+
+
+.form-aligned input,
+.form-aligned textarea,
+.form-aligned select,
+  /* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
+.form-aligned .help-inline,
+.form-message-inline {
   display: inline-block;
-  outline:none; /* remove focus ring from Webkit */
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.form-aligned textarea {
+  vertical-align: top;
 }
 
-.input-disabled {
-  cursor: not-allowed;
-  pointer-events: none; //取消hover的效果，在IE上不生效...
+/* Aligned Forms */
+.form-aligned .control-group {
+  margin-bottom: 0.5em;
+}
+.form-aligned .control-group label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+}
+.form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
+  margin: 1.5em 0 0 10em;
 }
 
-input[type="range"] {
-  -webkit-appearance: none;
-  margin-top: 5px;
-  background-color: #73dcff;
-  border-radius: 20px;
-  width: 400px;
+//----------------------------form或期中input使用圆角-----------------------------------
+.form input.input-rounded,
+.form .input-rounded {
+  border-radius: 2em;
+  padding: 0.5em 1em;
+}
+
+//-----------------------------组input----------------------------------
+.form .group fieldset {
+  margin-bottom: 10px;
+}
+
+.form .group input {
+  display: block;
+  padding: 10px 1em;
+  margin: 0;
+  border-radius: 0;
+  position: relative;
+  top: -1px;
+}
+.form .group input:focus {
+  z-index: 2;
+}
+.form .group input:first-child {
+  top: 1px;
+//  border-top-right-radius: 10px;
+
+}
+.form .group input:last-child {
+  top: -2px;
+//  border-bottom-left-radius: 10px;
+}
+.form .group button {
+  margin: 0.35em 0;
+}
+
+.form .input-1 {
+  width: 100%;
+}
+.form .input-2-3 {
+  width: 66%;
+}
+.form .input-1-2 {
+  width: 50%;
+}
+.form .input-1-3 {
+  width: 33%;
+}
+.form .input-1-4 {
+  width: 25%;
+}
+
+
+/* Inline help for forms */
+/* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
+.form .help-inline,
+.form-message-inline {
+  display: inline-block;
+  padding-left: 0.3em;
+  color: #666;
+  vertical-align: middle;
+  font-size: 0.875em;
+}
+
+/* Block help for forms */
+.form-message {
+  display: block;
+  color: #666;
+  font-size: 0.875em;
+}
+
+//----------------------------多媒体响应式设计-----------------------------------
+@media only screen and (max-width : 480px) {
+  .form button[type="submit"] {
+    margin: 0.7em 0 0;
+  }
+
+  .form input:not([type]),
+  .form input[type="text"],
+  .form input[type="password"],
+  .form input[type="email"],
+  .form input[type="url"],
+  .form input[type="date"],
+  .form input[type="month"],
+  .form input[type="time"],
+  .form input[type="datetime"],
+  .form input[type="datetime-local"],
+  .form input[type="week"],
+  .form input[type="number"],
+  .form input[type="search"],
+  .form input[type="tel"],
+  .form input[type="color"],
+  .form label {
+    margin-bottom: 0.3em;
+    display: block;
+  }
+
+
+  .group input:not([type]),
+  .group input[type="text"],
+  .group input[type="password"],
+  .group input[type="email"],
+  .group input[type="url"],
+  .group input[type="date"],
+  .group input[type="month"],
+  .group input[type="time"],
+  .group input[type="datetime"],
+  .group input[type="datetime-local"],
+  .group input[type="week"],
+  .group input[type="number"],
+  .group input[type="search"],
+  .group input[type="tel"],
+  .group input[type="color"] {
+    margin-bottom: 0;
+  }
+
+  .form-aligned .control-group label {
+    margin-bottom: 0.3em;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+
+  .form-aligned .controls {
+    margin: 1.5em 0 0 0;
+  }
+
+  /* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
+  .form .help-inline,
+  .form-message-inline,
+  .form-message {
+    display: block;
+    font-size: 0.75em;
+    /* Increased bottom padding to make it group with its related input element. */
+    padding: 0.2em 0 0.8em;
+  }
 }
