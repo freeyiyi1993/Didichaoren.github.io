@@ -21,7 +21,6 @@
 ////document.body.appendChild(table);
 
 $(document).ready(function () {
-    //.number
     var num;
     $('.number>div>div:first-child').click(function () {
         num = $('.number>input').prop('value');
@@ -30,14 +29,5 @@ $(document).ready(function () {
     $('.number>div>div:last-child').click(function () {
         num = $('.number>input').prop('value');
         $('.number>input').prop('value',parseInt(num)-parseInt(1));
-    });
-
-    //.color
-    $('<div class="colors"></div>').appendTo('.color');
-    for(var i = 0;i<36;i++) {
-        $('<span></span>').appendTo('.colors').css('background-color','#efefef');
-    }
-    $('.color').click(function(){
-
-    });
+    })
 });

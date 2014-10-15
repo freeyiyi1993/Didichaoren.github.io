@@ -8,12 +8,12 @@
 .calendar {
   margin: 2em;
   padding: 0.5em 0;
-  width: 30em;
-  height: 18.75em;
+  width: 480px;
+  height: 300px;
   background-color: #7be0ff;
   color: #ffffff;
   >div:nth-child(1) {
-    height: 2.5em;
+    height: 40px;
     background-color: #e7e7e7;
     >i:nth-child(1){
       margin: 5px 20px;
@@ -78,11 +78,11 @@
 .color {
   padding: 0.3em;
   margin: 0.3em;
-  >div:nth-child(1) {
-    position: relative;
+  >div {
     height: 40px;
     width: 100px;
     border: 1px solid #e7e7e7;
+    position: relative;
     >div {
       height: 30px;
       width: 30px;
@@ -95,36 +95,11 @@
       right: 0;
       top: 0;
       padding: 11px;
-      border-bottom: 1px solid #e7e7e7;
       content: "▼";
       color: #d4d4d4;
       background-color: #e7e7e7;
-      cursor: pointer;
+      border-bottom: 1px solid #e7e7e7;  //不太能接受
     }
-    &:hover:after {
-      color: #3da5f5;
-      transition: all 0.3s;
-    }
-    &:active:after {
-      border-bottom-color: #3da5f5;
-      background-color: #3da5f5;
-      color: #d4d4d4;
-      transition: all 0.3s;
-    }
-  }
-}
-//色盘
-.colors {
-  height: 6em;
-  width: 16.8em;
-  margin: .1em 0;
-  padding: .1em;
-  border: 1px solid #e7e7e7;
-  >span {
-    display: inline-block;
-    height: 1.2em;
-    width: 1.2em;
-    margin: 0 .1em;
   }
 }
 
