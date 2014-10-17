@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>form_test</title>
-    <link href="../less/forms-bs.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/forms.less" type="text/less" rel="stylesheet/less">
     <link href="../less/buttons.less" type="text/less" rel="stylesheet/less">
     <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <br />
 <form class="form">
     <fieldset>
-        <legend>Collie-UI基础表单样式测试</legend>
+        <legend>Collie-UI基础表单测试(默认inline-block)</legend>
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password"  disabled="disabled">
 
@@ -62,9 +62,19 @@
 </form>
 
     <br /><br />
+    <form class="form">
+        <fieldset>
+        <legend>Collie-UI input-rounded表单样式测试</legend>
+        <label for="search">
+        <input class="input-rounded" type="search">
+        <button type="submit" class="btn-fl-s btn-fl-success">Search</button>
+        </fieldset>
+    </form>
+
+    <br /><br />
 <form class="form form-aligned">
-    <legend>Collie-UI 对齐表单测试</legend>
     <fieldset>
+        <legend>Collie-UI aligned对齐表单测试</legend>
         <div class="control-group">
             <label for="name">Username</label>
             <input id="name" type="text" placeholder="Username">
@@ -95,6 +105,34 @@
     </fieldset>
 </form>
 
+    <br /><br />
+    <form class="form form-order form-block">
+        <fieldset>
+            <legend>Collie-UI form-block表单测试</legend>
+            <div class="control-group">
+                <label for="name">Username</label>
+                <input id="name" type="text" placeholder="Username">
+            </div>
+
+            <div class="control-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password">
+            </div>
+
+            <div class="control-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="Email Address">
+            </div>
+
+            <div class="controls">
+                <label for="cb" class="checkbox">
+                    <input id="cb" type="checkbox"> I've read the terms and conditions
+                </label>
+
+                <button type="submit" class="btn-lu-s btn-lu-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>
 
     <br /><br />
 <form class="form">
@@ -114,101 +152,120 @@
 </form>
 
 
+    <br /><br />
+    <form class="form form-order">
+        <legend>Collie-UI input-group测试</legend>
+        <fieldset>
+            <label for="email">字符info提示测试</label>
+            <div class="input-group">
+            <div class="input-info">@</div>
+            <input type="email" placeholder="Email">
+            </div>
+
+            <label for="email">Font-Awsome info提示测试</label>
+            <div class="input-group">
+                <div class="input-info"><i class="fa fa-envelope-o fa-fw"></i> </div>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <div class="input-info">
+                    <i class="fa fa-key fa-fw"></i>
+                </div>
+                <input type="text" placeholder="password">
+            </div>
+            <div class="input-group">
+                <div class="input-info">
+                    <i class="fa fa-twitter fa-fw"></i>
+                </div>
+                <input type="text" placeholder="twitter name">
+            </div>
+
+        </fieldset>
+        </form>
+
+        <br /><br />
+    <form class="form form-order">
+        <fieldset>
+            <legend>Collie-UI Checkbox表单测试</legend>
+            <div class="checkbox">Checkbox:
+                <label>
+                    <input type="checkbox" value="">
+                    Option one is this and that&mdash;be sure to include why it's great
+                </label>
+            </div>
+            <div class="checkbox disabled">
+                <label>
+                    <input type="checkbox" value="" disabled>
+                    Option two is disabled
+                </label>
+            </div>
+            <div class="checkbox">Checkbox-inline:
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1">1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2">2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3">3
+                </label>
+            </div><br />
+
+        </fieldset>
+    </form>
+
+        <br /><br />
+        <form class="form form-order">
+            <fieldset>
+                <legend>Collie-UI Radio表单测试</legend>
+                    <div class="radio">Radio:
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Option one is this and that&mdash;be sure to include why it's great
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Option two can be something else and selecting it will deselect option one
+                        </label>
+                    </div>
+                    <div class="radio disabled">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                            Option three is disabled
+                        </label>
+                    </div>
+
+                <div class="radio">Radio-inline:
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">1
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">2
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">3
+                    </label>
+
+                </div>
+
+            </fieldset>
+        </form>
+
 
 
     <br /><br />
 <form class="form form-order">
     <fieldset>
-    <legend>Collie-UI表单全部组件测试</legend>
-
-        <label for="email">email</label>
-        <input type="email" id="email" placeholder="Email">
-
-        <br />
-        <label for="checkbox" class="checkbox">Checkbox
-        <input type="checkbox" id="checkbox">My Checkbox 1
-        <input type="checkbox" id="checkbox">My Checkbox 2
-        <input type="checkbox" id="checkbox">My Checkbox 3
-        </label><br />
-
-        <label for="button">Button</label>
-        <button class="btn-lu-s btn-lu-primary" type="button">Button</button>
-
-
-        <label for="color">Color</label>
-        <input type="color" id="color">
-
-        <label for="date">Date</label>
-        <input type="date" id="date">
-
-        <label for="datetime">Datetime</label>
-        <input type="datetime" id="datetime">
-
-        <label for="datetime-lacal">Datetime-local</label>
-        <input type="datetime-local" id="datetime-lacal">
-
-        <label for="file">File2</label>
-        <input type="file" id="file"/>
-        <label class="input_file" for="file">Click me</label>
-
-        <label for="image">Image</label>
-        <input type="image" id="image">Submit(Image)
-
-        <label for="month">Month</label>
-        <input type="month" id="month">
-
-        <label for="number">Number</label>
-        <input type="number" id="number">
-
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Password">
-        <br />
-
-        <label for="radio" class="radio">Radio
-        <input type="radio" id="radio" name="myradio">My Radio 2
-        <input type="radio" id="radiob" name="myradio">My Radio 2
-        <input type="radio" id="radiob" name="myradio">My Radio 3
-        </label><br />
-
-        <label for="range">Range</label>
-        <input type="range" id="range">
-
-        <label for="reset">Reset</label>
-        <button class="btn-lu-s btn-lu-primary" type="reset">Reset</button>
-
-        <label for="search">Search</label>
-        <input type="search" id="search">
-
-        <label for="submit">Submit</label>
-        <button class="btn-lu-s btn-lu-primary" type="submit" >Submit</button>
-
-        <label for="tel">Tel</label>
-        <input class="success" type="tel" id="tel">
-
-        <label for="text">Text</label>
-        <input class="warning" type="text" id="text">
-
-        <label for="time">Time</label>
-        <input class="error" type="time" id="time">
-
-        <label for="url">Url</label>
-        <input type="url" id="url">
-
-        <label for="week">Week</label>
-        <input type="week" id="week" disabled="disabled">
-
-        <label for="hidden">Hidden</label>
-        <input type="hidden" id="hidden">
-
-        <label>textarea</label>
-        <textarea rows="1"></textarea>
-
-    </fieldset>
-    <br /><br />
-</form>
-
+    <legend>Collie-UI 只读表单测试</legend>
+        <label for="text">Text只读</label>
+        <input type="text" id="text" value="readonly but can copy..." readonly>
+ </fieldset>
+        </form>
 </div>
     <div class="pure-u-1-8"></div>
 </div>
+<br/><br/><br/><br/><br/><br/>
 </body>
 </html>

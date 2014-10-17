@@ -12,16 +12,16 @@
 
 //----------------------------修改所有input的placeholder的默认色-----------------------------------
 ::-webkit-input-placeholder {
-  color: #e0e0e0;
+  color: #d8d8d8;
 }
 :-moz-placeholder {/* Firefox 18- */
-  color: #e0e0e0;
+  color: #d8d8d8;
 }
 ::-moz-placeholder{/* Firefox 19+ */
-  color: #e0e0e0;
+  color: #d8d8d8;
 }
 :-ms-input-placeholder {//IE私有属性
-  color: #e0e0e0;
+  color: #d8d8d8;
 }
 
 input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默认发光边框
@@ -47,20 +47,21 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 .form select,
 .form textarea,
 .form input:not([type]){
-  display: inline-block;
   padding: 0.5em 1em;
+  display: inline-block;
   border: 1px solid #d8d8d8;
   border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  background-image: none;
   .transition-setting(border-color.3s);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   &:hover {
-    border-color: #d0d0d0;
+    border-color: #d8d8d8;
   }
   &:focus {
-    border-radius: 0px;
     border: 1px solid #8fe1fd;
     box-shadow: 0px 0px 10px rgba(143,225,253,0.6);
     .transition-setting();//transition竟然不支持box-shadow的过度!疯了@！
@@ -77,7 +78,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 //----------------------------Type="Color"-----------------------------------
 .form input[type="color"],
 .form select{//聿菡在做 宽度与表单一致 长度待定
-  padding: 0.4em 1em;
+  padding: 0.5em 1em;
 }
 
 .form input[type="file"],
@@ -89,21 +90,30 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   }
 }
 .form .checkbox,
-.form .radio {//去掉box-shadow
+.form .radio {
+  font-size: 100%;
+  font-family: @font-family;
   margin: 0.5em 0;
   display: block;
+}
+.form .checkbox-inline,
+.form .radio-inline {
+  font-size: 100%;
+  font-family: @font-family;
+  margin: 0.5em 0;
+  display: inline-block;
 }
 
 .form input[readonly],//只读读文本
 .form select[readonly],
 .form textarea[readonly] {
-  background: #eee; /* menu hover bg color */
-  color: #777; /* menu text color */
-  border-color: #ccc;
+  background: #f6f6f6;
+  color:#434343;
+  border-color: #d8d8d8;
 }
 
 
-//----------------------------消息提示-----------------------------------
+//----------------------------消息提示(功能要不要呢)-----------------------------------
 .form input:focus:invalid,
 .form textarea:focus:invalid,
 .form select:focus:invalid {
@@ -128,7 +138,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   background-color: white;
 }
 
-.form select[multiple] {
+.form select[multiple] {//同时选中多个选框
   height: auto;
 }
 .form label {
@@ -167,11 +177,42 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 .form-order input[type="tel"],
 .form-order input[type="color"],
 .form-order select,
-.form-order label,
 .form-order textarea,
 .form-order input:not([type]){
   display: block;
-  margin-top: 0.25em;//要不要换成0.5em 0；
+  margin-top:0.25em;
+  margin-bottom: 0.5em;
+}
+.form-order label{
+  display: block;
+  margin-top:0.25em;
+}
+
+.form-order .input-group input[type="text"],
+.form-order .input-group input[type="password"],
+.form-order .input-group input[type="email"],
+.form-order .input-group input[type="url"],
+.form-order .input-group input[type="date"],
+.form-order .input-group input[type="month"],
+.form-order .input-group input[type="time"],
+.form-order .input-group input[type="datetime"],
+.form-order .input-group input[type="datetime-local"],
+.form-order .input-group input[type="week"],
+.form-order .input-group input[type="number"],
+.form-order .input-group input[type="search"],
+.form-order .input-group input[type="tel"],
+.form-order .input-group input[type="color"],
+.form-order .input-group select,
+.form-order .input-group label,
+.form-order .input-group textarea,
+.form-order .input-group input:not([type]){
+  display:inline-block;
+  margin-top:0.25em;
+  margin-bottom: 0.5em;
+}
+.form-order .input-group label{
+  display:inline-block;
+  margin-top:0.25em;
 }
 
 //----------------------------form-block类 进行块组织-----------------------------------
@@ -190,9 +231,13 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 .form-block input[type="tel"],
 .form-block input[type="color"],
 .form-block select,
-.form-block label,
 .form-block textarea,
 .form-block input:not([type]){
+  display: block;
+  width:100%;
+  margin-bottom: 0.5em;
+}
+.form-block label{
   display: block;
   width:100%;
 }
@@ -201,7 +246,6 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 .form-aligned input,
 .form-aligned textarea,
 .form-aligned select,
-  /* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
 .form-aligned .help-inline,
 .form-message-inline {
   display: inline-block;
@@ -217,6 +261,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 .form-aligned .control-group {
   margin-bottom: 0.5em;
 }
+
 .form-aligned .control-group label {
   text-align: right;
   display: inline-block;
@@ -224,6 +269,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   width: 10em;
   margin: 0 1em 0 0;
 }
+
 .form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
   margin: 1.5em 0 0 10em;
 }
@@ -297,6 +343,28 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   display: block;
   color: #666;
   font-size: 0.875em;
+}
+
+//----------------------------input-group-----------------------------------
+
+.input-group {
+//  display: inline-block;
+  >div:first-child{
+    margin-right: -6px;
+  }
+}
+.form .input-group .input-info{
+    margin-top:0.25em;
+    margin-bottom: 0.3em;
+    padding: 0.5em 0.5em;
+    font-size: inherit;
+    display: inline-block;
+    border: 1px solid #d8d8d8;
+    border-radius: 0px;
+    font-family: @font-family;
+    box-shadow: none;
+    background-color: #e6e6e6;
+    color: #434343;
 }
 
 //----------------------------多媒体响应式设计-----------------------------------
