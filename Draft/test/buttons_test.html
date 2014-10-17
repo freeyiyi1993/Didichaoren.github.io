@@ -3,18 +3,51 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Collie-UI-Buttons</title>
-    <link href="../less/buttons.less" type="text/less" rel="stylesheet/less"/>
+    <link rel="stylesheet/less" type="text/less" href="../less/buttons.less">
+    <link rel="stylesheet/less" type="text/less" href="../less/grids.less">
+    <link rel="stylesheet/less" type="text/less" href="../less/forms.less">
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../less/less-1.7.4.min.js"></script>
+    <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+    </style>
 </head>
 <body>
-
+<div id="div1"><img src="../1.png" /></div>
 <!--===============================================按钮全部样式测试===============================================-->
-<h1>Collie-UI-Buttons</h1>
-<hr />
-<br />
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <label>
+            <h1>Collie-UI Buttons</h1>
+        </label>
+        <hr />
+        <br />
+    </div>
+<!-- 空div -->
+<div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
 <!--大小测试-->
 
-<h3>「Lucency系列按钮」大小示例</h3>
+<label><h3>「Lucency系列按钮」大小示例</h3></label>
 <br />
 <button class="btn-xl btn-lu-r btn-lu-default">Default中文</button>
 <button class="btn-lg btn-lu-r btn-lu-default">Default中文</button>
@@ -29,9 +62,9 @@
 <button class="btn-xs btn-lu-s btn-lu-default">Default中文</button>
 <br /><br />
 
-<h3>「Flat系列按钮」大小示例</h3>
+<label><h3>「Flat系列按钮」大小示例</h3></label>
 <button class="btn-xl btn-fl-r btn-fl-primary">primary</button>
-<button class="btn-lg btn-fl-r btn-fl-primary active">primary</button>
+<button class="btn-lg btn-fl-r btn-fl-primary">primary</button>
 <button class="btn-fl-r btn-fl-primary">primary</button>
 <button class="btn-sm btn-fl-r btn-fl-primary">primary</button>
 <button class="btn-xs btn-fl-r btn-fl-primary">primary</button>
@@ -44,7 +77,7 @@
 <br /><br />
 
 <!--清透按钮测试-->
-<h3>「Lucency系列按钮」全预设样式示例</h3>
+<label><h3>「Lucency系列按钮」全预设样式示例</h3></label>
 <button class="btn-lu-r btn-lu-default">Default中文</button>
 <button class="btn-lu-r btn-lu-info">info</button>
 <button class="btn-lu-r btn-lu-primary">primary</button>
@@ -63,7 +96,7 @@
 <br /><br />
 
 <!--扁平化按钮测试-->
-<h3>「Flat系列按钮」全预设样式示例</h3>
+<label><h3>「Flat系列按钮」全预设样式示例</h3></label>
 <button class="btn-fl-r btn-fl-default">Default中文</button>
 <button class="btn-fl-r btn-fl-info">info</button>
 <button class="btn-fl-r btn-fl-primary">primary</button>
@@ -82,11 +115,25 @@
 <button class="btn-link">Link</button>
 <br /><br />
 
-<!--btn-block-->
-<h3>btn-block测试</h3>
-<button class="btn-fl-s btn-fl-success btn-block">Succeess</button>
+        <br />
+        <label><h3>「幽霊系列按钮」示例</h3></label>
+        <button class="btn-xl btn-yl">Default中文</button>
+        <button class="btn-lg btn-yl">Default中文</button>
+        <button class="btn-yl">Default中文</button>
+        <button class="btn-sm btn-yl">Default中文</button>
+        <button class="btn-xs btn-yl">Default中文</button>
+        <br/><br/>
+
+        <!--这个部分感觉是最近网页设计中很时尚的元素，-->
+        <!--背景基本是使用“高斯模糊”滤镜化之后的全局背景，-->
+        <!--白色纤细线条看起来高端大气，-->
+        <!--所以并不像其他功能按钮开发其他颜色。-->
+<label><h3>btn-block测试</h3></label>
+<button class="btn-fl-s btn-fl-success btn-block">Succeess</button><br /><br />
+        <button class="btn-yl btn-block">Succeess</button>
+        <br/><br/>
 <!--清透按钮disabled="disabled"测试-->
-<h3>「Lucency系列按钮」disabled="disabled"示例</h3>
+<label><h3>「Lucency系列按钮」disabled="disabled"示例</h3></label>
 <button class="btn-lu-r btn-lu-default"disabled="disabled">Default中文</button>
 <button class="btn-lu-r btn-lu-info"disabled="disabled">info</button>
 <button class="btn-lu-r btn-lu-primary"disabled="disabled">primary</button>
@@ -107,7 +154,7 @@
 
 
 <!--扁平化按钮disabled="disabled"测试-->
-<h3>「Flat系列按钮」disabled="disabled"示例</h3>
+<label><h3>「Flat系列按钮」disabled="disabled"示例</h3></label>
 <button class="btn-fl-r btn-fl-default"disabled="disabled">Default中文</button>
 <button class="btn-fl-r btn-fl-info"disabled="disabled">info</button>
 <button class="btn-fl-r btn-fl-primary"disabled="disabled">primary</button>
@@ -125,27 +172,40 @@
 <button class ="btn-fl-s btn-fl-error"disabled="disabled">Error</button>
 <button class="btn-link"disabled="disabled">Link</button>
 
-<h3>「按钮类」示例</h3>
-        "a"标签<br /><br />
-<a class="btn-xl btn-lu-s btn-lu-default" href="#" role="button">Link</a>
-<br /><br />
-<a class="btn-lg btn-lu-s btn-lu-default" href="#" role="button"disabled="disabled">Link</a>       disabled-"disabled"
-<br /><br />
-<a class="btn-lu-s btn-lu-default" href="#" role="button">Link</a>
-<br /><br />
-<a class="btn-sm btn-lu-s btn-lu-default" href="#" role="button">Link</a>
-<br /><br />
-<a class="btn-xs btn-lu-s btn-lu-default" href="#" role="button">Link</a>
-<br /><br />
+        <br /><br />
+        <label><h3>「Flat系列按钮」disabled="disabled"示例</h3></label>
+        <label>Disabled<br/><br/></label>
+        <button class="btn-xl btn-yl" disabled="disabled">Default中文</button>
 
-        普通连接样式对比
+        <label>
+            <h3>「按钮类」示例</h3></label>
+        <label> "a"标签</label><br /><br />
+            <a class="btn-xl btn-yl" href="#" role="button">Link</a>
+            <br /><br />
+            <a class="btn-lg btn-yl" href="#" role="button">Link</a>
+            <br /><br />
+            <a class="btn-yl" href="#" role="button">Link</a>
+            <br /><br />
+            <a class="btn-sm btn-yl" href="#" role="button">Link</a>
+            <br /><br />
+            <a class="btn-xs btn-yl" href="#" role="button">Link</a>
+            <br /><br />
+
+        <label>普通连接样式对比</label>
 <a href="#">Link</a><br /><br />
-        submit按钮<br /><br />
+        <label>submit按钮<br /><br /></label>
 <button class="btn-fl-r btn-fl-default" type="submit">Button</button>
+        <button class="btn-yl" type="submit">Button</button>
 <br /><br />
-        input<br /><br />
+        <label>input<br /><br /></label>
 <input class="btn-lu-s btn-lu-success" type="button" value="Input">
 <input class="btn-lu-r btn-lu-primary" type="submit" value="Submit">
-<br /><br />
+        <input class="btn-yl" type="button" value="Input">
+        <input class="btn-yl" type="submit" value="Submit">
+        <br /><br />
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
 </body>
 </html>

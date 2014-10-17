@@ -6,11 +6,24 @@
     <link rel="stylesheet/less" type="text/less" href="Draft/less/buttons.less">
     <link rel="stylesheet/less" type="text/less" href="Draft/less/forms.less">
     <link rel="stylesheet/less" type="text/less" href="Draft/less/grids.less">
-    <script src="Draft/less/less-1.7.4.min.js"></script>
+     <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+    </style>
 </head>
-
 <body>
-<img class="stock" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; z-index:-1"; src="1.png" >
+<div id="div1"><img src="../1.png" /></div>
 <br /><br /><br /><br /><br /><br /><br />
 <div class="pure-g">
 <div class="pure-u-1-8"></div>
