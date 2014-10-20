@@ -1,5 +1,24 @@
 
 @font-family: dax-regular;
+@font-face
+
+{
+
+  font-family: 'dax-regularRegular';
+
+  src: url('../fonts/dax-regular.eot');
+
+  src: local('../fonts/dax-regular Regular'),
+
+  local('dax-regular'),
+
+  url('../fonts/dax-regular.woff') format('woff'),
+
+  url('../fonts/dax-regular.ttf') format('truetype'),
+
+  url('../fonts/dax-regular.svg#dax-regular') format('svg');
+
+}
 
 .transition-setting(@action:boder-color,@time:ease-in-out .15s){
   -webkit-transition: @arguments;
