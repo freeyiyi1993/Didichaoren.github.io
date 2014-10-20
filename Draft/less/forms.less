@@ -81,7 +81,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   padding: 0.5em 1em;
 }
 
-.form input[type="file"],
+//.form input[type="file"],
 .form input[type="radio"],
 .form input[type="checkbox"]{
   &:focus {
@@ -142,6 +142,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   height: auto;
 }
 .form label {
+  color:#333333;
   margin: 0.5em 0 0.2em;
   font-family: @font-family;
 }
@@ -157,7 +158,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   margin-bottom: 0.4em;
   font-family: @font-family;
   font-size: 110%;
-  color: #333;
+  color: #333333;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -271,7 +272,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 }
 
 .form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
-  margin: 1.5em 0 0 10em;
+  margin: 1.5em 0 0 8em;
 }
 
 //----------------------------form或期中input使用圆角-----------------------------------
@@ -348,7 +349,6 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 //----------------------------input-group-----------------------------------
 
 .input-group {
-//  display: inline-block;
   >div:first-child{
     margin-right: -6px;
   }
@@ -433,3 +433,42 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
     padding: 0.2em 0 0.8em;
   }
 }
+
+
+.file{
+  margin-top: 0.3em;
+  padding:0.4em 0.8em;
+  display:inline-block;
+  border:1px solid #ccc;
+  background:#e6e6e6;
+  color:#434343;
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+  -moz-transition: border-color ease-in-out;
+  -webkit-transition:  border-color ease-in-out;
+  transition: border-color ease-in-out;
+  &:hover {
+    border: 1px solid #73dcff;
+  }
+  &:focus{
+    border: 1px solid #8fe1fd;
+    box-shadow: 0px 0px 10px rgba(143, 225, 253, 0.6);;//这里的focus<span>中不使用tabindex不起作用 js解决
+     }
+  }
+
+.file+label{
+   margin-top:0;
+   font-size:80%;
+   color:#a2a2a2;
+}
+.fbtn {
+  width: 125px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  }
