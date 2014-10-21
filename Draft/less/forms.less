@@ -35,7 +35,7 @@
   color: #d8d8d8;
 }
 
-input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默认发光边框
+input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文本框默认发光边框
   outline: none;
 }
 
@@ -361,7 +361,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
 
 .input-group {
   >div:first-child{
-    margin-right: -0.4em;
+    margin-right: -0.6em;
   }
 }
 .form .input-group .input-info{
@@ -453,7 +453,7 @@ input:focus,textarea:focus,select:focus {//去除Chrome等浏览器文本框默�
   border:1px solid #ccc;
   background:#e6e6e6;
   color:#434343;
-  font-family: dax-regular;
+  font-family: @font-family;
   text-align:center;
   overflow:hidden;
   position:relative;
