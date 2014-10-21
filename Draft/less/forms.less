@@ -87,7 +87,6 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 }
 
 
-
 //----------------------------Type="Color"-----------------------------------
 .form select{//宽度与表单一致 长度待定
   padding: 0.5em 1em;
@@ -107,6 +106,9 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   font-family: @font-family;
   margin: 0.5em 0;
   display: block;
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
 .form .checkbox-inline,
 .form .radio-inline {
@@ -175,7 +177,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 }
 
 //----------------------------form-order类 进行块组织-----------------------------------
-.form-order input[type="text"],
+.input-lg-order input[type="text"],
 .form-order input[type="password"],
 .form-order input[type="email"],
 .form-order input[type="url"],
@@ -284,7 +286,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 }
 
 .form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
-  margin: 1.5em 0 0 8em;
+  margin: 1.5em 0 0 10em;
 }
 
 //----------------------------form或期中input使用圆角-----------------------------------
@@ -485,3 +487,28 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   opacity: 0;
   filter: alpha(opacity=0);
   }
+
+.form input.input-xl,
+.form select.input-xl,
+.form textarea.input-xl,
+.form input:not([type]).input-xl{
+  font-size: 125%;
+}
+.form input.input-lg,
+.form select.input-lg,
+.form textarea.input-lg,
+.form input:not([type]).input-lg{
+  font-size: 110%;
+}
+.form input.input-sm,
+.form select.input-sm,
+.form textarea.input-sm,
+.form input:not([type]).input-sm{
+  font-size: 85%;
+}
+.form input.input-xs,
+.form select.input-xs,
+.form textarea.input-xs,
+.form input:not([type]).input-xs{
+  font-size: 70%;
+}

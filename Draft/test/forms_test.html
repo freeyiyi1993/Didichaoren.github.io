@@ -208,9 +208,9 @@
                     Option one is this and that&mdash;be sure to include why it's great
                 </label>
             </div>
-            <div class="checkbox disabled">
-                <label>
-                    <input type="checkbox" value="" disabled>
+            <div class="checkbox">
+                <label >
+                    <input type="checkbox" value="" disabled="disabled">
                     Option two is disabled
                 </label>
             </div>
@@ -275,7 +275,7 @@
     <fieldset>
     <legend>Collie-UI 只读表单测试</legend>
         <input class="pure-u-1-3" type="text" id="text" value="readonly but can copy..." readonly>
- </fieldset>
+    </fieldset>
         </form>
 
 
@@ -302,7 +302,7 @@
     <br /><br />
     <form class="form">
         <fieldset>
-            <legend>Collie-UI color测试</legend>
+            <legend>Collie-UI date测试</legend>
             <input type="date">
         </fieldset>
     </form>
@@ -310,10 +310,31 @@
     <br /><br />
     <form class="form">
         <fieldset>
-            <legend>Collie-UI color测试</legend>
+            <legend>Collie-UI number测试</legend>
             <input type="number">
         </fieldset>
     </form>
+
+    <br />
+    <form class="form">
+        <fieldset>
+            <legend>Collie-UI textarea测试(默认inline-block)</legend>
+            <textarea class="pure-u-1-3" rows="1"></textarea>
+        </fieldset>
+    </form>
+
+    <br /><br />
+    <form class="form form-order">
+        <fieldset>
+            <legend>Collie-UI input框大小测试</legend>
+            <input class="input-xl" type="email" placeholder=".input-xl">
+            <input class="input-lg" type="email" placeholder=".input-lg">
+            <input type="email" placeholder="normal">
+            <input class="input-sm" type="email" placeholder=".input-sm">
+            <input class="input-xs" type="email" placeholder=".input-xs">
+        </fieldset>
+    </form>
+
 </div>
     <div class="pure-u-1-8"></div>
 </div>
