@@ -1,8 +1,3 @@
-//functions
-$(document).ready(function () {
-
-});
-
 $(document).ready(function () {
 //    样式覆盖
     var inputNumber = $('input[type="number"]');
@@ -20,6 +15,7 @@ $(document).ready(function () {
     inputDate.hide();
 
 //    .number
+
     var num;
     $('.number>div>div:first-child').click(function () {
         num = $(this).parents('.number').find('input').prop('value');
@@ -31,6 +27,7 @@ $(document).ready(function () {
     });
 
 //    .color
+
     $('<div class="colors"></div>').appendTo('.color');
     var x = 201, y = 193 , z = 225;
     for(var i = 0; i < 36; i++) {
@@ -54,12 +51,14 @@ $(document).ready(function () {
     })
 
 //    date
-    var months = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'];
+
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
     $('<div class="calendar"><div></div><table><thead><tr><td>Sun</td><td>Mon</td><td>Tue</td>' +
         '<td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td></tr></thead>' +
         '<tbody></tbody></table></div>').appendTo('.date');
-//    $('.calendar').hide();
+    $('.calendar').hide();
+
 //    获取今天的日期
     var today = new Date();
     today.setDate(today.getDate());
@@ -72,17 +71,14 @@ $(document).ready(function () {
         $(this).parent().children('.calendar').toggle();
     });
 
-
     $.calPanel = function (date) {
         var tDate = date || new Date(),
             tYear = tDate.getFullYear(),
             tMonth = tDate.getMonth(),
-            tDay = tDate.getDate(),
-            tWeek = tDate.getDay(),
             currentDays = new Date(tYear,tMonth+1,0).getDate(),
             preDays = new Date(tYear,tMonth,0).getDate(),
             firstDay = new Date(tYear,tMonth,1),
-            firstCell = firstDay.getDay() === 0 ? 6 : firstDay.getDay(),
+            firstCell = firstDay.getDay() === 0 ? 7 : firstDay.getDay(),
             lastCell = 42 - currentDays - firstCell;
         var preMonth = [];
         for(var i = firstCell; i >0; i--) {
@@ -97,41 +93,75 @@ $(document).ready(function () {
             nextMonth.push(new Date(tYear,tMonth+1,k+1));
         }
         preMonth = preMonth.concat(currentMonth,nextMonth);
+        console.log('im panel');
         return preMonth;
     }
 
-
     var calendar = $('.calendar');  //日历的容器div
-    var currentYear, currentMonth;
+    var curYear, curMonth;
+    var tbody = calendar.find('tbody');
+    var current = calendar;
+
     $.calUI = function (date) {
         //获取前后三个月的日历
         var calpanel = $.calPanel(date); //日历面板
-        currentYear = calpanel[7].getFullYear();
-        currentMonth = calpanel[7].getMonth();
-        calendar.children('div').append('<i class="fa fa-2x fa-chevron-circle-left"></i><span>'+
+        console.log( calpanel);
+
+        curYear = calpanel[7].getFullYear();
+        curMonth = calpanel[7].getMonth();
+        current.children('div').append('<i class="fa fa-2x fa-chevron-circle-left"></i><span>'+
             months[calpanel[7].getMonth()]+'</span>'+
             '<span>'+calpanel[7].getFullYear()+'</span>' +
             '<i class="fa fa-2x fa-chevron-circle-right"></i>');
 
-        var tbody = calendar .find('tbody');
-        var currentRow;
-        for(var i = 0; i<42; i ++){
+        var curRow,curDay;
+        for(var i = 0; i<42; i++){
             if(i % 7 === 0) tbody.append('<tr></tr>');
-            currentRow = tbody.children('tr:last-child');
-            currentRow.append('<td>'+calpanel[i].getDate()+'</td>')
+            curRow = tbody.children('tr:last-child');
+            curDay = calpanel[i].getDate()
+            if(i<7) {
+                if(curDay>7) curRow.append('<td class="premonth">'+curDay+'</td>');
+                else curRow.append('<td>'+curDay+'</td>');
+            }
+            else if(i>27) {
+                if(curDay<15) curRow.append('<td class="nextmonth">'+curDay+'</td>');
+                else curRow.append('<td>'+curDay+'</td>');
+            }
+            else curRow.append('<td>'+curDay+'</td>');
         }
     }
+
     $.calUI();
 
-    calendar.find('i:first').click(function () {
-        $('.calendar').find('tbody').empty();
-        $('.calendar').children('div').empty();
-        $.calUI(new Date(currentYear,currentMonth-1,1));
+    $.changeMonth = function (cur) {
+        current = cur.parents('.calendar');
+        tbody = current.find('tbody');
+        current.find('tbody').empty();
+        current.children('div').empty();
+    }
+
+//  DOM结构没有刷新？
+    calendar.on('click','i:first',function () {
+        $.changeMonth($(this));
+        $.calUI(new Date(curYear,curMonth-1,1));
     });
-    calendar.find('i:last').click(function () {
-        calendar.find('tbody').empty();
-        calendar.children('div').empty();
-        $.calUI(new Date(currentYear,currentMonth+1,1));
+    calendar.on('click','i:last',function () {
+        $.changeMonth($(this));
+        $.calUI(new Date(curYear,curMonth+1,1));
     });
-    console.log( $.calPanel());
+
+    current.find('tbody').on('click','td', function () {
+        if($(this).is('.premonth')) {
+            $.changeMonth($(this));
+            $.calUI(new Date(curYear,curMonth-1,1));
+        }
+        else if($(this).is('.nextmonth')) {
+            $.changeMonth($(this));
+            $.calUI(new Date(curYear,curMonth+1,1));
+        }
+        else {
+            $(this).parents('.date').find('input').attr('value',(curMonth+1)+'/'+$(this).text()+'/'+curYear);
+            $(this).parents('.calendar').hide();
+        }
+    });
 });
