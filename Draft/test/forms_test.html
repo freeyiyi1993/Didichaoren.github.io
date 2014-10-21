@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>form_test</title>
     <link href="../less/forms.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/other-forms.less" type="text/less" rel="stylesheet/less">
     <link href="../less/buttons.less" type="text/less" rel="stylesheet/less">
     <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/forms.js"></script>
+    <script src="../javascript/other-forms.js"></script>
 </head>
 
 <body>
@@ -283,12 +285,35 @@
         <legend>Collie-UI file测试</legend>
             <span class="file">
                 <!--添加了tabindex="0"才聚焦的-->
-                <input class="fbtn" type="file">Select a  file...</button>
+                <input class="fbtn" type="file">Select a  file...
             </span>
             <label>This is a help text you put for info</label>
         </fieldset>
     </form>
 
+    <br /><br />
+    <form class="form">
+        <fieldset>
+            <legend>Collie-UI color测试</legend>
+            <input type="color">
+        </fieldset>
+    </form>
+
+    <br /><br />
+    <form class="form">
+        <fieldset>
+            <legend>Collie-UI color测试</legend>
+            <input type="date">
+        </fieldset>
+    </form>
+
+    <br /><br />
+    <form class="form">
+        <fieldset>
+            <legend>Collie-UI color测试</legend>
+            <input type="number">
+        </fieldset>
+    </form>
 </div>
     <div class="pure-u-1-8"></div>
 </div>
