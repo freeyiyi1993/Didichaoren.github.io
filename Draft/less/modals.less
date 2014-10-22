@@ -3,6 +3,18 @@
 
 //-------------------------------------------
 
+body{
+  -webkit-backface-visibility: hidden;
+}
+
+.modal-active{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
   .modal {//在这一层设计高斯模糊和颜色
 //    display:none;//演示的时候要注销
     overflow: hidden; //隐藏滚动条
