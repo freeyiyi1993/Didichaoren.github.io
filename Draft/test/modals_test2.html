@@ -8,8 +8,6 @@
     <link href="../less/modals.less" type="text/less" rel="stylesheet/less">
     <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
     <script src="../less/less-1.7.4.min.js"></script>
-    <script src="../javascript/jquery-2.1.1.min.js"></script>
-    <script src="../javascript/modal.js"></script>
     <style type="text/css">
         div#div1{
             position:fixed;
@@ -28,6 +26,7 @@
 </head>
 
 <body>
+
 <div id="div1"><img src="../../1.png" /></div>
 
 <div class="pure-g">
@@ -47,36 +46,28 @@
 <div class="pure-g">
     <div class="pure-u-1-8"></div>
 
-    <div class="form pure-u-3-4"><br />
-        <br />
-        <button class="btn-lu-s btn-lu-primary btn-lg" id="modal">
-            Modal demo1
-        </button>
-        <br />
+    <div class="pure-u-3-4">
+        <div class="modal">
+            <div class="modal-lu">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-header">
+                    <h2 class="modal-title">Collie-UI Modal title</h2>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-lu-s btn-lu-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn-lu-s btn-lu-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-boundary -->
+        </div><!-- /.modal -->
     </div>
-    <!-- 空div -->
     <div class="pure-u-1-8"></div>
 </div>
-
-<!--模态框Div-->
-<div class="modal">
-    <div class="content">
-        <div class="modal-fl">
-            <button type="button" class="close" id="close">&times;</button>
-            <div class="modal-header">
-                <h2 class="modal-title">Collie-UI Modal title</h2>
-            </div>
-            <div class="modal-body">
-                <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-lu-s btn-lu-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn-lu-s btn-lu-primary">Save changes</button>
-            </div>
-        </div><!-- /.modal-fl -->
-    </div><!-- content -->
-</div><!-- /.modal -->
-
 
 </body>
 </html>

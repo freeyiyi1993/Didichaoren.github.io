@@ -13,8 +13,9 @@
 }
 
 
-  .modal {//在这一层设计高斯模糊和颜色
-//    display:none;//演示的时候要注销
+  .modal {//在这一层设计灰暗颜色
+
+    display:none;//单独演示的时候要注销
     position: fixed;
     overflow:hidden;
     top: 0;
@@ -26,8 +27,12 @@
     -webkit-overflow-scrolling: touch;
   }
 
+.content{//整个模态框
+  display: none;
+  padding:1em;
+}
 
-.modal-fl{//真正模态框的主体
+.modal-fl{//模态框的主体
     font-family: @font-family;
     width:768px;
     text-align:middle;
@@ -61,9 +66,8 @@
     min-height: 3em;
   }
 
-
-     .modal-fl .close,
-     .modal-lu .close{
+.modal-fl .close,
+.modal-lu .close{
      //小的关闭按钮样式
      float: right;
      margin-right: -10px;
@@ -89,6 +93,7 @@
        color: white;
      }
  }
+
   .modal-title {
     margin: 0;
     line-height: 2em;
