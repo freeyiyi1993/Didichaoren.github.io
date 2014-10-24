@@ -44,30 +44,35 @@
     <div class="pure-u-1-8"></div>
 </div>
 
-<div class="pure-g">
+<div class="pure-g form">
     <div class="pure-u-1-8"></div>
 
     <div class="form pure-u-3-4"><br />
         <br />
-        <button class="btn-lu-s btn-lu-primary btn-lg" id="modal">
+        <button class="btn-lu-s btn-lu-primary btn-lg btn-modal"  data-modal="#modal1">
             Modal demo1
         </button>
-        <br />
+        <button class="btn-lu-s btn-lu-primary btn-lg btn-modal"  data-modal="#modal2">
+            Modal demo2
+        </button><label>◀ When the modal is long</label>
     </div>
     <!-- 空div -->
     <div class="pure-u-1-8"></div>
 </div>
 
 <!--模态框Div-->
-<div class="modal">
+<div class="modal" id="modal1">
     <div class="content">
         <div class="modal-fl">
-            <button type="button" class="close" id="close">&times;</button>
+            <button type="button" class="close">&times;</button>
             <div class="modal-header">
                 <h2 class="modal-title">Collie-UI Modal title</h2>
             </div>
             <div class="modal-body">
-                <p>One fine body&hellip;</p>
+                <p>One fine body&hellip;
+                    <br />
+                    <br />
+                </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-lu-s btn-lu-default" data-dismiss="modal">Close</button>
@@ -77,6 +82,30 @@
     </div><!-- content -->
 </div><!-- /.modal -->
 
+<div class="modal" id="modal2">
+    <div class="content">
+        <div class="modal-fl">
+            <button type="button" class="close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Collie-UI Modal title</h2>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;
+                    <br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br />
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-lu-s btn-lu-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn-lu-s btn-lu-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-fl -->
+    </div><!-- content -->
+</div>
 
 </body>
 </html>
