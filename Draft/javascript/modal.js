@@ -18,4 +18,3 @@ $(document).ready(function(){//规定弹窗动作但是没有进行绑定
         $('.content').hide({height:'hide'},"slow");
     })
 });
-
