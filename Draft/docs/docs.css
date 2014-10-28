@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-size: 100%;
+    font-family: "Lucida Grande", "Calibri", "Arial", sans-serif;
+}
+
+header {
+    display: block;
+    position: fixed;
+    width: 28%;
+    height: 100%;
+    font-size: 120%;
+    text-align: center;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+    width: 72%;
+    padding: 0 2em;
+    float: right;
+    box-sizing: border-box;
+}
+
+section>h1 {
+    padding: .5em;
+    font-size: 3em;
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+}
+
+article>h1 {
+    font-size: 2em;
+}
+
+article p {
+    margin: 1em 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#logo {
+    padding: 1.5em 2em;
+    background-color: #a08cc8;
+    font-size: 120%;
+}
+#logo a {
+    color: #ffffff;
+}
+
+#menu {
+    margin: 1em;
+    text-align: left;
+}
+
+#menu li {
+    margin: 1em 1em 1em 0;
+}
+
+#menu a+ul {
+    margin: .5em;
+    border-left: 1px solid #c3c3c3;
+    cursor: pointer;
+}
+
+#menu a+ul li {
+    color: #cccccc;
+}
+
+#menu a+ul li:before {
+    margin: 0 1em 0 0;
+    content: "-";
+    color: #cccccc;
+}
+
+.selected a {
+    color: #99d2f5;
+    background-color: #ddeafd;
+}
+
+section article {
+    margin: 1em;
+}
+
+/*code style*/
+article pre {
+    font-family: "Monaco", arial, sans-serif;
+    margin: 1em;
+}

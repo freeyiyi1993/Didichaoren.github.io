@@ -66,6 +66,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 .form input:not([type]){
   padding: 0.5em 1em;
   display: inline-block;
+  margin: 0 0.3em;
   border: 1px solid #d8d8d8;
   border-radius: 0px;
   font-size: 100%;
@@ -111,7 +112,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 .form .radio {
   font-size: 100%;
   font-family: @font-family;
-  margin: 0.5em 0;
+  margin: 0.5em 0.3em;
   display: block;
   &[disabled]{
     cursor: not-allowed;
@@ -121,7 +122,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 .form .radio-inline {
   font-size: 100%;
   font-family: @font-family;
-  margin: 0.5em 0;
+  margin: 0.5em 0.3em;
   display: inline-block;
 }
 
@@ -370,12 +371,13 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 
 .input-group {
   >div:first-child{
-    margin-right: -0.5625em;
+    margin-right: -0.8625em;
   }
 }
 .form .input-group .input-info{
     margin-top:0.25em;
     margin-bottom: 0.3em;
+    margin-left: 0.3em;
     padding: 0.5em 0.6em;
     font-size: inherit;
     display: inline-block;

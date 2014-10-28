@@ -1,109 +1,79 @@
-@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
-
-.transition-bgc-setting(@action:background-color,@time:.3s){
-  -webkit-transition: @arguments;
-  -moz-transition: @arguments;
-  transition: @arguments;
+@font-face {
+  font-family: 'dax-regular';
+  src: url('../fonts/dax-regular.eot');
+  src: url('../fonts/dax-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/dax-regular.woff2') format('woff2'),
+  url('../fonts/dax-regular.woff') format('woff'),
+  url('../fonts/dax-regular.ttf') format('truetype'),
+  url('../fonts/dax-regular.svg#dax-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+@font-family:dax-regular;
 
-nav.vertical {
-  > ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    width: 8em;
-    background-color: #a8ecff;
-    > li {
-      > a {
-        display: block;
-        padding: 0.5em 1em;
-        color: #ffffff;
-        text-decoration: none;
-        border-top: 1px solid #ffffff;
-        font-size: 100%;
-        font-family: @font-family;
-        &:hover {
-          background-color: #d3e3bd;
-          .transition-bgc-setting;
-        }
-        &:focus {
-          background-color: #e8e2a0;
-          .transition-bgc-setting;
-        }
-      }
-    }
-  }
-}
-
-.horizon {
-  > ul {
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    max-width: 335px;//!!
-    list-style-type: none;
-    background-color: #a8ecff;
+//--------------------------------------
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  font-family: @font-family;
+  >ul{
+    display: flex;
     overflow: hidden;
+    background-color: #e6e6e6;
+//    border: 1px solid #d0d0d0;
+    margin-bottom: 0;
+    padding-left: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+
     > li {
-      float: left;
-      padding: 0.5em 0;
-      border-right: 1px solid #ffffff;
-      a {
-        padding: 0.5em 1em;
-        color: #ffffff;
+      margin: auto 0;
+      float: left;//默认横向的导航
+      position: relative;
+      display: block;
+      > a {
+        position: relative;
+        display: block;
+        padding: 0.9em 1.5em;
         text-decoration: none;
-        font-size: 100%;
-        font-family: @font-family;
-        &:hover {
-          background-color: #d3e3bd;
-          .transition-bgc-setting;
+        color: #434343;
+//        border: 1px solid transparent;
+        background-color: #e6e6e6;
+        -webkit-tap-highlight-color: transparent;
+        -moz-transition:all .3s;
+        -webkit-transition:all .3s;
+        transition:all .3s;
+        &:active,
+        &:focus{
+//          border: 1px solid #d0d0d0;
+          text-decoration: none;
+//          background-color: #e6e6e6;
+          box-shadow: inset 0 1px 8px rgba(0,0,0,0.2);
         }
-        &:focus {
-          background-color: #e8e2a0;
-          .transition-bgc-setting;
+        &:hover{
+//         font-size:120%;
+          text-shadow: 0 0 30px rgba(0,0,0,0.6);
+        }
+      }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+      &.disabled > a {
+        color: white;
+
+        &:hover,
+        &:focus{
+          color: black ;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: not-allowed;
         }
       }
     }
   }
 }
 
-.smooth {
-  > ul {
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid #4e9fff;
-    list-style-type: none;
-    > li {
-      float: left;
-      margin: 0 0.5em;
-      padding: 0.5em 0;
-      a {
-        padding: 0.5em 1em;
-        color: #d3d3d3;
-        text-decoration: none;
-        font-size: 100%;
-        font-family: @font-family;
-        border-top: 1px solid #d3d3d3;
-        border-right: 1px solid #d3d3d3;
-        border-left: 1px solid #d3d3d3;
-        &:hover {
-          color: #969696;
-        }
-        &:focus {
-          color: #4e9fff;
-          border-top: 3px solid #4e9fff;
-          border-right: 1px solid #4e9fff;
-          border-left: 1px solid #4e9fff;
-          border-bottom: 1px solid #ffffff;
-        }
-      }
-    }
+.right{
+  >li{
+    float: right;
   }
-}
-
-.cl-fl {
-  clear: both;
 }

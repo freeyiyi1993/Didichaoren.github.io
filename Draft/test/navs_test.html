@@ -2,38 +2,56 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Collie-UI Navs</title>
     <link href="../less/navs.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/forms.less" type="text/less" rel="stylesheet/less" />
+    <link href="../less/buttons.less" type="text/less" rel="stylesheet/less" />
+    <link href="../less/grids.less" type="text/less" rel="stylesheet/less" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
+    <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+    </style>
 </head>
 <body>
-<nav class="vertical">
+<div id="div1"><img src="../../1.png" /></div>
+<!--===============================================按钮全部样式测试===============================================-->
+<form class="form">
+        <label>
+            <h1>Collie-UI Buttons</h1>
+        </label>
+        <hr />
+        <br />
+</form>
+
+    <nav class="nav">
     <ul>
-        <li><a href="#"><span class="fa fa-heart"></span>spring</a></li>
-        <li><a href="#">summer</a></li>
-        <li><a href="#">autumn</a></li>
-        <li><a href="#">winter</a></li>
+        <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
+        <li><a href="#">Spring</a></li>
+        <li><a href="#">Summer</a></li>
+        <li><a href="#">Fall</a></li>
+        <li><a href="#">Winter</a></li>
+        <li><form class="form right">
+                <label for="search">
+                    <input class="input-rounded" id="search" type="search">
+                    <button type="submit" class="btn-fl-s btn-fl-primary">Search</button>
+                </label>
+        </form></li>
     </ul>
-</nav>
-<br>
-<nav class="horizon">
-    <ul>
-        <li><a href="#"><span class="fa fa-heart"></span>spring</a></li>
-        <li><a href="#">summer</a></li>
-        <li><a href="#">autumn</a></li>
-        <li><a href="#">winter</a></li>
-    </ul>
-</nav>
-<br>
-<nav class="smooth">
-    <ul>
-        <li><a href="#"><span class="fa fa-heart"></span>spring</a></li>
-        <li><a href="#">summer</a></li>
-        <li><a href="#">autumn</a></li>
-        <li><a href="#">winter</a></li>
-        <div class="cl-fl"></div>
-    </ul>
+    </nav>
+
 </nav>
 </body>
 </html>
