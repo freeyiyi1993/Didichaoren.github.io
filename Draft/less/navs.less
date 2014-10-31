@@ -29,6 +29,10 @@
       display: block;
       float: left;
       position: relative;
+      >form.form{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
       > a {
         position: relative;
         display: block;
@@ -63,6 +67,7 @@
     }
   }
 }
+
 .nav-yl{
   margin-bottom: 0;
   padding-left: 0; // Override default ul/ol
@@ -119,13 +124,15 @@
       display: block;
       float: none;
       a{
+        padding-left: 1.1em;
+        padding-right: 1.9em;
         display: inline-block;
         width: 100%;
         &:hover,
         &:active,
         &:focus{
-          padding-left: 2em;
-          padding-right: 1em;
+          padding-left: 1.7em;
+          padding-right: 1.3em;
         }
       }
     }
@@ -156,7 +163,7 @@
   }
 }
 
-.nav-inverse{
+.nav-inverse{//反色
   >ul{
     background-color: black;
     >li{
