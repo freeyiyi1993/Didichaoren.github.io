@@ -1,7 +1,7 @@
 
 
 
-$(document).ready(function(){//这样不能每个都改 愁人
+$(document).ready(function(){
 
     var height5 = $('nav').find('.form input.input-xl').parents(".form").height();
     $('nav').find('.form input.input-xl').parents(".form").css({"margin-top":((50 - height5)/2)+"px","margin-bottom":((50 - height5)/2)+"px"});
