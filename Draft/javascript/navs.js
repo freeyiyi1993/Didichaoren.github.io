@@ -17,4 +17,5 @@ $(document).ready(function(){
 
     var height3 = $('nav').find('.form input.input-xs').parents(".form").height();
     $('nav').find('.form input.input-xs').parents(".form").css({"margin-top":((50 - height3)/2)+"px","margin-bottom":((50 - height3)/2)+"px"});
+
 });
