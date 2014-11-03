@@ -1,170 +1,65 @@
-@font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
-//
-span {
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@font-face {
+  font-family: 'dax-regular';
+  src: url('../fonts/dax-regular.eot');
+  src: url('../fonts/dax-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/dax-regular.woff2') format('woff2'),
+  url('../fonts/dax-regular.woff') format('woff'),
+  url('../fonts/dax-regular.ttf') format('truetype'),
+  url('../fonts/dax-regular.svg#dax-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-family:dax-regular;
+
+//-------------------------------------------------------------------------------------
+
+.triangle {
   display: inline-block;
-  max-width: 100%;
-  margin: 0.5em;
-  font-family: @font-family;
-  font-size: 100%;
-  text-align: right;
+  width: 0;
+  height: 0;
+  margin-left: 0.5em;
+  margin-right: -0.25em;
+  vertical-align: middle;
+  border-top:   10px solid;
+  border-right: 6px solid transparent;
+  border-left:  6px solid transparent;
 }
 
 .dropdown {
   position: relative;
-  padding: 0;
-  margin: 0;
-  width: 18em;
+  list-style: none;
   font-family: @font-family;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  >ul {
-    display: none;
-    padding: 0.5em 0;
-    margin: 0 0.5em;
-    list-style-type: none;
-    background-color: #e7e7e7;
-    >li {
-      >a {
-        display: block;
-        padding: 0.5em;
-        line-height: 1.2em;
-        color: #ffffff;
-        text-align: center;
-        &:hover {
-          transition: all 0.3s ease-out;
-          background-color: #cccccc;
-        }
+}
+
+.dropdown-list{//用在ul上
+  position: absolute; //相对于除了static的父元素
+  left: 0;
+//  display: none;
+  float: left;
+  top: 100%;
+  list-style: none;
+  z-index: 1;
+  border: 1px solid #f0f0f0;
+  padding: 0.3em 0;
+  margin: 3px 0 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  min-width: 160px;
+  >li{
+    >a{
+      display: block;
+      padding: 0.5em 1em;
+      &:hover{
+        color: white;
+        background-color: black;
+      }
+      &:active,&:focus{
+        background-color: black;
       }
     }
-    .dropdown-group {
-      background-color: #dbdbdb;
-      font-size: 1.2em;
-      text-indent: -2em;
-    }
   }
-}
-
-//默认样式的下拉菜单
-.dropdown-default {
-  .dropdown;
-  >span {
-    display: block;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
-    border: 1px solid #e3e3e3;
-    text-align: center;
-    font-family: @font-family;
-    color: #a7a7a7;
-    &:after {
-      position: absolute;
-      right: 0.5em;
-      top: 0;
-      margin-left: 0.5em;
-      padding: 0.5em;
-      content: "▼";
-      color: #a7a7a7;
-      background-color: #dddddd;
-      border-bottom: 1px solid #e3e3e3;  //不太能接受
-    }
-  }
-  &:hover ul{
-    display: block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-}
-
-//含有小箭头的下拉菜单
-.dropdown-default-i {
-  .dropdown;
-  div.tran {
-//    display: none;
-    opacity: 0;
-    margin-left: 1.4em;
-  }
-  >i {
-    margin-left: 0.5em;
-    color: #e3e3e3;
-  }
-  &:hover {
-    ul {
-      display: block;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s;
-    }
-    div.tran {
-      display: block;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s;
-    }
-  }
-}
-
-.dropdown-green {
-  ul {
-    background-color: #69c576;
-    .dropdown-group {
-      background-color: #6affa9;
-    }
-  }
-}
-.dropdown-blue {
-  ul {
-    background-color: #7be0ff;
-    .dropdown-group {
-      background-color: #0980bb;
-    }
-  }
-}
-
-.tran-frame {
-  div:nth-child(1) {
-    height: 4em;
-    width: 8em;
-    background-color: #dfdfdf;
-    word-wrap: break-word;
-  }
-  div:nth-child(2) {
-    display: block;
-    height: 0;
-    width: 0;
-    margin-left: 0.5em;
-    border: 10px solid;
-    border-color: #dfdfdf transparent transparent transparent;
-  }
-}
-
-.info-group {
-  padding: 0.5em;
-  margin: 0.5em;
-  width: 18em;
-  font-family: @font-family;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  > i {
-    margin-left: 0.5em;
-    color: #3da5f5;
-  }
-}
-
-.tran {
-  display: block;
-  height: 0;
-  width: 0;
-  margin-left: 0.5em;
-  border: 10px solid;
-  border-color: transparent transparent #e3e3e3 transparent;
-}
-
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
