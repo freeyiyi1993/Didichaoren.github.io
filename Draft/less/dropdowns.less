@@ -38,7 +38,7 @@
 .dropdown-list{//用在ul上
   position: absolute; //相对于除了static的父元素
   left: 0;
-//  display: none;
+  display: none;
   float: left;
   top: 100%;
   list-style: none;
@@ -58,7 +58,6 @@
       color: #434343;
       white-space: nowrap;//不遇到换行则不换行
       text-decoration: none;
-      -webkit-tap-highlight-color: transparent;
       transition:all 0.3s;
       -moz-transition: all 0.3s;
       -webkit-transition: all 0.3s;
@@ -109,7 +108,7 @@
   }
 }
 
-.dropdown-list .divider{
+.dropdown-list .divider{//长度目前不能自适应
   display: inline-block;
   width: 0;
   height: 0;

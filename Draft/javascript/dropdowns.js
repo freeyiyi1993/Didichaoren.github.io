@@ -1,14 +1,15 @@
 
-$(document).ready(function(){//规定弹窗动作但是没有进行绑定
 
-    $('.btn-modal').click(function(){
+$(document).ready(function(){
+
+    $('.btn-dropdown').click(function(){
         var $this   = $(this);
-        var modalName = $this.attr('data-modal');//获取用户的输入标记
-        $(modalName).show();//识别了用户定义的id之后就直接显示
-        $(modalName).find('.content').animate({height:'show'});
+        var dropdownName = $this.attr('data-dropdown');//获取用户的输入标记(ul)
+        $(dropdownName).show();//识别了用户定义的id之后就直接显示
+        $(dropdownName).find('.content').animate({height:'show'});
     });
 
-    //改变id为close的按钮点击隐藏
+    //点击其他地方隐藏点击隐藏(暂时不会)
     $('.close').click(function(){//直接关闭
         $('.modal').hide();
         $('.content').hide({height:'hide'},"slow");
