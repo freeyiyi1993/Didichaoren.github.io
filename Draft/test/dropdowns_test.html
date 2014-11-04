@@ -2,39 +2,169 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>DropDown-Tests</title>
+    <title>Collie-UI DopDowns</title>
     <link type="text/less" rel="stylesheet/less" href="../less/dropdowns.less">
     <link type="text/less" rel="stylesheet/less" href="../less/forms.less">
     <link type="text/less" rel="stylesheet/less" href="../less/buttons.less">
+    <link type="text/less" rel="stylesheet/less" href="../less/grids.less">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/dropdowns.js"></script>
+    <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+    </style>
 </head>
+
 <body>
+<div id="div1"><img src="../../1.png" /></div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <label>
+            <h1>Collie-UI DropDownss</h1>
+        </label>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <legend>Normal</legend>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-1-4"><br />
 <div class="dropdown">
     <button class="btn-lu-s btn-lu-primary">Choose one
-        <!--<i class="fa fa-chevron-circle-down"></i>-->
         <span class="triangle"></span>
     </button>
     <ul class="dropdown-list">
-        <li><a>i am a</a></li>
-        <li><a>i am b</a></li>
-        <li><a>i am c</a></li>
-        <li><a>i am d</a></li>
+        <li><a href="#">Elsa</a></li>
+        <li><a href="#">Do you</a></li>
+        <li><a href="#">Wanna build</a></li>
+        <li><a href="#">A snow man</a></li>
     </ul>
 </div>
-<!--<br /><br />-->
-<!--<div class="dropdown">-->
-    <!--<button class="btn-lu-s btn-lu-primary">Choose one-->
-        <!--&lt;!&ndash;<i class="fa fa-chevron-circle-down"></i>&ndash;&gt;-->
-        <!--<span class="triangle"></span>-->
-    <!--</button>-->
-    <!--<ul class="dropdown-list">-->
-        <!--<li><a>i am a</a></li>-->
-        <!--<li><a>i am b</a></li>-->
-        <!--<li><a>i am c</a></li>-->
-        <!--<li><a>i am a very very long list</a></li>-->
-    <!--</ul>-->
-<!--</div>-->
+    </div>
+    <div class="form pure-u-1-4"><br />
+<div class="dropdown">
+    <button class="btn-lu-s btn-lu-primary">Choose one
+        <span class="triangle"></span>
+    </button>
+    <ul class="dropdown-list">
+        <li  class="dropdown-header"><a>Come On</a></li>
+        <li><a href="#">let's go</a></li>
+        <li><a href="#">and play</a></li>
+        <li class="dropdown-header"><a>I Never</a></li>
+        <li><a href="#">see you anymore</a></li>
+        <li><a href="#">come out the door</a></li>
+    </ul>
+</div>
+    </div>
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown">
+            <button class="btn-lu-s btn-lu-primary">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list">
+                <li><a>It's like you gone away</a></li>
+                <li><a href="#">We used to be best buddies</a></li>
+                <li><a href="#">and now we're not</a></li>
+                <li class="divider"><span class="line"></span></li>
+                <li><a href="#">I wish</a></li>
+                <li><a href="#">you could tell me why.....................</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <legend>幽霊</legend>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown dropdown-yl">
+            <button class="btn-lu-s btn-lu-primary">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list">
+                <li><a href="#">Elsa</a></li>
+                <li><a href="#">Do you</a></li>
+                <li><a href="#">Wanna build</a></li>
+                <li><a href="#">A snow man</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown dropdown-yl">
+            <button class="btn-lu-s btn-lu-primary">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list">
+                <li  class="dropdown-header"><a>Come On</a></li>
+                <li><a href="#">let's go</a></li>
+                <li><a href="#">and play</a></li>
+                <li class="dropdown-header"><a>I Never</a></li>
+                <li><a href="#">see you anymore</a></li>
+                <li><a href="#">come out the door</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown dropdown-yl">
+            <button class="btn-lu-s btn-lu-primary">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list">
+                <li><a>It's like you gone away</a></li>
+                <li><a href="#">We used to be best buddies</a></li>
+                <li><a href="#">and now we're not</a></li>
+                <li class="divider"><span class="line"></span></li>
+                <li><a href="#">I wish</a></li>
+                <li><a href="#">you could tell me why.....................</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
 
 </body>
 </html>

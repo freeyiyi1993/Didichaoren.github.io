@@ -17,7 +17,7 @@
 
 //-------------------------------------------------------------------------------------
 
-.triangle {
+.triangle {//定义三角形
   display: inline-block;
   width: 0;
   height: 0;
@@ -43,23 +43,79 @@
   top: 100%;
   list-style: none;
   z-index: 1;
-  border: 1px solid #f0f0f0;
-  padding: 0.3em 0;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  padding: 0.6em 0;
   margin: 3px 0 0;
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  background-clip: padding-box;
+  background-clip: padding-box;//背景被剪裁到内边据框
   min-width: 160px;
   >li{
     >a{
       display: block;
-      padding: 0.5em 1em;
+      padding: 0.6em 1em;
+      clear: both;
+      color: #434343;
+      white-space: nowrap;//不遇到换行则不换行
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition:all 0.3s;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      cursor: pointer;
       &:hover{
-        color: white;
-        background-color: black;
-      }
-      &:active,&:focus{
-        background-color: black;
+        color: #434343;
+        background-color: #f0f0f0;
+//        box-shadow: 0 0 2px rgba(0,0,0,0.4);
       }
     }
   }
+}
+
+.dropdown-list .dropdown-header{//保证优先级
+  >a{
+    padding-left: 2em;
+    color: #a0a0a0;
+    font-size: 110%;
+    &:hover{
+      color: #a0a0a0;
+      background-color: transparent;
+    }
+  }
+}
+.dropdown-yl{
+  >.dropdown-list{
+    >li{
+      >a{
+        color: white;
+        &:hover{
+          color: #434343;
+        }
+      }
+    }
+  }
+}
+.dropdown-yl{
+  >.dropdown-list {
+    background-color: transparent;
+    >.dropdown-header{
+      >a{
+        color: #d8d8d8;
+        &:hover{
+          color: #d8d8d8;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-list .divider{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0.6em 0;
+  vertical-align: middle;
+  border-top:   1px solid #d0d0d0;
+  border-right: 80px solid transparent;
+  border-left:  80px solid transparent;
 }

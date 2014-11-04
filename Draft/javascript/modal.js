@@ -16,5 +16,6 @@ $(document).ready(function(){//规定弹窗动作但是没有进行绑定
     $('.close').click(function(){//直接关闭
         $('.modal').hide();
         $('.content').hide({height:'hide'},"slow");
-    })
+    });
+
 });
