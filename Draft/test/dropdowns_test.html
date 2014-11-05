@@ -7,6 +7,8 @@
     <link type="text/less" rel="stylesheet/less" href="../less/forms.less">
     <link type="text/less" rel="stylesheet/less" href="../less/buttons.less">
     <link type="text/less" rel="stylesheet/less" href="../less/grids.less">
+    <link href="../less/navs.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/buttongroups.less" type="text/less" rel="stylesheet/less">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
@@ -58,20 +60,20 @@
 
     <div class="form pure-u-1-4"><br />
 <div class="dropdown">
-    <button class="btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown1">Choose one
+    <button class="btn-fl-s btn-fl-primary btn-dropdown" data-dropdown="#dropdown1">Choose one
         <span class="triangle"></span>
     </button>
     <ul class="dropdown-list" id="dropdown1">
         <li><a href="#">Elsa</a></li>
         <li><a href="#">Do you</a></li>
-        <li><a href="#">Wanna build</a></li>
+        <li class="disabled"><a>Wanna build</a></li>
         <li><a href="#">A snow man</a></li>
     </ul>
 </div>
     </div>
     <div class="form pure-u-1-4"><br />
 <div class="dropdown">
-    <button class="btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown2">Choose one
+    <button class="btn-fl-s btn-fl-primary btn-dropdown" data-dropdown="#dropdown2">Choose one
         <span class="triangle"></span>
     </button>
     <ul class="dropdown-list" id="dropdown2">
@@ -86,7 +88,7 @@
     </div>
     <div class="form pure-u-1-4"><br />
         <div class="dropdown">
-            <button class="btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown3">Choose one
+            <button class="btn-fl-s btn-fl-primary btn-dropdown" data-dropdown="#dropdown3">Choose one
                 <span class="triangle"></span>
             </button>
             <ul class="dropdown-list" id="dropdown3">
@@ -127,7 +129,7 @@
             <ul class="dropdown-list" id="dropdown4">
                 <li><a href="#">Elsa</a></li>
                 <li><a href="#">Do you</a></li>
-                <li><a href="#">Wanna build</a></li>
+                <li class="disabled"><a>Wanna build</a></li>
                 <li><a href="#">A snow man</a></li>
             </ul>
         </div>
@@ -165,6 +167,151 @@
     <!-- 空div -->
     <div class="pure-u-1-8"></div>
 </div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <legend>上拉菜单(配合使用向上三角形)</legend>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown dropdown-top">
+            <button class="btn-fl-s btn-fl-primary btn-dropdown" data-dropdown="#dropdown7">Choose one
+                <span class="triangle-top"></span>
+            </button>
+            <ul class="dropdown-list" id="dropdown7">
+                <li><a href="#">Elsa</a></li>
+                <li><a href="#">Do you</a></li>
+                <li class="disabled"><a>Wanna build</a></li>
+                <li><a href="#">A snow man</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form pure-u-1-4"><br />
+        <div class="dropdown dropdown-yl dropdown-top">
+            <button class="btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown8">Choose one
+                <span class="triangle-top"></span>
+            </button>
+            <ul class="dropdown-list" id="dropdown8">
+                <li  class="dropdown-header"><a>Come On</a></li>
+                <li><a href="#">let's go</a></li>
+                <li><a href="#">and play</a></li>
+                <li class="dropdown-header"><a>I Never</a></li>
+                <li><a href="#">see you anymore</a></li>
+                <li><a href="#">come out the door</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form pure-u-1-4"></div>
+    <div class="pure-u-1-8"></div>
+    </div>
+    <!-- 空div -->
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <legend>dropdown-block使下拉菜单拉伸至父元素100%</legend>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-8"><br />
+        <div class="dropdown dropdown-block">
+            <button class="btn-fl-s btn-fl-primary btn-dropdown" data-dropdown="#dropdown9">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list" id="dropdown9">
+                <li><a href="#">Elsa</a></li>
+                <li><a href="#">Do you</a></li>
+                <li class="disabled"><a>Wanna build</a></li>
+                <li><a href="#">A snow man</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form pure-u-3-8"><br />
+        <div class="dropdown dropdown-yl dropdown-block">
+            <button class="btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown10">Choose one
+                <span class="triangle"></span>
+            </button>
+            <ul class="dropdown-list" id="dropdown10">
+                <li><a>It's like you gone away</a></li>
+                <li><a href="#">We used to be best buddies</a></li>
+                <li><a href="#">and now we're not</a></li>
+                <li class="divider"><span class="line"></span></li>
+                <li><a href="#">I wish</a></li>
+                <li><a href="#">you could tell me why.....................</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+
+    <div class="form pure-u-3-4"><br />
+        <legend>按钮组式的下拉菜单(同时测试使用右对齐)</legend>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-8"></div>
+    <div class="form pure-u-3-4"><br />
+            <div class="btn-group dropdown">
+              <button type="submit" class="btn btn-lu-s btn-lu-primary">青い鳥</button>
+              <button type="button" class="btn btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown11">
+                  <span class="triangle"></span>
+              </button>
+
+            <ul class="dropdown-list" id="dropdown11">
+                <li><a href="#">羽ばたいたら</a></li>
+                <li><a href="#">戻らないと言って</a></li>
+                <li class="disabled"><a>目指したのは</a></li>
+                <li><a href="#">青い...青い...あの空...</a></li>
+            </ul>
+            </div>
+        <div class="btn-group dropdown">
+            <button type="submit" class="btn btn-lu-s btn-lu-primary">いきものがかり</button>
+            <button type="button" class="btn btn-lu-s btn-lu-primary btn-dropdown" data-dropdown="#dropdown12">
+                <span class="triangle"></span>
+            </button>
+
+            <ul class="dropdown-list justify-right" id="dropdown12">
+                <li><a href="#">突き抜けたら</a></li>
+                <li><a href="#">見つかると知って</a></li>
+                <li><a>振り切るほど</a></li>
+                <li class="divider"></li>
+                <li><a href="#">蒼い...蒼い...あの空...</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 空div -->
+    <div class="pure-u-1-8"></div>
+</div>
+
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br />
 </body>

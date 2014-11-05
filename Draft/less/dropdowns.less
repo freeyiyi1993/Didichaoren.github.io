@@ -21,16 +21,23 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 0.5em;
-  margin-right: -0.25em;
   vertical-align: middle;
   border-top:   10px solid;
   border-right: 6px solid transparent;
   border-left:  6px solid transparent;
 }
+.triangle-top{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-bottom: 1px;
+  border-bottom:   10px solid;
+  border-right: 6px solid transparent;
+  border-left:  6px solid transparent;
+}
 
 .dropdown {
-  position: relative;
+  position: relative;/*position是定位的关键*/
   list-style: none;
   font-family: @font-family;
 }
@@ -39,8 +46,8 @@
   position: absolute; //相对于除了static的父元素
   left: 0;
   display: none;
-  float: left;
-  top: 100%;
+  float: right;
+  top: 100%;/*默认是下拉菜单*/
   list-style: none;
   z-index: 1;
   background-color: white;
@@ -65,12 +72,13 @@
       &:hover{
         color: #434343;
         background-color: #f0f0f0;
-//        box-shadow: 0 0 2px rgba(0,0,0,0.4);
+        //        box-shadow: 0 0 2px rgba(0,0,0,0.4);
       }
     }
   }
 }
 
+/*内标题*/
 .dropdown-list .dropdown-header{//保证优先级
   >a{
     padding-left: 2em;
@@ -82,6 +90,7 @@
     }
   }
 }
+/*幽灵下拉*/
 .dropdown-yl{
   >.dropdown-list{
     >li{
@@ -108,6 +117,7 @@
   }
 }
 
+/*分割线（li）*/
 .dropdown-list .divider{//长度目前不能自适应
   display: inline-block;
   width: 0;
@@ -117,4 +127,43 @@
   border-top:   1px solid #d0d0d0;
   border-right: 80px solid transparent;
   border-left:  80px solid transparent;
+}
+
+/*disabled（li）*/
+.dropdown > .dropdown-list > .disabled > a{
+  cursor: not-allowed;
+  color: #e6e6e6;
+  &:hover{
+    background-color: transparent;
+    color: #e6e6e6;
+  }
+}
+.dropdown-yl > .dropdown-list > .disabled > a{
+  cursor: not-allowed;
+  color: #c0c0c0;
+  &:hover {
+    background-color: transparent;
+    color: #c0c0c0;
+  }
+}
+
+/*上拉、左拉、右拉菜单*/
+.dropdown-top{
+  >.dropdown-list {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+  }
+}
+
+.justify-right{
+    right: 0;
+    left: auto;
+}
+
+.dropdown-block{
+  >.dropdown-list{
+    right: 0;
+    left: 0;
+  }
 }
