@@ -25,6 +25,8 @@
     font-size: 1.2em;
     cursor: pointer;
     >li {
+      position: relative;
+      overflow: visible;
       padding: .5em 1em;
       display: inline-block;
       .transition-setting(all,.3s);
@@ -65,9 +67,13 @@
       &:hover:not(.tab-choosed) {
         background-color: #efefef;
       }
+      &:not(.tab-choosed) {
+        border: 1px solid transparent;
+      }
     }
   }
   .tab-choosed {
+    background-color: white;
     border-color: #efefef #efefef #ffffff;
   }
 }
@@ -81,7 +87,7 @@
         font-family: FontAwesome;
         font-size: .8em;
         content: '\f04b';
-        color: #ffffff;
+        color: transparent;
         .transition-setting(all,.3s);
       }
       &:hover:not(.tab-choosed):before{

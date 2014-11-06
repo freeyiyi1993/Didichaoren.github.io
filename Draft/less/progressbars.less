@@ -1,0 +1,61 @@
+.progressbar {
+  margin: .3em 0;
+  background-color: #efefef;
+  border-radius: .7em;
+  >div {
+    padding: .2em;
+    background-color: #73dcff;
+    border-radius: .7em;
+    text-align: center;
+    color: #ffffff;
+  }
+  .probar-stripe {
+    background-image:
+    -webkit-linear-gradient(
+            45deg,
+            transparent 25%,
+            rgba(255, 255, 255, .3) 25%,
+            rgba(255, 255, 255, .3) 50%,
+            transparent 50%,
+            transparent 75%,
+    );
+    background-image:
+    linear-gradient(
+            45deg,
+            transparent 25%,
+            rgba(255, 255, 255, .3) 25%,
+            rgba(255, 255, 255, .3) 50%,
+            transparent 50%,
+            transparent 75%,
+    );
+    background-size: 5em 100%;
+  }
+  .animate-stripe {
+    -webkit-animation: animate-stripe 3s linear infinite;
+    animation: animate-stripe 3s linear infinite;
+  }
+}
+
+.progresscircle {
+  width: 5em;
+  height: 5em;
+  border: .5em solid #efefef;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes animate-stripe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5em 0;
+  }
+}
+@keyframes animate-stripe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5em 0;
+  }
+}

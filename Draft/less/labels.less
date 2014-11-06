@@ -1,0 +1,79 @@
+@default-b:#c8c8c8;
+
+@primary-a:#73dcff;
+
+@info-a:#259bf5;
+
+@success-a:#65e1a3;
+
+@warning-a:#ffb24c;
+
+@error-a:#ee3b3b;
+
+//--------------------------------------
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 600;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0;
+
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: #000000 ;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  //空白则隐藏
+  &:empty {
+    display: none;
+  }
+}
+
+
+
+// Quick fix for labels in buttons
+.btn-lu-s .label,
+.btn-lu-r .label,
+.btn-fl-s .label,
+.btn-fl-r .label,{
+  position: relative;
+  line-height: normal;
+  top: -1px;
+  padding: .3em .6em;
+}
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+  background-color: @default-b;
+}
+
+.label-primary {
+  background-color: @primary-a;
+}
+
+.label-success {
+  background-color: @success-a;
+}
+
+.label-info {
+  background-color: @info-a;
+}
+
+.label-warning {
+  background-color: @warning-a;
+}
+
+.label-error {
+  background-color: @error-a;
+}
