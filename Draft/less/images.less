@@ -1,6 +1,9 @@
 .img {
+  display: inline-block;
   padding: .5em;
   border: .2em solid #efefef;
+  margin: .5em 0;
+  background-color: #ffffff;
 }
 
 .img-responsive {
@@ -8,19 +11,16 @@
   height: auto;
 }
 
-img.img-circle {
+.img-circle {
   border-radius: 50%;
 }
 
-div.img-circle {
-  background-color: #86f3bc;
+.img-bordered {
   display: inline-block;
-  padding: 0 .3em;
+  padding: 0 .2em;
+  border: .2em solid #d3d3d3;
   >.img {
-    margin: .5em 0;
     border: 0;
-    border-radius: 50%;
-    background-color: #ffffff;
   }
 }
 
@@ -34,4 +34,13 @@ div.img-circle {
     margin: .5em;
     float: left;
   }
+}
+
+.img-thumbnail {
+  border: .2em solid #73dcff;
+  transition: all .3s;
+}
+
+.bgd-1 {
+  background-color: #86b37f;
 }

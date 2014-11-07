@@ -5,16 +5,21 @@
     <meta name="viewport" content="width = device-width">
     <title></title>
     <link href="docs.css" type="text/css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../less/less-1.7.4.min.js">
     <link rel="stylesheet/less" type="text/less" href="../less/tables.less">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="docs.js"></script>
+
+    <link rel="stylesheet" href="../styles/atelier-dune.light.css">
+    <script src="../styles/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <header id="header">
     <div id="logo">
         <h2><a href="#" title="collie-ui">Collie-UI</a></h2>
+        <h5>Color your life</h5>
     </div>
     <div id="menu">
         <ul>
@@ -45,7 +50,7 @@
         <h1>Style</h1>
         <div>
             <div>
-                <p><strong>Default Table</strong> has solid border,add the classname--table,then it works.</p>
+                <p><strong>默认表格[Default Table]</strong>，添加<kbd>table</kbd>类即可调用。</p>
                 <table class="table" cellspacing="0" cellpadding="0">
                     <thead>
                     <tr>
@@ -78,12 +83,46 @@
                     </tbody>
                 </table>
                <pre>
-                   &lt;table class = "table"&gt;
-                   &lt;/table&gt;
+                   <code class="html">
+                       &lt;table class="table-bordered" cellspacing="0" cellpadding="0"&gt;
+                            &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;&lt;span&gt;Keywords&lt;/span&gt;&lt;/th&gt;
+                                &lt;th&gt;&lt;span&gt;Impressions&lt;/span&gt;&lt;/th&gt;
+                                &lt;th&gt;&lt;span&gt;Clicks&lt;/span&gt;&lt;/th&gt;
+                                &lt;th&gt;&lt;span&gt;CTR&lt;/span&gt;&lt;/th&gt;
+                                &lt;th&gt;&lt;span&gt;Rank&lt;/span&gt;&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;silly tshirts&lt;/td&gt;
+                                &lt;td&gt;6,000&lt;/td&gt;
+                                &lt;td&gt;110&lt;/td&gt;
+                                &lt;td&gt;1.8%&lt;/td&gt;
+                                &lt;td&gt;22.2&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;2013 webapps&lt;/td&gt;
+                                &lt;td&gt;9,900&lt;/td&gt;
+                                &lt;td&gt;460&lt;/td&gt;
+                                &lt;td&gt;4.6%&lt;/td&gt;
+                                &lt;td&gt;11.5&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;ring bananaphone&lt;/td&gt;
+                                &lt;td&gt;10,500&lt;/td&gt;
+                                &lt;td&gt;748&lt;/td&gt;
+                                &lt;td&gt;7.1%&lt;/td&gt;
+                                &lt;td&gt;17.3&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                       &lt;/table&gt;
+                   </code>
                </pre>
             </div>
             <div>
-                <p><strong>Underline Table</strong>,add the classname table-underline,then it works.</p>
+                <p><strong>下划线表格[Underline Table]</strong>为table标签添加类名<kbd>table-underline</kbd>。</p>
                 <table class="table-underline" cellspacing="0" cellpadding="0">
                     <thead>
                     <tr>
@@ -115,9 +154,16 @@
                     </tr>
                     </tbody>
                 </table>
+                <pre>
+                   <code class="html">
+                       &lt;table class="table-underline" cellspacing="0" cellpadding="0"&gt;
+                       ...
+                       &lt;/table&gt;
+                   </code>
+               </pre>
             </div>
             <div>
-                <p><strong>Bordered Table</strong>,add the classname table-bordered,then it works.</p>
+                <p><strong>网状表格[Bordered Table]</strong>,为table标签添加<kbd>table-bordered</kbd>.</p>
                 <table class="table-bordered" cellspacing="0" cellpadding="0">
                     <thead>
                     <tr>
@@ -149,6 +195,13 @@
                     </tr>
                     </tbody>
                 </table>
+                <pre>
+                   <code class="html">
+                       &lt;table class="table-bordered" cellspacing="0" cellpadding="0"&gt;
+                       ...
+                       &lt;/table&gt;
+                   </code>
+               </pre>
             </div>
         </div>
     </article>
