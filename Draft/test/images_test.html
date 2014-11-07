@@ -9,7 +9,7 @@
     <script src="../less/less-1.7.4.min.js"></script>
 </head>
 <body>
-<img class="img" src="../img.png" alt="img">
+<img class="img" src="../img.png" alt="img" width="180px">
 <img class="img img-circle" src="../img3.png" alt="img3" width="180px">
 
 <div class="img-bordered" style="text-align: center">
@@ -17,7 +17,7 @@
     <p>2014/11/4</p>
 </div>
 <div class="img-bordered bgd-1" style="text-align: center">
-    <img class="img img-circle" src="../img.png" alt="img">
+    <img class="img img-circle" src="../img.png" alt="img" width="180px">
     <p>2014/11/4</p>
 </div>
 <div class="media-item pure-u-1-2">
@@ -43,18 +43,30 @@
         72%
     </div>
 </div>
+<div class="pure-u-1-2 progressbar yellow">
+    <div class="probar-stripe" style="width: 72%">
+        72%
+    </div>
+</div>
 <div class="pure-u-1-2 progressbar">
     <div class="probar-stripe animate-stripe" style="width: 72%">
         72%
     </div>
 </div>
 <div class="pure-u-1-2 progressbar">
-    <div class="probar-stripe animate-stripe" style="width: 20%">
-        20%
-    </div>
+    <div class="probar-stripe animate-stripe" style="width: 20%"></div>
 </div>
-<div class="pure-u-1-16 progresscircle">
-    <div></div>
+
+<div class="pure-u-1-2 progresscircle">
+    <div class="pie-right"><div></div></div>
+    <div class="pie-left"><div></div></div>
+    <div class="circle-inner">75%</div>
+</div>
+
+<div class="pure-u-1-2 progresscircle red">
+    <div class="pie-right"><div></div></div>
+    <div class="pie-left"><div></div></div>
+    <div class="circle-inner">75%</div>
 </div>
 
 <progress max="100" value="23"></progress>

@@ -37,10 +37,55 @@
 }
 
 .progresscircle {
-  width: 5em;
-  height: 5em;
-  border: .5em solid #efefef;
-  border-radius: 50%;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  .pie-right,
+  .pie-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #73dcff;
+    border-radius: 50%;
+    >div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background-color: #efefef;
+      border-radius: 50%;
+    }
+  }
+  .pie-right {
+    clip: rect(0,auto,auto,100px);
+    >div {
+      clip: rect(0,auto,auto,100px);
+      transform: rotate(180deg);
+    }
+  }
+  .pie-left {
+    clip:rect(0,100px,auto,auto);
+    >div {
+      clip:rect(0,100px,auto,auto);
+      transform: rotate(90deg);
+    }
+  }
+  .circle-inner {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #ffffff;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+  }
 }
 
 @-webkit-keyframes animate-stripe {
@@ -57,5 +102,43 @@
   }
   100% {
     background-position: 5em 0;
+  }
+}
+
+.progressbar {
+  &.green {
+    >div {
+      background-color: #65e1a3;
+    }
+  }
+  &.yellow {
+    >div {
+      background-color: #ffb24b;
+    }
+  }
+  &.red {
+    >div {
+      background-color: #ee363b;
+    }
+  }
+}
+.progresscircle {
+  &.green {
+    .pie-right,
+    .pie-left {
+      background-color: #65e1a3;
+    }
+  }
+  &.yellow {
+    .pie-right,
+    .pie-left {
+      background-color: #ffb24b;
+    }
+  }
+  &.red {
+    .pie-right,
+    .pie-left {
+      background-color: #ee363b;
+    }
   }
 }
