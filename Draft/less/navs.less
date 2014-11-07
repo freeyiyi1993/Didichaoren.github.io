@@ -182,3 +182,35 @@
     }
   }
 }
+
+.nav-path{
+  >ol {
+    display: inline-block;
+    padding: 0.5em 1em;
+    >li {
+      display: inline-block;
+      list-style: none;
+      >a {
+        padding: 0.5em 0;
+        font-size: 110%;
+        color: #73dcff;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+        &:active,
+        &:focus {
+          color: #b0b0b0;
+          text-decoration: none;
+        }
+      }
+      +li:before {
+        font-size: 80%;
+        color: #d0d0d0;
+        margin: 0 0.5em;
+        content: " / ";
+        padding: 0 5px;
+      }
+    }
+  }
+}
