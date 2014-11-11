@@ -1,0 +1,109 @@
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@font-face {
+  font-family: 'dax-regular';
+  src: url('../fonts/dax-regular.eot');
+  src: url('../fonts/dax-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/dax-regular.woff2') format('woff2'),
+  url('../fonts/dax-regular.woff') format('woff'),
+  url('../fonts/dax-regular.ttf') format('truetype'),
+  url('../fonts/dax-regular.svg#dax-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-family:dax-regular;
+
+//---------------------------------------------------
+.popup {
+  position: relative;/*position是定位的关键*/
+  list-style: none;
+  font-family: @font-family;
+}
+
+.popup .popup-bottom{
+  left: 0;
+  right: auto;
+  top: 150%;
+}
+.popup .popup-top{
+  bottom: 150%;
+  >.popup-triangle{
+    color: white;
+    top: auto;
+    bottom: -14px;
+    border-top: 16px solid;
+    border-bottom: 0;
+  }
+}
+.popup .popup-right{
+  top: 0;
+  left: 0;
+  right: auto;
+  >.popup-triangle {
+    top: 0;
+    left: -138px;
+    color: #ffffff;
+    border-right: 16px solid;
+    border-bottom: 16px solid transparent;
+    border-top: 16px solid transparent;
+  }
+}
+.popup .popup-left{
+  top: 0;
+  right: 0;
+  left: auto;
+  >.popup-triangle{
+    top: 0;
+    right: -138px;
+    color: #ffffff;
+    border-left:   16px solid;
+    border-bottom: 16px solid transparent;
+    border-top:  16px solid transparent;
+  }
+}
+
+.popup-list{
+  position: absolute; //相对于除了static的父元素
+  display: none;
+  float: right;
+  list-style: none;
+  text-align: left;
+  letter-spacing: normal;
+  color: #434343;
+  z-index: 1;
+  margin: 2px 0 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;//背景被剪裁到内边据框
+  width: 240px;
+}
+
+.popup-triangle{
+  display: inline-block;
+  position: absolute;
+  top: -14px;
+  margin: 0 108px;
+  width: 0;
+  height: 0;
+  color: #f2f2f2;
+  vertical-align: middle;
+  border-bottom:   16px solid;
+  border-right: 16px solid transparent;
+  border-left:  16px solid transparent;
+}
+
+.popup-header{
+  padding: 0.5em 1em;
+  background-color: #f2f2f2;
+}
+
+.popup-body{
+  padding: 0.5em 1em;
+  background-color: white;
+  min-height: 60px;
+  >p{
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+}
