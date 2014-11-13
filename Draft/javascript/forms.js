@@ -26,8 +26,8 @@ $(document).ready(function(){//使得form中的span具有tab属性
     $('.form').ready(function(){
         $(this).find('span').attr("tabIndex", "0");
         var height = $(this).find('.input-group input').height();//解决input-info中使用radio、checkbox的大小问题
-        $(this).find('.input-group .input-info').css({"max-height":(height)+"px"});
-        $(this).find('.input-group .input-info').css({"min-width":(height)+"px"});
+        $(this).find('.input-group .input-info').css({"height":(height)+"px"});
+        $(this).find('.input-group .input-info').css({"width":(height)+"px"});
     });
 
 });
