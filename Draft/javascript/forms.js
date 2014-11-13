@@ -34,7 +34,6 @@ $(document).ready(function(){
     });
     $('.input-xs').children('.input-info').each(function(){
         var height2 = $(this).parent('.input-group').children('input').height();
-        alert(height2);
         $(this).css({"max-height":(height2)+1+"px"});
     });
 });
