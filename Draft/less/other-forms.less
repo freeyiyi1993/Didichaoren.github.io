@@ -123,12 +123,13 @@
 }
 
 .color {
-  padding: .3em;
+  padding: .3em 0;
   margin: .3em;
   >div:nth-child(1) {
     position: relative;
+    display: inline-block;
     height: 2.5em;
-    width: 6em;
+    width: 4em;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
     >div:nth-child(1) {
@@ -138,22 +139,23 @@
       border-radius: 50%;
       background-color: #71dbff;
     }
-    &:after {
-      position: absolute;
-      right: 0;
-      top: -.0625em;
-      padding: .6875em;
-      content: "▼";
-      color: #d4d4d4;
-      background-color: #e7e7e7;
-      cursor: pointer;
-      box-sizing: border-box;
-    }
-    &:hover:after {
+  }
+  >div:nth-child(2) {
+    display: inline-block;
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: #e7e7e7;
+    text-align: center;
+    line-height: 2.5em;
+    color: #d4d4d4;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
       color: #3da5f5;
       transition: all 0.3s;
     }
-    &:active:after {
+    &:active {
       border-bottom-color: #3da5f5;
       background-color: #3da5f5;
       color: #d4d4d4;

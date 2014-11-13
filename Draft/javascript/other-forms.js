@@ -6,7 +6,7 @@ $(document).ready(function () {
     inputNumber.hide();
 
     var inputColor = $('input[type="color"]');
-    $('<div class="color"><div><div></div></div></div>')
+    $('<div class="color"><div><div></div></div><div>▼</div></div>')
         .insertAfter(inputColor);
     inputColor.hide();
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
     $('<div></div>').appendTo('.colors');
 
     $('.colors').hide();
-    $('.color').find('div:nth-child(1)').click(function(){
+    $('.color').children('div:nth-child(2)').click(function(){
         $(this).parent().find('.colors').toggle();
     });
 
