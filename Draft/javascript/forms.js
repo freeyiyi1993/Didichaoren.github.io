@@ -30,7 +30,11 @@ $(document).ready(function(){
     $('.input-info').each(function(){
         var height = $(this).parent('.input-group')
             .children('input').height();//解决input-info中使用radio、checkbox的大小问题
-        $(this).css({"max-height":(height)+"px","width":(height)+"px"});
+        $(this).css({"max-height":(height)+"px","width":(height)+1+"px"});
     });
-
+    $('input-xs').find('.input-info')
+        .css({"height":(height)+1+"px"});
+//        if($(this).find(typeof 'radio')){//radio、checkbox
+//            $(this).css({"max-height":(height)+"px"});
+//        }
 });
