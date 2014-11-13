@@ -21,13 +21,16 @@ function get()
 }
 
 
-$(document).ready(function(){//使得form中的span具有tab属性
+$(document).ready(function(){
 
-    $('.form').ready(function(){
-        $(this).find('span').attr("tabIndex", "0");
-        var height = $(this).find('.input-group input').height();//解决input-info中使用radio、checkbox的大小问题
-        $(this).find('.input-group .input-info').css({"max-height":(height)+"px"});
-        $(this).find('.input-group .input-info').css({"width":(height)+"px"});
+    $('.form').each(function(){//使得form中的span具有tab属性
+        $(this).find('.file').attr("tabIndex", "0");
+    });
+
+    $('.input-info').each(function(){
+        var height = $(this).parent('.input-group')
+            .children('input').height();//解决input-info中使用radio、checkbox的大小问题
+        $(this).css({"height":(height)+"px","width":(height)+"px"});
     });
 
 });
