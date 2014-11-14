@@ -14,11 +14,13 @@
 
 .list-chooseable {
   >.list-item {
+    padding: 0 .5em;
     cursor: pointer;
     >a {
       display: block;
       width: 100%;
       height: auto;
+      padding: 1em 0;
       text-decoration: none;
     }
   }
@@ -26,7 +28,20 @@
 
 .list-touchmovable {
   >.list-item {
+  }
+}
 
+.list-touchmoved {
+    position: relative;
+    left: -2em;
+  &:after {
+    content: '删除';
+    position: absolute;
+    top: 0;
+    right: -2.5em;
+    padding: 1em .5em;
+    background-color: #ff0000;
+    color: #ffffff;
   }
 }
 

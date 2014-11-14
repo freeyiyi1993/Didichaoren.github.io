@@ -26,25 +26,23 @@
   -moz-transition: @arguments;
   transition: @arguments;
 }
-//---------------------------------------------------------------
-
-
-
 //----------------------------修改所有input的placeholder的默认色-----------------------------------
-::-webkit-input-placeholder {
-  color: #d8d8d8;
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #b8b8b8;
 }
-:-moz-placeholder {/* Firefox 18- */
-  color: #d8d8d8;
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #b8b8b8;
 }
-::-moz-placeholder{/* Firefox 19+ */
-  color: #d8d8d8;
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #b8b8b8;
 }
-:-ms-input-placeholder {//IE私有属性
-  color: #d8d8d8;
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #b8b8b8;
 }
 
-input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文本框默认发光边框
+//去除Chrome等浏览器文本框默认发光边框
+input:focus,textarea:focus,select:focus,span:focus{
   outline: none;
 }
 
@@ -70,22 +68,26 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 .form select,
 .form textarea,
 .form input:not([type]){
+  color: white;
   padding: 0.5em 1em;
   display: inline-block;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #454545;
   border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
   -webkit-tap-highlight-color: transparent;/*苹果设备的点击阴影屏蔽，使效果统一*/
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  .transition-setting(border-color.3s);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.1);
+  background-color: #454545;
+  .transition-setting(all .3s);
+  .transition-setting(background-color .2s);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   &:hover {
-    border-color: #d8d8d8;
+    background-color: black;
   }
   &:focus {
+    background-color: #000000;
     border: 1px solid #8fe1fd;
     box-shadow: 0px 0px 10px rgba(143,225,253,0.6);
     .transition-setting(box-shadow ease-in-out 0.3s);//transition竟然不支持box-shadow的过度!疯了@！
@@ -93,9 +95,8 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   &[disabled]{
     cursor: not-allowed;
     box-shadow: none;
-    background-color: #f6f6f6;
+    background-color: #999999;
     border: 1px solid #f6f6f6;
-    color: #e0e0e0;
   }
 }
 
@@ -103,9 +104,9 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 //----------------------------Type="Color"-----------------------------------
 .form select{//宽度与表单一致 长度待定
   padding: 0.5em 1em;
+  background-color: #000000;
 }
 
-//.form input[type="file"],
 .form input[type="radio"],
 .form input[type="checkbox"]{
   &:focus {
@@ -134,9 +135,12 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 .form input[readonly],//只读读文本
 .form select[readonly],
 .form textarea[readonly] {
-  background: #f6f6f6;
-  color:#434343;
+  background: #999999;
+  color: white;
   border-color: #d8d8d8;
+  &:hover{
+    background: #999999;
+  }
 }
 
 
@@ -161,14 +165,14 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
 
 .form select {
   border: 1px solid #ccc;
-  background-color: white;
+  background-color: #454545;
 }
 
 .form select[multiple] {//同时选中多个选框
   height: auto;
 }
 .form label {
-  color:#333333;
+  color:#454545;
   margin: 0.5em 0 0.2em;
   font-family: @font-family;
 }
@@ -184,7 +188,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   margin-bottom: 0.4em;
   font-family: @font-family;
   font-size: 110%;
-  color: #333333;
+  color: #454545;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -405,7 +409,7 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   text-align: center;
   vertical-align: middle;
   display: inline-block;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #f2f2f2;
   border-radius: 0px;
   font-family: @font-family;
   box-shadow: none;
@@ -485,9 +489,9 @@ input:focus,textarea:focus,select:focus,span:focus{//去除Chrome等浏览器文
   margin-top: 0.3em;
   padding:0.4em 0.8em;
   display:inline-block;
-  border:1px solid #ccc;
-  background:#e6e6e6;
-  color:#434343;
+  border:1px solid white;
+  background: #454545;
+  color:white;
   font-family: @font-family;
   text-align:center;
   overflow:hidden;
