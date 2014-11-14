@@ -8,6 +8,8 @@
     <link type="text/less" rel="stylesheet/less" href="../less/grids.less">
     <link type="text/less" rel="stylesheet/less" href="../less/alerts.less">
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/progress.js"></script>
 </head>
 <body>
 <img class="img" src="../image/background.png" alt="img" width="180px" height="180px">
@@ -27,14 +29,26 @@
     <div class="mi-content">简单易用，BLALADFJW2OIRUSLFJA;FKLJCF </div>
 </div>
 
-<div class="pure-u-1-2 progressbar">
-    <div style="width: 72%">
-        72%
-    </div>
+
+<div class="pure-u-1-2 img-group-4">
+    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/background.png">
 </div>
 
 <div class="pure-u-1-2 progressbar">
-    <div style="width: 20%">
+    <div></div>
+</div>
+
+<script>
+    $('.progressbar').progress({curValue:40,hasStrip:true}).progress("animate");
+</script>
+
+<div class="pure-u-1-2 progressbar">
+    <div style="width: 1%">
         20%
     </div>
 </div>
