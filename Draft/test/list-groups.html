@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../less/list-groups.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
+    <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/list-groups.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="pure-u-1-2 list-group list-chooseable">
+    <div class="list-item">
+        AOE啊哦额
+    </div>
+    <div class="list-item">
+        asdfasdfa
+    </div>
+    <div class="list-item">
+        asdfasdfa
+    </div>
+    <div class="list-item list-touchmovable">
+        asdfasdfa
+    </div>
+    <div class="list-item">
+        <a href="#">yayayyfdsfd</a>
+    </div>
+</div>
+<script>
+    $('.list-group').listGroup('swipe');
+</script>
+<br>
+<div class="pure-u-1-2 list-group list-organ">
+    <div class="list-item">
+        AOE啊哦额
+    </div>
+    <div class="list-content">aaa</div>
+    <div class="list-item">
+        asdfasdfa
+    </div>
+    <div class="list-content">bbb</div>
+    <div class="list-item">
+        asdfasdfa
+    </div>
+    <div class="list-content">ccc</div>
+    <div class="list-item list-touchmovable">
+        asdfasdfa
+    </div>
+    <div class="list-content">ddd</div>
+    <div class="list-item">
+        <a href="#">yayayyfdsfd</a>
+    </div>
+    <div class="list-content">eee</div>
+</div>
+<script>
+    $('.list-organ').listGroup('organ');
+</script>
+</body>
+</html>

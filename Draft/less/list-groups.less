@@ -1,0 +1,44 @@
+.list-group {
+  padding: 1em;
+  >.list-item {
+    padding: 1em .5em;
+    border-bottom: solid .1em #d6d6d6;
+    &:first-child {
+      border-top: solid .1em #d6d6d6;
+    }
+    &:hover {
+      background-color: #efefef;
+    }
+  }
+}
+
+.list-chooseable {
+  >.list-item {
+    cursor: pointer;
+    >a {
+      display: block;
+      width: 100%;
+      height: auto;
+      text-decoration: none;
+    }
+  }
+}
+
+.list-touchmovable {
+  >.list-item {
+
+  }
+}
+
+.list-content {
+  display: none;
+  padding: 1em;
+  border: .1em solid #d6d6d6;
+}
+
+.list-organ {
+  >.list-item {
+    background-color: #efefef;
+    cursor: pointer;
+  }
+}
