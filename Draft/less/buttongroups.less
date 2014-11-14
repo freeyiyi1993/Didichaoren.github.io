@@ -98,15 +98,23 @@
   border-bottom-left-radius: 0;
 }
 /*这些大小必须写在各种按钮div之外。大小与分别对单一按钮使用了大小类一致。*/
-.btn-group-xl > .btn {
+.btn-group-xl > .btn,
+.btn-toolbar-xl > .btn-group > .btn,
+.btn-toolbar-xl > .btn-group-gap > .btn{
   font-size: 125%;
 }
-.btn-group-lg > .btn {
+.btn-group-lg > .btn,
+.btn-toolbar-lg > .btn-group > .btn,
+.btn-toolbar-lg > .btn-group-gap > .btn{
   font-size: 110%;
 }
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.btn-toolbar-sm > .btn-group > .btn,
+.btn-toolbar-sm > .btn-group-gap > .btn{
   font-size: 85%;
 }
-.btn-group-xs > .btn {
+.btn-group-xs > .btn,
+.btn-toolbar-xs > .btn-group > .btn,
+.btn-toolbar-xs > .btn-group-gap > .btn{
   font-size: 70%;
 }
