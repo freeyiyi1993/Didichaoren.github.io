@@ -14,34 +14,34 @@
 @default-c:#b0b0b0;
 @default-d:#ebebeb;
 
-@primary-a:#73dcff;
-@primary-b:#50c0e6;
-@primary-c:#43a0bf;
-@primary-d:#a6e9ff;
+@skyblue-a:#73dcff;
+@skyblue-b:#50c0e6;
+@skyblue-c:#43a0bf;
+@skyblue-d:#a6e9ff;
 
-@info-a:#259bf5;
-@info-b:#0a7acf;
-@info-c:#0863a8;
-@info-d:#87c5f5;
+@blue-a:#259bf5;
+@blue-b:#0a7acf;
+@blue-c:#0863a8;
+@blue-d:#87c5f5;
 
-@success-a:#65e1a3;
-@success-b:#46c786;
-@success-c:#34ad71;
-@success-d:#92e0b9;
+@green-a:#65e1a3;
+@green-b:#46c786;
+@green-c:#34ad71;
+@green-d:#92e0b9;
 
-@warning-a:#ffb24c;
-@warning-b:#ff9100;
-@warning-c:#bf7d26;
-@warning-d:#ffc880;
+@orange-a:#ffb24c;
+@orange-b:#ff9100;
+@orange-c:#bf7d26;
+@orange-d:#ffc880;
 
-@error-a:#ee3b3b;
-@error-b:#d42020;
-@error-c:#ad1a1a;
-@error-d:#ed8e8e;
+@red-a:#ee3b3b;
+@red-b:#d42020;
+@red-c:#ad1a1a;
+@red-d:#ed8e8e;
 
 @link-b:#008bf5;
 @link-d:#6ebaf5;
-//link-a,link-b分别使用info-a和info-b。
+//link-a,link-b分别使用blue-a和blue-b。
 
 @yl-d:#e0e0e0;
 
@@ -84,8 +84,8 @@
   width: 100%;
 }
 
-.btn-fl-s,.btn-fl-r,
-.btn-lu-s,.btn-lu-r,.btn-link{
+.btn-fl,.btn-fl,
+.btn-lu,.btn-lu,.btn-link{
   .btn;
 }
 
@@ -96,36 +96,22 @@
   -moz-box-shadow: @arguments;
   box-shadow: @arguments;
 }
-//default: 0.5em,1em;
 .btn-size(@top:0.5em,@right:1em,@bottom:0.5em,@left:1em) {
   padding: @arguments;
 }
 
 
-/*...................................透明边框系列类....................................*/
+/*...................................按钮形状....................................*/
 
-.btn-lu-r {
-  border-radius: 60px;
-}
-
-.btn-lu-s {
+.btn-lu,
+.btn-fl{
   border-radius: 0px;
 }
-
-.btn-lu-r,
-.btn-lu-s {
+.btn-r{
+  border-radius: 60px;
+}
+.btn-lu{
   background: transparent;
-
-}
-
-/*...................................无边框扁平系列类....................................*/
-
-.btn-fl-r {
-  border-radius: 60px;
-}
-
-.btn-fl-s {
-  border-radius: 0px;
 }
 
 /*........................................Link按钮类...................................*/
@@ -133,14 +119,14 @@
 .btn-link {/*Link按钮*/
   border: 0px solid ;
   background: transparent;
-  color: @info-a;
+  color: @blue-a;
   &:hover ,&:focus {
     text-decoration: underline;
     color: @link-b;
   }
   &:active,&.active{
     text-decoration: underline;
-    color: @info-c;
+    color: @blue-c;
   }
 }
 
@@ -189,7 +175,7 @@
 /*......................................透明按钮颜色的分类动作.....................................*/
 
 
-.btn-lu-default {
+.btn-lu.default,{
   border: 1px solid @default-b;
   color:black;
   &:hover ,&:focus {
@@ -208,104 +194,104 @@
 }
 
 
-.btn-lu-info {
-  border: 1px solid @info-a;
-  color: @info-a;
+.btn-lu.blue{
+  border: 1px solid @blue-a;
+  color: @blue-a;
   &:hover ,&:focus {
-    background-color: @info-a;
+    background-color: @blue-a;
     color: white;
   }
   &:active,&.active {
     color: white;
-    border: 1px solid @info-b;
-    background-color: @info-b;
+    border: 1px solid @blue-b;
+    background-color: @blue-b;
   }
   &[disabled]{
-    border: 1px solid @info-d;
-    color:@info-d;
+    border: 1px solid @blue-d;
+    color:@blue-d;
   }
 }
 
 
-.btn-lu-primary {
-  /*primary颜色类*/
-  border: 1px solid @primary-a;
-  color: @primary-a;
+.btn-lu.skyblue{
+  /*skyblue颜色类*/
+  border: 1px solid @skyblue-a;
+  color: @skyblue-a;
   &:hover ,&:focus {
-    background-color: @primary-a;
+    background-color: @skyblue-a;
     color: white;
   }
   &:active,&.active {
     color: white;
-    border: 1px solid @primary-b;
-    background-color: @primary-b;
+    border: 1px solid @skyblue-b;
+    background-color: @skyblue-b;
   }
   &[disabled]{
-    border: 1px solid @primary-d;
-    color:@primary-d;
+    border: 1px solid @skyblue-d;
+    color:@skyblue-d;
   }
 }
 
-.btn-lu-success {
-  /*success颜色类*/
-  border: 1px solid @success-a;
-  color: @success-a;
+.btn-lu.green{
+  /*green颜色类*/
+  border: 1px solid @green-a;
+  color: @green-a;
   &:hover ,&:focus {
-    background-color: @success-a;
+    background-color: @green-a;
     color: white;
   }
   &:active,&.active {
     color: white;
-    border: 1px solid @success-b;
-    background-color: @success-b;
+    border: 1px solid @green-b;
+    background-color: @green-b;
   }
   &[disabled]{
-    border: 1px solid @success-d;
-    color:@success-d;
+    border: 1px solid @green-d;
+    color:@green-d;
   }
 }
 
 
-.btn-lu-warning{
-  border: 1px solid @warning-a;
-  color:@warning-a;
+.btn-lu.orange{
+  border: 1px solid @orange-a;
+  color:@orange-a;
   &:hover ,&:focus {
-    background-color: @warning-a;
+    background-color: @orange-a;
     color: white;
   }
   &:active,&.active {
     color: white;
-    border: 1px solid @warning-b;
-    background-color: @warning-b;
+    border: 1px solid @orange-b;
+    background-color: @orange-b;
   }
   &[disabled]{
-    border: 1px solid @warning-d;
-    color:@warning-d;
+    border: 1px solid @orange-d;
+    color:@orange-d;
   }
 }
 
-.btn-lu-error {
-  border: 1px solid @error-a;
-  color: @error-a;
+.btn-lu.red{
+  border: 1px solid @red-a;
+  color: @red-a;
   &:hover ,&:focus {
-    background-color: @error-a;
+    background-color: @red-a;
     color: white;
   }
   &:active,&.active {
     color: white;
-    border: 1px solid @error-b;
-    background-color: @error-b;
+    border: 1px solid @red-b;
+    background-color: @red-b;
   }
   &[disabled]{
-    border: 1px solid @error-d;
-    color:@error-d;
+    border: 1px solid @red-d;
+    color:@red-d;
   }
 }
 
 
 /*......................................全色按钮颜色的分类动作.....................................*/
 
-.btn-fl-default {
+.btn-fl.default{
   border: 1px solid transparent;
   background: @default-a;
   color:black;
@@ -327,126 +313,132 @@
   }
 }
 
-.btn-fl-info {
+.btn-fl.blue{
   border: 1px solid transparent;
-  background: @info-a;
+  background: @blue-a;
   color: white;
   &:hover ,&:focus {
     border: 1px solid transparent;
-    background: @info-b;
+    background: @blue-b;
     color: white;
   }
   &:active,&.active {
-    border: 1px solid @info-c;
-    background: @info-b;
+    border: 1px solid @blue-c;
+    background: @blue-b;
     color: white;
-    .box-shadow-inset-setting(inset, 0, 2px, 8px, @info-c);
+    .box-shadow-inset-setting(inset, 0, 2px, 8px, @blue-c);
   }
   &[disabled]{
     border: 1px solid transparent;
-    background: @info-d;
+    background: @blue-d;
     color: white;
   }
 }
 
-.btn-fl-primary {
+.btn-fl.skyblue{
   border: 1px solid transparent;
-  background: @primary-a;
+  background: @skyblue-a;
   color: white;
   &:hover ,&:focus {
     border: 1px solid transparent;
-    background: @primary-b;
+    background: @skyblue-b;
     color:white;
   }
   &:active,&.active {
-    border: 1px solid @primary-c;
-    background: @primary-b;
+    border: 1px solid @skyblue-c;
+    background: @skyblue-b;
     color:white;
-   .box-shadow-inset-setting(inset,0,2px,8px,@primary-c);
+   .box-shadow-inset-setting(inset,0,2px,8px,@skyblue-c);
   }
   &[disabled]{
     border: 1px solid transparent;
-    background: @primary-d;
+    background: @skyblue-d;
     color: white;
   }
 }
 
-.btn-fl-success {
+.btn-fl.green{
   border: 1px solid transparent;
-  background: @success-a;
+  background: @green-a;
   color: white;
   &:hover ,&:focus {
     border: 1px solid transparent;
-    background: @success-b;
+    background: @green-b;
     color:white;
   }
   &:active,&.active {
-     border: 1px solid @success-c;
-     background: @success-b;
+     border: 1px solid @green-c;
+     background: @green-b;
      color:white;
-     .box-shadow-inset-setting(inset,0,2px,8px,@success-c);
+     .box-shadow-inset-setting(inset,0,2px,8px,@green-c);
    }
   &[disabled]{
     border: 1px solid transparent;
-    background: @success-d;
+    background: @green-d;
     color: white;
   }
 }
 
-.btn-fl-warning {
+.btn-fl.orange{
   border: 1px solid transparent;
-  background: @warning-a;
+  background: @orange-a;
   color: white;
   &:hover ,&:focus {
     border: 1px solid transparent;
-    background: @warning-b;
+    background: @orange-b;
     color:white;
   }
   &:active,&.active {
-     border: 1px solid @warning-c;
-     background: @warning-b;
+     border: 1px solid @orange-c;
+     background: @orange-b;
      color:white;
-     .box-shadow-inset-setting(inset,0,2px,8px,@warning-c);
+     .box-shadow-inset-setting(inset,0,2px,8px,@orange-c);
    }
   &[disabled]{
     border: 1px solid transparent;
-    background: @warning-d;
+    background: @orange-d;
     color: white;
   }
 }
 
-.btn-fl-error {
+.btn-fl.red{
   border: 1px solid transparent;
-  background: @error-a;
+  background: @red-a;
   color: white;
   &:hover ,&:focus {
     border: 1px solid transparent;
-    background: @error-b;
+    background: @red-b;
     color:white;
   }
   &:active,&.active {
-    border: 1px solid @error-c;
-    background: @error-b;
+    border: 1px solid @red-c;
+    background: @red-b;
     color:white;
-    .box-shadow-inset-setting(inset,0,2px,8px,@error-c);
+    .box-shadow-inset-setting(inset,0,2px,8px,@red-c);
   }
   &[disabled]{
     border: 1px solid transparent;
-    background: @error-d;
+    background: @red-d;
     color: white;
   }
 }
 
 /*A标签的按钮类问题解决*/
-a.btn-fl-s,.btn-fl-r,
-.btn-lu-s,.btn-lu-r,.btn-yl:link{
+a.btn-fl:link,
+a.btn-lu:link,
+a.btn-yl:link{
   text-decoration:none;
 }
-a.btn-fl-s,.btn-fl-r,
-.btn-lu-s,.btn-lu-r,.btn-yl:visited{
+a.btn-fl:visited,
+a.btn-lu:visited,
+a.btn-yl:visited{
   text-decoration:none;
 }
-a.btn-fl-s,.btn-fl-r,
-.btn-lu-s,.btn-lu-r,.btn-yl:active,&.active{
+a.btn-fl:active,
+a.btn-lu:active,
+a.btn-yl:active,
+a.btn-fl.active,
+a.btn-lu.active,
+a.btn-yl.active{
   text-decoration:none;
 }
