@@ -53,7 +53,7 @@
 @font-size-xs:70%;
 //------------------------------------------------------
 
-.btn(){
+.btn{
   position: relative;
   display: inline-block;
   margin: 0 auto;
@@ -84,12 +84,6 @@
   width: 100%;
 }
 
-.btn-fl,.btn-fl,
-.btn-lu,.btn-lu,.btn-link{
-  .btn;
-}
-
-
 //inset-box-shadow
 .box-shadow-inset-setting(@inset:inset,@x:0,@y:2,@radius:8px,@color:@default-c) {
   -webkit-box-shadow: @arguments;
@@ -101,24 +95,10 @@
 }
 
 
-/*...................................按钮形状....................................*/
-
-.btn-lu,
-.btn-fl{
-  border-radius: 0px;
-}
-.btn-r{
-  border-radius: 60px;
-}
-.btn-lu{
-  background: transparent;
-}
-
 /*........................................Link按钮类...................................*/
 
 .btn-link {/*Link按钮*/
   border: 0px solid ;
-  background: transparent;
   color: @blue-a;
   &:hover ,&:focus {
     text-decoration: underline;
@@ -138,7 +118,6 @@
 
 /*...................................幽霊按钮系列类....................................*/
 .btn-yl {
-  background-color: transparent;
   border-radius: 0px;
   color: white;
   border: 1px solid;
@@ -155,6 +134,20 @@
     color: @yl-d;
   }
 }
+
+/*...................................按钮形状....................................*/
+
+.btn-lu,
+.btn-fl{
+  border-radius: 0px;
+}
+.btn-r{
+  border-radius: 60px;
+}
+.btn-lu,.btn-yl,.btn-link{
+  background: transparent;
+}
+
 /*.....................................按钮大小类.....................................*/
 
 .btn-xl {
