@@ -71,20 +71,22 @@ input:focus,textarea:focus,select:focus,span:focus{
   color: white;
   padding: 0.5em 1em;
   display: inline-block;
-  border: 1px solid #454545;
+  border: 1px solid #333333;
   border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
   -webkit-tap-highlight-color: transparent;/*苹果设备的点击阴影屏蔽，使效果统一*/
-  box-shadow: inset 0 1px 1px rgba(255,255,255,.1);
-  background-color: #454545;
+  background-color: #333333;
   .transition-setting(all .3s);
-  .transition-setting(background-color .2s);
+  -moz-transition:all ease-in-out .3s;
+  -webkit-transition:all ease-in-out .3s;
+  transition: all ease-in-out .3s;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   &:hover {
     background-color: black;
+    border: 1px solid black;
   }
   &:focus {
     background-color: #000000;
@@ -96,7 +98,7 @@ input:focus,textarea:focus,select:focus,span:focus{
     cursor: not-allowed;
     box-shadow: none;
     background-color: #999999;
-    border: 1px solid #f6f6f6;
+    border: 1px solid #999999;
   }
 }
 
@@ -137,9 +139,14 @@ input:focus,textarea:focus,select:focus,span:focus{
 .form textarea[readonly] {
   background: #999999;
   color: white;
-  border-color: #d8d8d8;
+  border-color: #999999;
   &:hover{
     background: #999999;
+    border: 1px solid #999999;
+  }
+  &:focus{
+    background-color: #999999;
+    border: 1px solid #73dcff;
   }
 }
 
@@ -165,14 +172,14 @@ input:focus,textarea:focus,select:focus,span:focus{
 
 .form select {
   border: 1px solid #ccc;
-  background-color: #454545;
+  background-color: #333333;
 }
 
 .form select[multiple] {//同时选中多个选框
   height: auto;
 }
 .form label {
-  color:#454545;
+  color:#333333;
   margin: 0.5em 0 0.2em;
   font-family: @font-family;
 }
@@ -188,7 +195,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   margin-bottom: 0.4em;
   font-family: @font-family;
   font-size: 110%;
-  color: #454545;
+  color: #333333;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -313,11 +320,11 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 
 //-----------------------------组input----------------------------------
-.form .group fieldset {
+.form .form-group fieldset {
   margin-bottom: 10px;
 }
 
-.form .group input {
+.form .form-group input {
   display: block;
   padding: 10px 1em;
   margin: 0;
@@ -325,19 +332,25 @@ input:focus,textarea:focus,select:focus,span:focus{
   position: relative;
   top: -1px;
 }
-.form .group input:focus {
+.form .form-group > input:not(:first-child){
+  border-top: 1px solid #222222;
+  &:focus{
+    border-top:1px solid #73dcff;
+  }
+}
+.form .form-group input:focus {
   z-index: 2;
 }
-.form .group input:first-child {
+.form .form-group input:first-child {
   top: 1px;
 //  border-top-right-radius: 10px;
 
 }
-.form .group input:last-child {
+.form .form-group input:last-child {
   top: -2px;
 //  border-bottom-left-radius: 10px;
 }
-.form .group button {
+.form .form-group button {
   margin: 0.35em 0;
 }
 
@@ -409,11 +422,11 @@ input:focus,textarea:focus,select:focus,span:focus{
   text-align: center;
   vertical-align: middle;
   display: inline-block;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e6e6e6;
   border-radius: 0px;
   font-family: @font-family;
   box-shadow: none;
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
   color: #434343;
 }
 
@@ -444,21 +457,21 @@ input:focus,textarea:focus,select:focus,span:focus{
   }
 
 
-  .group input:not([type]),
-  .group input[type="text"],
-  .group input[type="password"],
-  .group input[type="email"],
-  .group input[type="url"],
-  .group input[type="date"],
-  .group input[type="month"],
-  .group input[type="time"],
-  .group input[type="datetime"],
-  .group input[type="datetime-local"],
-  .group input[type="week"],
-  .group input[type="number"],
-  .group input[type="search"],
-  .group input[type="tel"],
-  .group input[type="color"] {
+  .form-group input:not([type]),
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"],
+  .form-group input[type="url"],
+  .form-group input[type="date"],
+  .form-group input[type="month"],
+  .form-group input[type="time"],
+  .form-group input[type="datetime"],
+  .form-group input[type="datetime-local"],
+  .form-group input[type="week"],
+  .form-group input[type="number"],
+  .form-group input[type="search"],
+  .form-group input[type="tel"],
+  .form-group input[type="color"] {
     margin-bottom: 0;
   }
 
@@ -489,18 +502,18 @@ input:focus,textarea:focus,select:focus,span:focus{
   margin-top: 0.3em;
   padding:0.4em 0.8em;
   display:inline-block;
-  border:1px solid white;
-  background: #454545;
+  border:1px solid #333333;
+  background: #333333;
   color:white;
   font-family: @font-family;
   text-align:center;
   overflow:hidden;
   position:relative;
-  -moz-transition: border-color ease-in-out;
-  -webkit-transition:  border-color ease-in-out;
-  transition: border-color ease-in-out;
+  -moz-transition:background-color ease-in-out .3s;
+  -webkit-transition:background-color ease-in-out .3s;
+  transition: background-color ease-in-out .3s;
   &:hover {
-    border: 1px solid #73dcff;
+    background-color: #000000;
   }
   &:focus{
     border: 1px solid #8fe1fd;
@@ -511,7 +524,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 .file+label{
    margin-top:0;
    font-size:80%;
-   color:#a2a2a2;
+   color:#333333;
 }
 .fbtn {
   width: 125px;
