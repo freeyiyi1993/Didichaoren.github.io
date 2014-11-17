@@ -12,9 +12,25 @@
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/forms.js"></script>
     <script src="../javascript/other-forms.js"></script>
+    <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+    </style>
 </head>
 
 <body>
+<div id="div1"><img src="../image/background.png" /></div>
 
 <div class="pure-g">
     <div class="pure-u-1-8"></div>
@@ -150,13 +166,13 @@
     <br /><br />
 <form class="form">
     <legend>Collie-UI 表单组测试</legend>
-    <fieldset class="group">
+    <fieldset class="form-group">
         <input type="text" class="input-1-2" placeholder="Username">
         <input type="text" class="input-1-2" placeholder="Password">
         <input type="email" class="input-1-2" placeholder="Email">
     </fieldset>
 
-    <fieldset class="group">
+    <fieldset class="form-group">
         <input type="text" class="input-1-2" placeholder="Another Group">
         <input type="text" class="input-1-2" placeholder="More Stuff">
     </fieldset>
