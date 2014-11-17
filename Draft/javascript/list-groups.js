@@ -16,9 +16,39 @@
                 direction: 'left'
             };
             var settings = $.extend(defaults,options);
+            var touchEvents = {
+                touchstart: 'touchstart',
+                touchmove: 'touchmove',
+                touchend: 'touchend'
+            };
             return this.each(function () {
-                $(this).bind('click', function () {
-                    
+                var startX;
+                if(!navigator.userAgent.match(/mobile/i)){
+                    touchEvents.touchstart = 'mousedown';
+                    touchEvents.touchmove = 'mousemove';
+                    touchEvents.touchend = 'mouseup';
+                }
+                $(this).children().bind(touchEvents.touchstart, function (event) {
+                    event.preventDefault();
+                    startX = event.pageX;
+
+                }).bind(touchEvents.touchmove, function (event) {
+                    event.preventDefault();
+
+                }).bind(touchEvents.touchend, function (event) {
+                    event.preventDefault();
+                    if((startX-event.pageX)>20) {
+                        $(this).siblings().children().removeClass('list-touchmoved');
+                        $(this).children().addClass('list-touchmoved');
+                    }
+                    else if ((startX-event.pageX)<-10) {
+                        $(this).children().removeClass('list-touchmoved');
+                    }
+                });
+                $('.list-touchmoved').on('click', function (event) {
+                    event.preventDefault();
+                   $(this).hide();
+                    console.log('12ss3');
                 });
             });
         },
