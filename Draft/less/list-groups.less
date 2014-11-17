@@ -22,26 +22,55 @@
       height: auto;
       padding: 1em 0;
       text-decoration: none;
+      &:link {
+        color: inherit;
+      }
+      &:visited {
+        color: inherit;
+      }
     }
   }
 }
 
 .list-touchmovable {
   >.list-item {
+    overflow: hidden;
+  }
+  span {
+    display: none;
   }
 }
 
 .list-touchmoved {
-    position: relative;
-    left: -2em;
-  &:after {
-    content: '删除';
+  position: relative;
+  left: -2em;
+  animation: touchmovedleft .5s;
+  >span {
+    display: inline;
     position: absolute;
     top: 0;
     right: -2.5em;
     padding: 1em .5em;
     background-color: #ff0000;
     color: #ffffff;
+    animation: touchmovedright .5s;
+  }
+}
+
+@keyframes touchmovedleft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -2em;
+  }
+}
+@keyframes touchmovedright {
+  from {
+    right: -4em;
+  }
+  to {
+    right: -2.5em;
   }
 }
 

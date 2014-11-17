@@ -13,7 +13,7 @@
         },
         swipe: function (options) {
             var defaults = {
-                direction: 'left'
+                content: '删除'
             };
             var settings = $.extend(defaults,options);
             var touchEvents = {
@@ -39,15 +39,16 @@
                     event.preventDefault();
                     if((startX-event.pageX)>20) {
                         $(this).siblings().children().removeClass('list-touchmoved');
-                        $(this).children().addClass('list-touchmoved');
+                        $(this).children().addClass('list-touchmoved').append('<span>'+settings.content+'</span>');
                     }
                     else if ((startX-event.pageX)<-10) {
-                        $(this).children().removeClass('list-touchmoved');
+                        $(this).children().removeClass('list-touchmoved').animate()
+                        ;
                     }
                 });
-                $('.list-touchmoved').on('click', function (event) {
+                $('.list-touchmovable').on('click','.list-touchmoved>span', function (event) {
                     event.preventDefault();
-                   $(this).hide();
+                    $(this).parents('.list-item').hide();
                     console.log('12ss3');
                 });
             });
