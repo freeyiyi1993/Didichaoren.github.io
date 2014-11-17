@@ -71,22 +71,20 @@ input:focus,textarea:focus,select:focus,span:focus{
   color: white;
   padding: 0.5em 1em;
   display: inline-block;
-  border: 1px solid #333333;
+  border: 1px solid #454545;
   border-radius: 0px;
   font-size: 100%;
   font-family: @font-family;
   -webkit-tap-highlight-color: transparent;/*苹果设备的点击阴影屏蔽，使效果统一*/
-  background-color: #333333;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.1);
+  background-color: #454545;
   .transition-setting(all .3s);
-  -moz-transition:all ease-in-out .3s;
-  -webkit-transition:all ease-in-out .3s;
-  transition: all ease-in-out .3s;
+  .transition-setting(background-color .2s);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   &:hover {
     background-color: black;
-    border: 1px solid black;
   }
   &:focus {
     background-color: #000000;
@@ -98,7 +96,7 @@ input:focus,textarea:focus,select:focus,span:focus{
     cursor: not-allowed;
     box-shadow: none;
     background-color: #999999;
-    border: 1px solid #999999;
+    border: 1px solid #f6f6f6;
   }
 }
 
@@ -132,6 +130,9 @@ input:focus,textarea:focus,select:focus,span:focus{
   font-family: @font-family;
   margin: 0.5em 0;
   display: inline-block;
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
 
 .form input[readonly],//只读读文本
@@ -139,14 +140,9 @@ input:focus,textarea:focus,select:focus,span:focus{
 .form textarea[readonly] {
   background: #999999;
   color: white;
-  border-color: #999999;
+  border-color: #d8d8d8;
   &:hover{
     background: #999999;
-    border: 1px solid #999999;
-  }
-  &:focus{
-    background-color: #999999;
-    border: 1px solid #73dcff;
   }
 }
 
@@ -172,16 +168,18 @@ input:focus,textarea:focus,select:focus,span:focus{
 
 .form select {
   border: 1px solid #ccc;
-  background-color: #333333;
+  background-color: #454545;
 }
 
 .form select[multiple] {//同时选中多个选框
   height: auto;
 }
 .form label {
-  color:#333333;
+  color:#454545;
   margin: 0.5em 0 0.2em;
   font-family: @font-family;
+  height: inherit;
+  vertical-align: middle;
 }
 .form fieldset {
   margin: 0;
@@ -195,7 +193,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   margin-bottom: 0.4em;
   font-family: @font-family;
   font-size: 110%;
-  color: #333333;
+  color: #454545;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -320,11 +318,11 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 
 //-----------------------------组input----------------------------------
-.form .form-group fieldset {
+.form .group fieldset {
   margin-bottom: 10px;
 }
 
-.form .form-group input {
+.form .group input {
   display: block;
   padding: 10px 1em;
   margin: 0;
@@ -332,25 +330,19 @@ input:focus,textarea:focus,select:focus,span:focus{
   position: relative;
   top: -1px;
 }
-.form .form-group > input:not(:first-child){
-  border-top: 1px solid #222222;
-  &:focus{
-    border-top:1px solid #73dcff;
-  }
-}
-.form .form-group input:focus {
+.form .group input:focus {
   z-index: 2;
 }
-.form .form-group input:first-child {
+.form .group input:first-child {
   top: 1px;
 //  border-top-right-radius: 10px;
 
 }
-.form .form-group input:last-child {
+.form .group input:last-child {
   top: -2px;
 //  border-bottom-left-radius: 10px;
 }
-.form .form-group button {
+.form .group button {
   margin: 0.35em 0;
 }
 
@@ -422,11 +414,11 @@ input:focus,textarea:focus,select:focus,span:focus{
   text-align: center;
   vertical-align: middle;
   display: inline-block;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #f2f2f2;
   border-radius: 0px;
   font-family: @font-family;
   box-shadow: none;
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   color: #434343;
 }
 
@@ -457,21 +449,21 @@ input:focus,textarea:focus,select:focus,span:focus{
   }
 
 
-  .form-group input:not([type]),
-  .form-group input[type="text"],
-  .form-group input[type="password"],
-  .form-group input[type="email"],
-  .form-group input[type="url"],
-  .form-group input[type="date"],
-  .form-group input[type="month"],
-  .form-group input[type="time"],
-  .form-group input[type="datetime"],
-  .form-group input[type="datetime-local"],
-  .form-group input[type="week"],
-  .form-group input[type="number"],
-  .form-group input[type="search"],
-  .form-group input[type="tel"],
-  .form-group input[type="color"] {
+  .group input:not([type]),
+  .group input[type="text"],
+  .group input[type="password"],
+  .group input[type="email"],
+  .group input[type="url"],
+  .group input[type="date"],
+  .group input[type="month"],
+  .group input[type="time"],
+  .group input[type="datetime"],
+  .group input[type="datetime-local"],
+  .group input[type="week"],
+  .group input[type="number"],
+  .group input[type="search"],
+  .group input[type="tel"],
+  .group input[type="color"] {
     margin-bottom: 0;
   }
 
@@ -502,18 +494,18 @@ input:focus,textarea:focus,select:focus,span:focus{
   margin-top: 0.3em;
   padding:0.4em 0.8em;
   display:inline-block;
-  border:1px solid #333333;
-  background: #333333;
+  border:1px solid white;
+  background: #454545;
   color:white;
   font-family: @font-family;
   text-align:center;
   overflow:hidden;
   position:relative;
-  -moz-transition:background-color ease-in-out .3s;
-  -webkit-transition:background-color ease-in-out .3s;
-  transition: background-color ease-in-out .3s;
+  -moz-transition: border-color ease-in-out;
+  -webkit-transition:  border-color ease-in-out;
+  transition: border-color ease-in-out;
   &:hover {
-    background-color: #000000;
+    border: 1px solid #73dcff;
   }
   &:focus{
     border: 1px solid #8fe1fd;
@@ -524,7 +516,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 .file+label{
    margin-top:0;
    font-size:80%;
-   color:#333333;
+   color:#a2a2a2;
 }
 .fbtn {
   width: 125px;
@@ -564,4 +556,117 @@ input:focus,textarea:focus,select:focus,span:focus{
 .form textarea.input-xs,
 .form input:not([type]).input-xs{
   font-size: 70%;
+}
+
+input[type=checkbox] {//隐藏原有样式
+  visibility: hidden;
+}
+input[type=radio] {
+  visibility: hidden;
+}
+//Radio-input
+.radio-input {
+  display: inline-block;
+  margin: 0 0.3em;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 100%;
+  position: relative;//子元素寻找定位
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.radio-input label {//label坚决不能使用除了static的position 影响label:before的继承
+  display: inline-block;
+}
+.radio-input label:before{
+  content: "";
+  display: block;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  background: #333;
+  -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+
+.radio-input input[type="radio"]:checked + label:before {
+  background: #73dcff;
+}
+
+//Checkbox-input
+.checkbox-input{
+  display: inline-block;
+  margin: 0 0.3em;
+  width: 24px;
+  height: 24px;
+  background: #ddd;
+  position: relative;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+.checkbox-input label{
+  cursor: pointer;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  top: 3px;
+  left: 3px;
+  background: #333;
+  border-radius: 100%;
+  -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.checkbox-input label:after {
+  opacity: 0.3;
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  background: transparent;
+  top: 3px;
+  left: 3px;
+  border: 3px solid #73dcff;
+  border-top: none;
+  border-right: none;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: rotate(-45deg);//旋转45°制作对钩
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.checkbox-input label:hover::after {
+  opacity: 0.6;
+}
+
+
+.checkbox-input input[type=checkbox]:checked + label:after {
+  opacity: 1;
 }

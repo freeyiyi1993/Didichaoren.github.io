@@ -23,8 +23,8 @@ function get()
 
 $(document).ready(function(){
 
-    $('.form').each(function(){//使得form中的span具有tab属性
-        $(this).find('.file').attr("tabIndex", "0");
+    $('.form').each(function(){
+        $(this).find('.file').attr("tabIndex", "0");//使得form中的span具有tab属
     });
 
     $('.input-info').each(function(){
@@ -36,4 +36,17 @@ $(document).ready(function(){
         var height2 = $(this).parent('.input-group').children('input').height();
         $(this).css({"max-height":(height2)+1+"px"});
     });
+    $('input[type="radio"]').each(function(){
+        var radioid=$(this).attr('id');
+        $(this).wrap('<div class="radio-input"></div>');
+        $(this).after('<label for='+radioid+'></label>');
+    });
+    $('input[type="checkbox"]').each(function(){
+        var checkboxid=$(this).attr('id');
+        $(this).wrap('<div class="checkbox-input"></div>');
+        $(this).after('<label for='+checkboxid+'></label>');
+        $(this).parent('.label').css({"height":"24px","vertical":"middle"})
+    });
 });
+
+

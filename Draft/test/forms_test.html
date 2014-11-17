@@ -12,24 +12,10 @@
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/forms.js"></script>
     <script src="../javascript/other-forms.js"></script>
-    <style type="text/css">
-        div#div1{
-            position:fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            z-index:-1;
-        }
-        div#div1 > img {
-            height:100%;
-            width:100%;
-            border:0;
-        }
-    </style>
 </head>
+
 <body>
-<div id="div1"><img src="../image/background.png" /></div>
+
 <div class="pure-g">
     <div class="pure-u-1-8"></div>
 
@@ -164,13 +150,13 @@
     <br /><br />
 <form class="form">
     <legend>Collie-UI 表单组测试</legend>
-    <fieldset class="form-group">
+    <fieldset class="group">
         <input type="text" class="input-1-2" placeholder="Username">
         <input type="text" class="input-1-2" placeholder="Password">
         <input type="email" class="input-1-2" placeholder="Email">
     </fieldset>
 
-    <fieldset class="form-group">
+    <fieldset class="group">
         <input type="text" class="input-1-2" placeholder="Another Group">
         <input type="text" class="input-1-2" placeholder="More Stuff">
     </fieldset>
@@ -191,11 +177,12 @@
 
             <label for="email">checkbox&radio info提示测试</label>
             <div class="input-group">
-            <div class="input-info"><input type="checkbox"></div>
+            <div class="input-info"><input type="checkbox" id="inside"></div>
             <input class="pure-u-1-3" type="email" placeholder="Email">
         </div>
+
             <div class="input-group">
-                <div class="input-info"><input type="radio"></div>
+                <div class="input-info"><input type="radio" id="inside2"></div>
                 <input class="pure-u-1-3" type="email" placeholder="Email">
             </div>
 
@@ -274,26 +261,32 @@
             <legend>Collie-UI Checkbox表单测试</legend>
             <div class="checkbox">Checkbox:
                 <label>
-                    <input type="checkbox" value="">
-                    Option one is this and that&mdash;be sure to include why it's great
+                <input type="checkbox" id=test1 value="">
+                Option one is this and that&mdash;be sure to include why it's great
                 </label>
+
             </div>
             <div class="checkbox">
                 <label >
-                    <input type="checkbox" value="" disabled="disabled">
+                    <input id="test2" type="checkbox" value="" disabled="disabled">
                     Option two is disabled
                 </label>
             </div>
+
             <div class="checkbox">Checkbox-inline:
+
                 <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox1" value="option1">1
                 </label>
+
                 <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox2" value="option2">2
                 </label>
+
                 <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox3" value="option3">3
                 </label>
+
             </div><br />
 
         </fieldset>
@@ -332,9 +325,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">3
                     </label>
-
                 </div>
-
             </fieldset>
         </form>
 
@@ -404,7 +395,6 @@
             <input class="input-xs" type="email" placeholder=".input-xs">
         </fieldset>
     </form>
-
 </div>
     <div class="pure-u-1-8"></div>
 </div>
