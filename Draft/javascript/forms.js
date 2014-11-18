@@ -37,15 +37,26 @@ $(document).ready(function(){
         $(this).css({"max-height":(height2)+1+"px"});
     });
     $('input[type="radio"]').each(function(){
+        if($(this).attr('disabled')){
+            var radioid=$(this).attr('id');
+            $(this).wrap('<div class="radio-input" disabled="disabled"></div>');
+            $(this).after('<label for='+radioid+' disabled="disabled"></label>');
+        }else{
         var radioid=$(this).attr('id');
         $(this).wrap('<div class="radio-input"></div>');
         $(this).after('<label for='+radioid+'></label>');
+        }
     });
     $('input[type="checkbox"]').each(function(){
-        var checkboxid=$(this).attr('id');
-        $(this).wrap('<div class="checkbox-input"></div>');
-        $(this).after('<label for='+checkboxid+'></label>');
-        $(this).parent('.label').css({"height":"24px","vertical":"middle"})
+        if($(this).attr('disabled')){
+            var checkboxid=$(this).attr('id');
+            $(this).wrap('<div class="checkbox-input" disabled="disabled"></div>');
+            $(this).after('<label for='+checkboxid+' disabled="disabled"></label>');
+        }else {
+            var checkboxid = $(this).attr('id');
+            $(this).wrap('<div class="checkbox-input"></div>');
+            $(this).after('<label for=' + checkboxid + '></label>');
+        }
     });
 });
 

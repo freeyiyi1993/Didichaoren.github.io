@@ -109,22 +109,12 @@ input:focus,textarea:focus,select:focus,span:focus{
   background-color: #000000;
 }
 
-.form input[type="radio"],
-.form input[type="checkbox"]{
-  &:focus {
-    outline: thin dotted #333; //点组成的虚线 Firework 疑似没有作用
-    outline: 1px auto #73dcff; //边,配合基础色系的焦点状态 Chrome
-  }
-}
 .form .checkbox,
 .form .radio {
   font-size: 100%;
   font-family: @font-family;
   margin: 0.5em 0;
   display: block;
-  &[disabled]{
-    cursor: not-allowed;
-  }
 }
 .form .checkbox-inline,
 .form .radio-inline {
@@ -226,29 +216,29 @@ input:focus,textarea:focus,select:focus,span:focus{
   margin-top:0.25em;
 }
 
-.form-order .input-group input[type="text"],
-.form-order .input-group input[type="password"],
-.form-order .input-group input[type="email"],
-.form-order .input-group input[type="url"],
-.form-order .input-group input[type="date"],
-.form-order .input-group input[type="month"],
-.form-order .input-group input[type="time"],
-.form-order .input-group input[type="datetime"],
-.form-order .input-group input[type="datetime-local"],
-.form-order .input-group input[type="week"],
-.form-order .input-group input[type="number"],
-.form-order .input-group input[type="search"],
-.form-order .input-group input[type="tel"],
-.form-order .input-group input[type="color"],
-.form-order .input-group select,
-.form-order .input-group label,
-.form-order .input-group textarea,
-.form-order .input-group input:not([type]){
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="email"],
+.input-group input[type="url"],
+.input-group input[type="date"],
+.input-group input[type="month"],
+.input-group input[type="time"],
+.input-group input[type="datetime"],
+.input-group input[type="datetime-local"],
+.input-group input[type="week"],
+.input-group input[type="number"],
+.input-group input[type="search"],
+.input-group input[type="tel"],
+.input-group input[type="color"],
+.input-group select,
+.input-group label,
+.input-group textarea,
+.input-group input:not([type]){
   display:inline-block;
   margin-top:0.25em;
   margin-bottom: 0.5em;
 }
-.form-order .input-group label{
+.input-group label{
   display:inline-block;
   margin-top:0.25em;
 }
@@ -398,9 +388,6 @@ input:focus,textarea:focus,select:focus,span:focus{
   >input:first-child{
     margin-right: -0.34em;
   }
-}
-
-.input-group {
   >input:first-child.input-rounded{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -414,6 +401,7 @@ input:focus,textarea:focus,select:focus,span:focus{
     border-top-right-radius: 60px;
   }
 }
+
 .form .input-group .input-info{
   margin-top:0.25em;
   margin-bottom: 0.3em;
@@ -585,12 +573,18 @@ input[type=radio] {
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
 
 .radio-input label {//label坚决不能使用除了static的position 影响label:before的继承
   display: inline-block;
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
-.radio-input label:before{
+.radio-input label{
   content: "";
   display: block;
   margin: 0;
@@ -614,7 +608,7 @@ input[type=radio] {
 }
 
 
-.radio-input input[type="radio"]:checked + label:before {
+.radio-input input[type="radio"]:checked + label{
   background: #73dcff;
 }
 
@@ -630,6 +624,9 @@ input[type=radio] {
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  &[disabled]{
+    cursor:not-allowed;
+  }
 }
 .checkbox-input label{
   cursor: pointer;
@@ -644,6 +641,9 @@ input[type=radio] {
   -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
   -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
   box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
 
 .checkbox-input label:after {
@@ -653,7 +653,7 @@ input[type=radio] {
   width: 12px;
   height: 6px;
   background: transparent;
-  top: 3px;
+  top: 2px;
   left: 3px;
   border: 3px solid #73dcff;
   border-top: none;
@@ -663,17 +663,16 @@ input[type=radio] {
   -o-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
-  -webkit-transform: rotate(-45deg);//旋转45°制作对钩
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-50deg);//旋转50°制作对钩
+  -moz-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  transform: rotate(-50deg);
 }
 
 .checkbox-input label:hover::after {
-  opacity: 0.6;
+  opacity: 0.5;
 }
-
 
 .checkbox-input input[type=checkbox]:checked + label:after {
   opacity: 1;
