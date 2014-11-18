@@ -36,6 +36,10 @@ $(document).ready(function(){
         var height2 = $(this).parent('.input-group').children('input').height();
         $(this).css({"max-height":(height2)+1+"px"});
     });
+//    $('.input-xl').find('input[type="checkbox"]').each(function(){
+//        var height3 = $(this).parent('.input-info').parent('.input-group').children('input').height();
+//        $(this).parent('.input-info').css({"max-height":(height3)-1+"px"});
+//    });
 
 
 

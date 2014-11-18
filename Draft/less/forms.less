@@ -420,6 +420,36 @@ input:focus,textarea:focus,select:focus,span:focus{
   background-color: #e6e6e6;
   color: #434343;
 }
+.form .input-group .input-info .checkbox-input{
+  margin: 0;
+  top: -0.0625em;
+  left: -0.0625em;
+}
+.form .input-group .input-info .radio-input{
+  margin: 0;
+  top: -0.0625em;
+  left: -0.0625em;
+}
+.form .input-group.input-sm .input-info .checkbox-input{
+  margin: 0;
+  top: -2px;
+  left: -2px;
+}
+.form .input-group.input-sm .input-info .radio-input{
+  margin: 0;
+  top: -2px;
+  left: -2px;
+}
+.form .input-group.input-xs .input-info .checkbox-input{
+  margin: 0;
+  top: -4px;
+  left: -3px;
+}
+.form .input-group.input-xs .input-info .radio-input{
+  margin: 0;
+  top: -4px;
+  left: -3px;
+}
 
 
 //----------------------------多媒体响应式设计-----------------------------------
@@ -571,6 +601,7 @@ input[type=radio] {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  vertical-align: middle;
   background: #ddd;
   border-radius: 100%;
   position: relative;//子元素寻找定位
@@ -622,6 +653,7 @@ input[type=radio] {
   margin: 0 0.3em;
   width: 20px;
   height: 20px;
+  vertical-align: middle;
   background: #ddd;
   position: relative;
   border-radius: 100%;
@@ -659,7 +691,7 @@ input[type=radio] {
   background: transparent;
   top: 1px;
   left: 1px;
-  border: 2px solid #73dcff;
+  border: 3px solid #73dcff;
   border-top: none;
   border-right: none;
   -webkit-transition: all .3s ease;
@@ -667,7 +699,7 @@ input[type=radio] {
   -o-transition: all .3s ease;
   -ms-transition: all .3s ease;
   transition: all .3s ease;
-  -webkit-transform: rotate(-60deg);//旋转50°制作对钩
+  -webkit-transform: rotate(-60deg);//旋转60°制作对钩
   -moz-transform: rotate(-60deg);
   -o-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
