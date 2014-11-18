@@ -50,6 +50,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 //----------------------------定义normal表单样式-----------------------------------
 .form{
   font-family: @font-family;
+  color: #333333;
 }
 .form input[type="text"],
 .form input[type="password"],
@@ -107,6 +108,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 .form select{//宽度与表单一致 长度待定
   padding: 0.5em 1em;
   background-color: #000000;
+  border: 1px solid #000000;//不起作用~怎么不重写的前提下改变默认样式？
 }
 
 .form .checkbox,
@@ -172,6 +174,18 @@ input:focus,textarea:focus,select:focus,span:focus{
   color:#333333;
   margin: 0.5em 0 0.2em;
   font-family: @font-family;
+}
+.form label .checkbox-input{
+  top: -3px;
+}
+.form label .radio-input{
+  top: -3px;
+}
+.form-order label .checkbox-input{
+  top: -3px;
+}
+.form-order label .radio-input{
+  top: -3px;
 }
 .form fieldset {
   margin: 0;
@@ -417,6 +431,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   background-color: #e6e6e6;
   color: #434343;
 }
+
 
 //----------------------------多媒体响应式设计-----------------------------------
 @media only screen and (max-width : 480px) {

@@ -36,6 +36,9 @@ $(document).ready(function(){
         var height2 = $(this).parent('.input-group').children('input').height();
         $(this).css({"max-height":(height2)+1+"px"});
     });
+
+
+
     $('input[type="radio"]').each(function(){
         if($(this).attr('disabled')){
             var radioid=$(this).attr('id');
