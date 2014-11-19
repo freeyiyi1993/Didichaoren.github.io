@@ -15,48 +15,59 @@
 
 @font-family:dax-regular;
 
-.tab {
+.tab-horizontal,
+.tab-vertical {
   margin: .6em;
-  >ul {
+  font-size: inherit;
+  >.tabs {
     padding: 0;
     list-style-type: none;
     color: #c3c3c3;
     font-family: @font-family;
-    font-size: 1.2em;
+    font-size: inherit;
     cursor: pointer;
     >li {
       position: relative;
       overflow: visible;
       padding: .5em 1em;
-      display: inline-block;
+      font-size: inherit;
       .transition-setting(all,.3s);
     }
   }
   .tab-item {
       width: 100%;
       padding: 1em;
-      box-sizing: border-box;
+    font-size: inherit;
+    box-sizing: border-box;
     }
 }
 
-.tab-bgc {
-  >ul {
+.tab-horizontal {
+  >.tabs {
+    >li {
+      display: inline-block;
+    }
+  }
+}
+
+.tab-horizontal.tab-bgc {
+  >.tabs {
     font-size: 0;
     >li {
-      font-size: 19.2px;
+      font-size: 16px;
       &:hover:not(.tab-choosed) {
         background-color: #efefef;
       }
+      &.tab-choosed {
+        background-color: #73dcff;
+        color: #ffffff;
+      }
     }
-  }
-  .tab-choosed {
-    background-color: #73dcff;
-    color: #ffffff;
   }
 }
 
-.tab-line {
-  >ul {
+.tab-horizontal.tab-line {
+  >.tabs {
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #efefef;
@@ -70,16 +81,16 @@
       &:not(.tab-choosed) {
         border: 1px solid transparent;
       }
+      &.tab-choosed {
+        background-color: white;
+        border-color: #efefef #efefef #ffffff;
+      }
     }
-  }
-  .tab-choosed {
-    background-color: white;
-    border-color: #efefef #efefef #ffffff;
   }
 }
 
-.tab-triangle {
-  >ul {
+.tab-horizontal.tab-triangle {
+  >.tabs {
     >li{
       padding-left: 0;
       &:before {
@@ -93,12 +104,59 @@
       &:hover:not(.tab-choosed):before{
         color: #efefef;
       }
+      &.tab-choosed {
+        color: #000000;
+        &:before {
+          color: #73dcff;
+        }
+      }
     } 
   }
-  .tab-choosed {
-    color: #000000;
-    &:before {
-      color: #73dcff;
+}
+
+.tab-vertical.tab-line {
+  >.tabs {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    >li {
+      border-left: .2em solid transparent;
+      &:hover:not(.tab-choosed) {
+        border-left-color: #efefef;
+      }
+      &.tab-choosed {
+        border-left: .2em solid #73dcff;
+        color: #000000;
+      }
     }
+  }
+  .tab-content {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+}
+
+.tab-vertical.tab-bgc {
+  >.tabs {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    >li {
+      &:hover:not(.tab-choosed) {
+        background-color: #efefef;
+      }
+      &.tab-choosed {
+        background-color: #73dcff;
+        color: #ffffff;
+      }
+    }
+  }
+  .tab-content {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+    box-sizing: border-box;
   }
 }

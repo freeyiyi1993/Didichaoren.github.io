@@ -9,7 +9,26 @@
     <script src="../javascript/tabs.js"></script>
 </head>
 <body>
-<div class="tab tab-bgc">
+<div class="tab-horizontal tab-bgc">
+    <ul class="tabs removeTextNodes">
+        <li>Home</li>
+        <li>Info</li>
+        <li>Contact</li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-item">
+            <h1>i am home</h1>
+        </div>
+        <div class="tab-item">
+            <h1>i am info</h1>
+        </div>
+        <div class="tab-item">
+            <h1>i am contact</h1>
+        </div>
+    </div>
+</div>
+
+<div class="tab-horizontal tab-line">
     <ul class="tabs">
         <li>Home</li>
         <li>Info</li>
@@ -28,13 +47,13 @@
     </div>
 </div>
 
-<div class="tab tab-line">
+<div class="tab-horizontal tab-triangle">
     <ul class="tabs">
         <li>Home</li>
         <li>Info</li>
         <li>Contact</li>
     </ul>
-    <div>
+    <div class="tab-content">
         <div class="tab-item">
             <h1>i am home</h1>
         </div>
@@ -46,14 +65,19 @@
         </div>
     </div>
 </div>
-
-<div class="tab tab-triangle">
+<script>
+    $('.removeTextNodes').contents().filter(function() {
+        return this.nodeType === 3;
+    }).remove();
+    $('.tab-horizontal').tabs();
+</script>
+<div class="tab-vertical tab-line">
     <ul class="tabs">
         <li>Home</li>
         <li>Info</li>
         <li>Contact</li>
     </ul>
-    <div>
+    <div class="tab-content">
         <div class="tab-item">
             <h1>i am home</h1>
         </div>
@@ -65,5 +89,26 @@
         </div>
     </div>
 </div>
+<div class="tab-vertical tab-bgc">
+    <ul class="tabs">
+        <li>Home</li>
+        <li>Info</li>
+        <li>Contact</li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-item">
+            <h1>i am home</h1>
+        </div>
+        <div class="tab-item">
+            <h1>i am info</h1>
+        </div>
+        <div class="tab-item">
+            <h1>i am contact</h1>
+        </div>
+    </div>
+</div>
+<script>
+    $('.tab-vertical').tabs('init',{defaultIndex:3});
+</script>
 </body>
 </html>
