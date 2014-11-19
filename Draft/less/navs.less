@@ -23,8 +23,8 @@
     background-color: #e6e6e6;
     margin-bottom: 0;
     padding-left: 0;
-    padding-bottpm: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    padding-bottom: 0;
+//    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
     > li {
       display: block;
       float: left;
@@ -36,14 +36,14 @@
       > a {
         position: relative;
         display: block;
-        padding: 1em 1.5em;
+        padding: 1em 1.3em;
         text-decoration: none;
         color: #434343;
         background-color: #e6e6e6;
         -webkit-tap-highlight-color: transparent;
-        -moz-transition:all .3s;
-        -webkit-transition:all .3s;
-        transition:all .3s;
+        -moz-transition:all .3s ease-in-out;
+        -webkit-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;
         &:active,
         &:focus{
           text-decoration: none;
@@ -55,11 +55,14 @@
       }
 
       &.disabled > a {
-        color: white;
+        cursor: not-allowed;
+        color: #c0c0c0;
         &:hover,
+        &:active,
         &:focus{
-          color: black ;
+          color: #c0c0c0 ;
           text-decoration: none;
+          box-shadow: none;
           background-color: transparent;
           cursor: not-allowed;
         }
@@ -90,17 +93,20 @@
       > a {
         position: relative;
         display: block;
-        padding: 1em 1.5em;
+        padding: 1em 1.3em;
         text-decoration: none;
         color: white;
         background-color: transparent;
         -webkit-tap-highlight-color: transparent;
-        -moz-transition: all .3s;
-        -webkit-transition: all .3s;
-        transition: all .3s;
+        -moz-transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
         &:hover{
           color: #434343;
           background-color: rgba(255,255,255,0.5);
+          -moz-transition: all .3s ease-in-out;
+          -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
         }
         &:active,
         &:focus{
@@ -109,9 +115,34 @@
           background-color: white;
         }
       }
+      &.disabled > a {
+        cursor: not-allowed;
+        color: #c0c0c0;
+        &:hover,
+        &:active,
+        &:focus{
+          color: #c0c0c0 ;
+          text-decoration: none;
+          box-shadow: none;
+          background-color: transparent;
+          cursor: not-allowed;
+        }
+      }
     }
   }
 }
+
+.nav-padding{
+  >ul{
+    padding: 0 1em;
+  }
+}
+.nav-vertical.nav-padding{
+  >ul{
+    padding: 1em 0;
+  }
+}
+
 .right{/*元素居右*/
   float: right !important;/*调整优先级*/
 }
@@ -134,6 +165,10 @@
           padding-left: 1.6em;
           padding-right: 1.4em;
         }
+      }
+      &.disabled > a{
+        padding-left: 1em;
+        padding-right: 2em;
       }
     }
   }
@@ -165,22 +200,37 @@
 
 .nav-inverse{//反色
   >ul{
-    background-color: black;
+    background-color: #555;
     >li{
       >a{
         color: white;
-        background-color: black;
+        background-color: #555;
         &:active,
         &:focus{
           text-decoration: none;
-          box-shadow: inset 0 1px 8px rgba(255,255,255,0.3);
+          box-shadow: inset 0 1px 8px rgba(0,0,0,0.36);
         }
         &:hover {
-          background-color: rgba(255, 255, 255, 0.16);
+          background-color: rgba(0,0,0, 0.16);
         }
       }
     }
   }
+}
+
+.nav-primary,.nav-success,.nav-inverse{
+   >ul{
+     >li{
+       &.disabled > a{
+         color: rgba(255,255,255,0.5);
+         &:hover,
+         &:active,
+         &:focus{
+           color: rgba(255,255,255,0.5);
+         }
+       }
+     }
+   }
 }
 
 .nav-path{
@@ -210,6 +260,17 @@
         margin: 0 0.5em;
         content: " / ";
         padding: 0 5px;
+      }
+      &.disabled > a {
+        color: rgba(115,220,255,0.5);
+        cursor: not-allowed;
+        &:hover,
+        &:active,
+        &:focus{
+          color: rgba(115,220,255,0.5);
+          cursor: not-allowed;
+          text-decoration: none;
+        }
       }
     }
   }

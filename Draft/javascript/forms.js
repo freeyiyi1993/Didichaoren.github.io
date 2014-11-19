@@ -20,9 +20,9 @@ $(document).ready(function(){
             $(this).wrap('<div class="radio-input" disabled="disabled"></div>');
             $(this).after('<label for='+radioid+' disabled="disabled"></label>');
         }else{
-        var radioid=$(this).attr('id');
+        var radioid1=$(this).attr('id');
         $(this).wrap('<div class="radio-input"></div>');
-        $(this).after('<label for='+radioid+'></label>');
+        $(this).after('<label for='+radioid1+'></label>');
         }
     });
     $('input[type="checkbox"]').each(function(){
@@ -31,9 +31,9 @@ $(document).ready(function(){
             $(this).wrap('<div class="checkbox-input" disabled="disabled"></div>');
             $(this).after('<label for='+checkboxid+' disabled="disabled"></label>');
         }else {
-            var checkboxid = $(this).attr('id');
+            var checkboxid1 = $(this).attr('id');
             $(this).wrap('<div class="checkbox-input"></div>');
-            $(this).after('<label for=' + checkboxid + '></label>');
+            $(this).after('<label for=' + checkboxid1 + '></label>');
         }
     });
     /*解决input-info中加入radio、checkbox后的大小*/

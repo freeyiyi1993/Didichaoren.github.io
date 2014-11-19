@@ -81,23 +81,23 @@
         </form></li>
     </ul>
 </nav><br /><br />
-<form class="form"><legend>幽灵导航样式</legend></form>
-<nav class="nav-yl">
+<form class="form"><legend>幽灵导航样式(使用了nav-padding)</legend></form>
+<nav class="nav-yl nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
-        <li><a href="#">Spring</a></li>
+        <li class="disabled"><a href="#">Spring</a></li>
         <li><a href="#">Summer</a></li>
         <li><a href="#">Fall</a></li>
         <li><a href="#">Winter</a></li>
     </ul>
 </nav><br /><br />
 
-<form class="form"><legend>.right使得个别元素左对齐</legend></form>
-<nav class="nav">
+<form class="form"><legend>.right使得个别元素左对齐(使用了nav-padding)</legend></form>
+<nav class="nav nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
         <li><a href="#">Spring</a></li>
-        <li><a href="#">Summer</a></li>
+        <li class="disabled"><a href="#">Summer</a></li>
         <li><a href="#">Fall</a></li>
         <li class="right"><a href="#"><i class="fa fa-user"></i></a></li>
         <li class="right"><form class="form">
@@ -117,7 +117,7 @@
                 <ul>
                     <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
                     <li><a href="#">Spring</a></li>
-                    <li><a href="#">Summer</a></li>
+                    <li class="disabled"><a href="#">Summer</a></li>
                     <li><a href="#">normal-long</a></li>
                     <li><a href="#">Fall</a></li>
                     <li><a href="#">Winter</a></li>
@@ -128,12 +128,12 @@
     <div class="pure-u-1-8"></div>
     <div class="pure-u-1-2">
         <form class="form">
-            <legend>Long list</legend>
-<nav class="nav-yl nav-vertical">
+            <legend>Long list(使用了nav-padding)</legend>
+<nav class="nav-yl nav-vertical nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
         <li><a href="#">Spring</a></li>
-        <li><a href="#">When the list is very very long...</a></li>
+        <li class="disabled"><a href="#">When the list is very very long...</a></li>
         <li><a href="#">Summer</a></li>
         <li><a href="#">Fall</a></li>
         <li><a href="#">Winter</a></li>
@@ -145,35 +145,47 @@
 </div><br/><br />
 
 <form class="form"><legend>Nav其他预设颜色</legend></form>
-<nav class="nav nav-primary">
+<nav class="nav nav-primary nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
         <li><a href="#">Spring</a></li>
         <li><a href="#">Summer</a></li>
-        <li><a href="#">Fall</a></li>
+        <li class="disabled"><a href="#">Fall</a></li>
         <li><a href="#">Winter</a></li>
         <li class="right"><a href="#"><i class="fa fa-user"></i></a></li>
         <li class="right"><a href="#"><i class="fa fa-cloud"></i></a></li>
     </ul>
 </nav>
-<nav class="nav nav-inverse">
+<nav class="nav nav-inverse nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
         <li><a href="#">Spring</a></li>
-        <li><a href="#">Summer</a></li>
+        <li class="disabled"><a href="#">Summer</a></li>
         <li><a href="#">Fall</a></li>
         <li><a href="#">Winter</a></li>
         <li class="right"><a href="#"><i class="fa fa-user"></i></a></li>
         <li class="right"><a href="#"><i class="fa fa-envelope"></i></a></li>
+        <li class="right"><form class="form">
+            <div class="input-group input-sm">
+                <input class="input-rounded" type="email" placeholder="Email">
+                <div class="input-info"><i class="fa fa-search fa-fw"></i></div>
+            </div>
+        </form></li>
     </ul>
 </nav>
-<nav class="nav nav-success">
+<nav class="nav nav-success nav-padding">
     <ul>
         <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
         <li><a href="#">Spring</a></li>
         <li><a href="#">Summer</a></li>
         <li><a href="#">Fall</a></li>
-        <li><a href="#">Winter</a></li>
+        <li class="disabled"><a href="#">Winter</a></li>
+        <li class="right"><form class="form">
+            <label for="search11">
+                <input class="input-rounded" id="search11" type="search">
+                <button type="submit" class="btn btn-fl green">Search</button>
+            </label>
+        </form></li>
         <li class="right"><a href="#"><i class="fa fa-user"></i></a></li>
         <li class="right"><a href="#"><i class="fa fa-bell"></i></a></li>
     </ul>
@@ -185,7 +197,7 @@
             <ol>
                 <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
                 <li><a href="#">Spring</a></li>
-                <li><a href="#">Summer</a></li>
+                <li class="disabled"><a href="#">Summer</a></li>
                 <li><a href="#">normal-long</a></li>
                 <li><a href="#">Fall</a></li>
                 <li><a href="#">Winter</a></li>
