@@ -22,39 +22,42 @@
                 touchend: 'touchend'
             };
             return this.each(function () {
-                var startX;
+                var startX,endX;
+                var type = 'mobile';
                 if(!navigator.userAgent.match(/mobile/i)){
                     touchEvents.touchstart = 'mousedown';
                     touchEvents.touchmove = 'mousemove';
                     touchEvents.touchend = 'mouseup';
+                    type = 'pc';
                 }
+                $(this).children().children().append('<span>'+settings.content+'</span>');
                 $(this).children().bind(touchEvents.touchstart, function (event) {
                     event.preventDefault();
-                    startX = event.pageX;
+                    startX = (type==='mobile')?event.originalEvent.touches[0].pageX:event.pageX;
 
                 }).bind(touchEvents.touchmove, function (event) {
                     event.preventDefault();
 
                 }).bind(touchEvents.touchend, function (event) {
                     event.preventDefault();
-                    if((startX-event.pageX)>20) {
+                    endX = (type==='mobile')?event.originalEvent.changedTouches[0].pageX:event.pageX;
+                    if((startX-endX)>20) {
                         $(this).siblings().children().removeClass('list-touchmoved');
-                        $(this).children().addClass('list-touchmoved').append('<span>'+settings.content+'</span>');
+                        $(this).children().addClass('list-touchmoved');
                     }
-                    else if ((startX-event.pageX)<-10) {
-                        $(this).children().removeClass('list-touchmoved').animate()
-                        ;
+                    else if ((startX-endX)<-10) {
+                        $(this).children().removeClass('list-touchmoved');
                     }
                 });
-                $('.list-touchmovable').on('click','.list-touchmoved>span', function (event) {
+                $('.list-touchmovable').on(touchEvents.touchstart,'.list-touchmoved>span', function (event) {
                     event.preventDefault();
-                    $(this).parents('.list-item').hide();
-                    console.log('12ss3');
+                    //$(this).parents('.list-item').hide();
+                    methods.destroy($(this).parents('.list-item'));
                 });
             });
         },
-        destroy: function () {
-
+        destroy: function (options) {
+            options.hide();
         }
     };
     $.fn.listGroup = function (options) {

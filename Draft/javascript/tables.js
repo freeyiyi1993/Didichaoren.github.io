@@ -6,10 +6,20 @@ $(document).ready(function(){
     var td_num = 0;
     $('.thclone').find('thead').find('th').each(function () {
         var td_width = $('.table-headfixed').find('tbody').find('td:nth-child('+(td_num+1)+')').width();
+        console.log(td_width);
         $(this).width(td_width);
         $('.table-headfixed').find('tbody').find('td:nth-child('+(td_num+1)+')').width(td_width)
         td_num++;
     });
     $('.thclone tbody').hide();
     $('.table-headfixed thead').hide();
+    $(window).resize(function () {
+        var td_num = 0;
+        $('.thclone').find('thead').find('th').each(function () {
+            var td_width = $('.table-headfixed').find('tbody').find('td:nth-child('+(td_num+1)+')').width();
+            console.log(td_width);
+            $(this).width(td_width);
+            td_num++;
+        });
+    });
 });
