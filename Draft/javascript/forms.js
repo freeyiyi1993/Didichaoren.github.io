@@ -2,47 +2,18 @@
  * Created by Didi on 2014/10/16.
  */
 
-function lost()
-{
-    var input=document.getElementByIdx_x("input");
-    var input_value=input.value;
-    if(input_value=="")
-    {
-        input.value="请输入";
-        input.style.color="gray";
-    }
-}
-
-function get()
-{
-    var input=document.getElementByIdx_x("input");
-    input.value="";
-    input.style.color="black";
-}
-
-
 $(document).ready(function(){
 
     $('.form').each(function(){
         $(this).find('.file').attr("tabIndex", "0");//使得form中的span具有tab属
     });
-
+    /*使input-info正方形*/
     $('.input-info').each(function(){
         var height = $(this).parent('.input-group')
-            .children('input').height();//解决input-info中使用radio、checkbox的大小问题
-        $(this).css({"max-height":(height)+"px","width":(height)+"px"});
+            .children('input').height();
+        $(this).css({"width":(height)+"px"});
     });
-//    $('.input-xs').children('.input-info').each(function(){
-//        var height2 = $(this).parent('.input-group').children('input').height();
-//        $(this).css({"max-height":(height2)+1+"px"});
-//    });
-//    $('.input-xl').find('input[type="checkbox"]').each(function(){
-//        var height3 = $(this).parent('.input-info').parent('.input-group').children('input').height();
-//        $(this).parent('.input-info').css({"max-height":(height3)-1+"px"});
-//    });
-
-
-
+    /*使得disabled可用*/
     $('input[type="radio"]').each(function(){
         if($(this).attr('disabled')){
             var radioid=$(this).attr('id');
@@ -64,6 +35,19 @@ $(document).ready(function(){
             $(this).wrap('<div class="checkbox-input"></div>');
             $(this).after('<label for=' + checkboxid + '></label>');
         }
+    });
+    /*解决input-info中加入radio、checkbox后的大小*/
+    $('.radio-input').each(function(){
+        var height1 = $(this).parent('.input-info')
+            .parent('.input-group').children('input').height();
+        $(this).parent('.input-info')
+            .css({"height":(height1)+"px"});
+    });
+    $('.checkbox-input').each(function(){
+        var height2 = $(this).parent('.input-info')
+            .parent('.input-group').children('input').height();
+        $(this).parent('.input-info')
+            .css({"height":(height2)+"px"});
     });
 });
 
