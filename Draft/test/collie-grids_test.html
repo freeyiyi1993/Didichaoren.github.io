@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Collie-grids Test</title>
+    <link href="../less/collie-grids.less" type="text/less" rel="stylesheet" />
+    <link href="../less/forms.less" type="text/less" rel="stylesheet" />
+    <script src="../less/less-1.7.4.min.js"></script>
+    <style type="text/css">
+        div#div1{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div#div1 > img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+        .skyblue{
+            font-size: 120%;
+            font-weight: bold;
+            color: #73dcff;
+            box-shadow: inset 0 0 60px #73dcff;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"><img src="../image/background.png"></div>
+<form class="form">
+
+    <div class="grids-16">
+        <div class="g-2"></div>
+        <div class="g-10 form"><br />
+              <h1>Collie-UI Grids</h1>
+        </div>
+        <div class="g-2"></div>
+    </div>
+
+    <legend style="text-align: center"><h4>Unresponsive(Normal) Grids</h4></legend><br />
+<!--普通栅格-->
+  <div class="grids-5"><!--5栅格-->
+      <div class="g-1 skyblue">1</div>
+      <div class="g-4 skyblue">4</div>
+  </div>
+  <div class="grids-12"><!--12栅格-->
+      <div class="g-1 skyblue">1</div>
+      <div class="g-5 skyblue">5</div>
+      <div class="g-3 skyblue">3</div>
+      <div class="g-3 skyblue">3</div>
+  </div>
+  <div class="grids-16"><!--16栅格-->
+      <div class="g-2 skyblue">2</div>
+      <div class="g-3 skyblue">3</div>
+      <div class="g-4 skyblue">4</div>
+      <div class="g-7 skyblue">7</div>
+  </div>
+
+    <legend style="text-align: center"><h4>Responsive Grids</h4></legend>
+<!--响应式栅格-->
+    <label><h5>568px:</h5></label>
+    <div class="grids-12"><!--12栅格 568px-->
+        <div class="g-xs-7 skyblue">7</div>
+        <div class="g-xs-4 skyblue">4</div>
+        <div class="g-xs-1 skyblue">1</div>
+    </div>
+    <label><h5>768px:</h5></label>
+  <div class="grids-5"><!--5栅格 768px-->
+      <div class="g-sm-1 skyblue">1</div>
+      <div class="g-sm-4 skyblue">4</div>
+  </div>
+    <label><h5>1024px:</h5></label>
+    <div class="grids-12"><!--12栅格 1024px-->
+      <div class="g-md-1 skyblue">1</div>
+      <div class="g-md-5 skyblue">5</div>
+      <div class="g-md-3 skyblue">3</div>
+      <div class="g-md-3 skyblue">3</div>
+  </div>
+    <label><h5>1280px:</h5></label>
+    <div class="grids-16"><!--16栅格 1280px-->
+      <div class="g-lg-2 skyblue">2</div>
+      <div class="g-lg-3 skyblue">3</div>
+      <div class="g-lg-4 skyblue">4</div>
+      <div class="g-lg-7 skyblue">7</div>
+  </div><br /><br /><br />
+
+</form>
+</body>
+</html>

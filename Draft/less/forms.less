@@ -516,6 +516,24 @@ input:focus,textarea:focus,select:focus,span:focus{
     /* Increased bottom padding to make it group with its related input element. */
     padding: 0.2em 0 0.8em;
   }
+
+  .input-group input:not([type]),
+  .input-group input[type="text"],
+  .input-group input[type="password"],
+  .input-group input[type="email"],
+  .input-group input[type="url"],
+  .input-group input[type="date"],
+  .input-group input[type="month"],
+  .input-group input[type="time"],
+  .input-group input[type="datetime"],
+  .input-group input[type="datetime-local"],
+  .input-group input[type="week"],
+  .input-group input[type="number"],
+  .input-group input[type="search"],
+  .input-group input[type="tel"],
+  .input-group input[type="color"]{
+    display: inline-block;
+  }
 }
 
 
