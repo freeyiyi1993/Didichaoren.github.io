@@ -36,19 +36,4 @@ $(document).ready(function(){
             $(this).after('<label for=' + checkboxid1 + '></label>');
         }
     });
-    /*解决input-info中加入radio、checkbox后的大小*/
-    $('.radio-input').each(function(){
-        var height1 = $(this).parent('.input-info')
-            .parent('.input-group').children('input').height();
-        $(this).parent('.input-info')
-            .css({"height":(height1)+"px"});
-    });
-    $('.checkbox-input').each(function(){
-        var height2 = $(this).parent('.input-info')
-            .parent('.input-group').children('input').height();
-        $(this).parent('.input-info')
-            .css({"height":(height2)+"px"});
-    });
 });
-
-

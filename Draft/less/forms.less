@@ -218,7 +218,10 @@ input:focus,textarea:focus,select:focus,span:focus{
   display: block;
   margin-top:0.25em;
 }
-
+.input-group{
+  display: inline-block;
+  width: auto;
+}
 .input-group input[type="text"],
 .input-group input[type="password"],
 .input-group input[type="email"],
@@ -238,14 +241,8 @@ input:focus,textarea:focus,select:focus,span:focus{
 .input-group textarea,
 .input-group input:not([type]){
   display:inline-block;
-  margin-top:0.25em;
   margin-bottom: 0.5em;
 }
-.input-group label{
-  display:inline-block;
-  margin-top:0.25em;
-}
-
 //----------------------------form-block类 进行块组织-----------------------------------
 .form-block input[type="text"],
 .form-block input[type="password"],
@@ -276,9 +273,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 
 .form-aligned input,
 .form-aligned textarea,
-.form-aligned select,
-.form-aligned .help-inline,
-.form-message-inline {
+.form-aligned select{
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -308,8 +303,7 @@ input:focus,textarea:focus,select:focus,span:focus{
 //----------------------------form或期中input使用圆角-----------------------------------
 .form input.input-rounded,
 .form .input-rounded {
-  border-radius: 100%;
-//  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 //-----------------------------组input----------------------------------
@@ -336,12 +330,10 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 .form .form-group input:first-child {
   top: 1px;
-//  border-top-right-radius: 10px;
 
 }
 .form .form-group input:last-child {
   top: -2px;
-//  border-bottom-left-radius: 10px;
 }
 .form .form-group button {
   margin: 0.35em 0;
@@ -364,9 +356,11 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 
 
-/* Inline help for forms */
-/* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
-.form .help-inline,
+.form-message-inline,
+.form-message {
+  font-size: 0.75em;
+  padding: 0.2em 0 0.8em;
+}
 .form-message-inline {
   display: inline-block;
   padding-left: 0.3em;
@@ -420,37 +414,13 @@ input:focus,textarea:focus,select:focus,span:focus{
   color: #434343;
 }
 .form .input-group .input-info .checkbox-input{
-  margin: 0;
-  top: -0.0625em;
-  left: -0.0625em;
+  top: -1px;
+  margin: -20px;
 }
 .form .input-group .input-info .radio-input{
-  margin: 0;
-  top: -0.0625em;
-  left: -0.0625em;
+  top: -1px;
+  margin: -20px;
 }
-.form .input-group.input-sm .input-info .checkbox-input{
-  margin: 0;
-  top: -0.15em;
-  left: -0.15em;
-}
-.form .input-group.input-sm .input-info .radio-input{
-  margin: 0;
-  top: -0.15em;
-  left: -0.15em;
-}
-.form .input-group.input-xs .input-info .checkbox-input{
-  margin: 0;
-  top: -0.4em;
-  left: -0.3em;
-}
-.form .input-group.input-xs .input-info .radio-input{
-  margin: 0;
-  top: -0.4em;
-  left: -0.3em;
-}
-
-
 //----------------------------多媒体响应式设计-----------------------------------
 @media only screen and (max-width : 480px) {
   .form button[type="submit"] {
@@ -505,16 +475,6 @@ input:focus,textarea:focus,select:focus,span:focus{
 
   .form-aligned .controls {
     margin: 1.5em 0 0 0;
-  }
-
-  /* NOTE: help-inline is deprecated. Use .form-message-inline instead. */
-  .form .help-inline,
-  .form-message-inline,
-  .form-message {
-    display: block;
-    font-size: 0.75em;
-    /* Increased bottom padding to make it group with its related input element. */
-    padding: 0.2em 0 0.8em;
   }
 
   .input-group input:not([type]),
@@ -690,7 +650,7 @@ input[type=radio] {
   top: 3px;
   left: 3px;
   background: #333;
-  border-radius: 100%;
+  border-radius: 2em;
   -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
   -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
   box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
