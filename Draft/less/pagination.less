@@ -1,0 +1,118 @@
+.pgn {
+  vertical-align: middle;
+  list-style-type: none;
+  >* {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+}
+
+.pgn-border {
+  a {
+    padding: .5em;
+    border: 1px solid #d6d6d6;
+    color: #73dcff;
+    &:hover:not(.pgn-choosed):not(.pgn-pre):not(.pgn-next) {
+      background-color: #d6d6d6;
+    }
+    &:active:not(.pgn-choosed) {
+      box-shadow: inset 0 0 8px #c2c2c2;
+    }
+  }
+  .pgn-choosed {
+    border-color: #73dcff ;
+    color: #ffffff;
+    background-color: #73dcff;
+  }
+}
+
+.pgn-circle {
+  a {
+    width: .6em;
+    height: .6em;
+    border: 1px solid #73dcff;
+    border-radius: 50%;
+    &:hover:not(.pgn-choosed):not(.pgn-pre):not(.pgn-next) {
+      border-color: #d6d6d6;
+      background-color: #d6d6d6;
+    }
+    &:active:not(.pgn-choosed) {
+      box-shadow: inset 0 0 5px #c2c2c2;
+    }
+  }
+  .pgn-choosed {
+    background-color: #73dcff;
+  }
+}
+
+.pgn-circle .pgn-pre,
+.pgn-circle .pgn-next {
+  height: 0;
+  width: 0;
+  border-width: .5em 1.2em;
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+.pgn-circle .pgn-pre {
+   border-color: transparent #73dcff transparent transparent;
+   &:hover {
+     border-right-color: #d6d6d6;
+   }
+}
+
+.pgn-circle .pgn-next {
+  border-color: transparent transparent transparent #73dcff;
+  &:hover {
+    border-left-color: #d6d6d6;
+  }
+}
+
+.pgn-roundborder {
+  .pgn-border;
+  a {
+    height: 2em;
+    width: 2em;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 2em;
+    box-sizing: content-box;
+    &:hover:not(.pgn-choosed):not(.pgn-pre):not(.pgn-next) {
+      border-color: #d6d6d6;
+      background-color: #d6d6d6;
+    }
+    &:active:not(.pgn-choosed) {
+      box-shadow: inset 0 0 5px #c2c2c2;
+    }
+  }
+}
+
+.pgn-roundborder .pgn-pre,
+.pgn-roundborder .pgn-next {
+  height: 0;
+  width: 0;
+  border-width: 1em 2em;
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+.pgn-roundborder .pgn-pre {
+  border-color: transparent #73dcff transparent transparent;
+  &:hover {
+    border-right-color: #d6d6d6;
+  }
+}
+
+.pgn-roundborder .pgn-next {
+  border-color: transparent transparent transparent #73dcff;
+  &:hover {
+    border-left-color: #d6d6d6;
+  }
+}
+

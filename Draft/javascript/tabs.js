@@ -7,7 +7,7 @@ $(document).ready(function () {
             //传入参数：默认选中的标签，缓动函数
             var defaults = {
                 defaultIndex: 1
-                //timingFunction: 'none'
+                //easing: 'none'
             };
             var settings = $.extend(defaults,options);
             var tab,tabs,tab_item;
@@ -26,6 +26,7 @@ $(document).ready(function () {
                     cur.addClass('tab-choosed');
                     index = cur.closest('li').index();
                     tab_content = cur.parent().siblings('.tab-content');
+
                     tab_content.find('.tab-item').not('.tab-item:eq('+index+')').hide();
                     tab_content.find('.tab-item:eq('+index+')').show();
                 });
