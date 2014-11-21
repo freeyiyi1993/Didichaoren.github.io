@@ -8,6 +8,7 @@
   -webkit-flex-flow: row wrap;
   display: -ms-flexbox;
   -ms-flex-flow: row wrap;
+  box-sizing: border-box;
 }
 .g-1,
 .g-2,
@@ -32,6 +33,7 @@
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  box-sizing: border-box;
 }
 
 /*5栅格*/
@@ -139,6 +141,38 @@
   width: 100%;
 }
 
+.gutter{
+  padding: 15px;
+}
+
+.gutter-vertical{
+  padding: 15px 0;
+}
+
+.gutter-horizontal{
+  padding: 0 15px;
+}
+
+.gutter-top{
+  padding-top: 15px;
+}
+
+.gutter-bottom{
+  padding-bottom: 15px;
+}
+
+.gutter-left{
+  padding-left: 15px;
+}
+
+.gutter-right{
+  padding-right: 15px;
+}
+
+.container{
+  width: 1024px;
+  margin: auto;
+}
 /*针对栅格系统的响应式设置*/
 .g-xs-1,
 .g-xs-2,
@@ -211,6 +245,7 @@
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 480px) {/*For Phone*/
