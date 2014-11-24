@@ -44,11 +44,4 @@ $(document).ready(function() {
         }
     });
 
-/*    $('.tooltip-list').each(function () {//想解决长度的问题
-        var width5 = $(this).find('.tooltip-body').width();
-        $(this).css({'width':(width5)+'px'});
-//        var p_text = $('.tooltip').find("p").text();
-//        alert(p_text);
-    });*/
-
 });

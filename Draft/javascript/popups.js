@@ -53,7 +53,21 @@ $(document).ready(function() {
             $(this).css({'top': height4 + 'px'});
         }
     });
-    $('.popup').click(function () {//点击弹出,无需绑定ID,动画待定
-        $(this).find('.popup-list').toggle(250)
+    $('.popup').bind('click',function (event) {//点击弹出,无需绑定ID
+        var $this=$(this).find('.popup-list');
+        $('.popup-list').fadeOut(300);
+        if($this.is(':visible')){
+            $this.fadeOut(300);
+        }else{
+            $this.fadeIn(300);
+        }
+        event.stopPropagation();
+    });
+    $(document).bind('click',function(e){//点击空白区域隐藏弹出模态框
+        var target  = $(e.target);
+        if(target.closest('.popup-list').length == 0){
+            $('.popup-list').fadeOut(300);
+        }
+        e.stopPropagation();
     });
 });

@@ -3,42 +3,43 @@
 $(document).ready(function(){
     var dropdownName;
     var i;
-    $('.btn-dropdown').click(function(){
+    $('.btn-dropdown').bind('click',function(event){
         var $this   = $(this);
         dropdownName = $this.attr('data-dropdown');//获取用户的输入标记
-        $(dropdownName).toggle(200);//识别了用户定义的id之后就直接显示
+        $('.dropdown-list').slideUp(200);
+        if($(dropdownName).is(':visible')){
+            $(dropdownName).slideUp(200);
+        }else{
+            $(dropdownName).slideDown(200);
+        }
+        event.stopPropagation();
+    });
+    $(document).bind('click',function(e){//点击空白区域隐藏弹出
+        var target  = $(e.target);
+        if(target.closest('.dropdown-list').length == 0){
+            $('.dropdown-list').slideUp(200);
+        }
+        e.stopPropagation();
     });
 
-//    //点击其他地方隐藏点击隐藏
-//    if($('.dropdown').find('.dropdownlist').css({'disaplay':'block'})) {
-//        $(document).bind("click", function (e) {
-//            var target = $(e.target);//表示当前对象，切记，如果没有e这个参数，即表示整个BODY对象
-//            if (target.closest(dropdownName).length == 0) {
-//                $(dropdownName).hide();
-//            }
-//        });
-//    }
-
     //解决divider的大小自适应,效率很可能是问题。
-    var sum = $('.dropdown').find('.divider').parent('.dropdown-list');
-    for (i = 0; i < sum.length; i++) {
-        var width = $('.dropdown').find('.divider').eq(i).parent('.dropdown-list').width();
-        console.log(width);
-        $('.dropdown').find('.divider').eq(i).css({
+    $('.dropdown-list').each(function(){
+        var width = $(this).width();
+        $(this).find('.divider').css({
             "border-left": (width / 2) + "px solid transparent",
             "border-right": (width / 2) + "px solid transparent"
         });
-    }
+    });
+
     $(window).resize(function() {
-        var sum = $('.dropdown').find('.divider').parent('.dropdown-list');
-        for (i = 0; i < sum.length; i++) {
-            var width = $('.dropdown').find('.divider').eq(i).parent('.dropdown-list').width();
-            console.log(width);
-            $('.dropdown').find('.divider').eq(i).css({
+        $('.dropdown-list').each(function(){
+            var width = $(this).width();
+            $(this).find('.divider').css({
                 "border-left": (width / 2) + "px solid transparent",
                 "border-right": (width / 2) + "px solid transparent"
             });
-        }
+        });
     });
 
 });
+
