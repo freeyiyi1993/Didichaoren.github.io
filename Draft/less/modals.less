@@ -28,29 +28,26 @@
 
 .content{//整个模态框
   display: none;
-  padding:1em;
+  font-family: @font-family;
+  width:768px;
+  text-align:middle;
+  padding: 3em;
+  margin: 0 auto;
+  position: relative;
 }
 
 .modal-fl{//模态框的主体
-    font-family: @font-family;
-    width:768px;
-    text-align:middle;
-    margin: 6em auto;
-    position: relative;
     background-color:white;
-//    border: 1px solid #d0d0d0;
     border-radius: 0px;
     box-shadow: 0 3px 30px rgba(0,0,0,.15);
     background-clip: padding-box;//背景被剪裁到padding（也就是不含border）
     outline: 0;
     z-index: 101;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   .modal-lu{
-    font-family: @font-family;
-    width:768px;
-    text-align:middle;
-    margin: 6em auto;
-    position: relative;
     color: white;
     background-color: rgba(0,0,0,.15);
     border-radius: 0px;
@@ -66,8 +63,7 @@
   }
 
 .modal-fl .close,
-.modal-lu .close{
-     //小的关闭按钮样式
+.modal-lu .close{//小的关闭按钮样式
      float: right;
      margin-right: -10px;
      margin-top: -10px;
@@ -83,6 +79,7 @@
      -webkit-transition: all .3s;
      transition: all .3s;
      box-shadow: 0 3px 30px rgba(0, 0, 0, .35);
+     z-index: 102;
      &:hover {
        background-color: #d42020;
      }

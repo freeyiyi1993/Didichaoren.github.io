@@ -9,7 +9,8 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
         var $this = $(this);
         var modalName = $this.attr('data-modal');//获取用户的输入标记
         $(modalName).show();//识别了用户定义的id之后就直接显示
-        $(modalName).find('.content').animate({height: 'show'});
+        $(modalName).find('.content').css({'opacity':0.5});
+        $(modalName).find('.content').slideDown(200).fadeTo(50,1);
         event.stopPropagation();
     });
 
@@ -25,9 +26,7 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
 
 $(document).bind('click',function(e){//点击空白区域隐藏弹出模态框
     var target  = $(e.target);
-    if(target.closest('.modal-header').length == 0
-        && target.closest('.modal-body').length == 0
-        && target.closest('.modal-footer').length == 0){
+    if(target.closest('.modal-fl').length == 0){
         $('.content').hide();
         $('.modal').hide();
     }
