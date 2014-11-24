@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/less" rel="stylesheet/less" href="../less/img-scroll.less">
+    <link type="text/less" rel="stylesheet/less" href="../less/pagination.less">
+    <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/img-scroll.js"></script>
+</head>
+<body>
+<div>
+    <div class="imgs">
+        <img src="../image/m1.jpg">
+        <img src="../image/m2.jpg">
+        <img src="../image/background.png">
+        <img src="../image/m1.jpg">
+        <img src="../image/m2.jpg">
+    </div>
+    <div class="pgn pgn-circle">
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a class="pgn-pre"></a>
+        <a class="pgn-next"></a>
+    </div>
+</div>
+<script>
+    $('.imgs').imgScroll();
+</script>
+</body>
+</html>
