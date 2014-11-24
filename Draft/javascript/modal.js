@@ -1,7 +1,4 @@
 
-
-
-
 $(document).ready(function() {//规定弹窗动作但是没有进行绑定
     //改变id为modal的按钮点击显示
 
@@ -9,8 +6,8 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
         var $this = $(this);
         var modalName = $this.attr('data-modal');//获取用户的输入标记
         $(modalName).show();//识别了用户定义的id之后就直接显示
-        $(modalName).find('.content').css({'opacity':0.5});
-        $(modalName).find('.content').slideDown(200).fadeTo(50,1);
+        $(modalName).find('.content').css({'opacity':0.6});
+        $(modalName).find('.content').slideDown(200).fadeTo(10,1);
         event.stopPropagation();
     });
 
