@@ -14,10 +14,22 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
     });
 
     //改变id为close的按钮点击隐藏
-    $('.close').click(function () {//直接关闭
+    $('.close').click(function (event) {
         $('.content').animate({height: 'hide'}, "slow", function () {
             $('.modal').hide();
         });
+        event.stopPropagation();
     });
 
+});
+
+$(document).bind('click',function(e){//点击空白区域隐藏弹出模态框
+    var target  = $(e.target);
+    if(target.closest('.modal-header').length == 0
+        && target.closest('.modal-body').length == 0
+        && target.closest('.modal-footer').length == 0){
+        $('.content').hide();
+        $('.modal').hide();
+    }
+    e.stopPropagation();
 });
