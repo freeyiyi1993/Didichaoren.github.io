@@ -16,6 +16,7 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
 
     //改变id为close的按钮点击隐藏
     $('.close').click(function (event) {
+        $('.content').hide();
             $('.modal').hide();
         event.stopPropagation();
     });
@@ -25,6 +26,7 @@ $(document).ready(function() {//规定弹窗动作但是没有进行绑定
 $(document).bind('click',function(e){//点击空白区域隐藏弹出模态框
     var target  = $(e.target);
     if(target.closest('.modal-fl').length == 0){
+        $('.content').hide();
         $('.modal').hide();
     }
     e.stopPropagation();
