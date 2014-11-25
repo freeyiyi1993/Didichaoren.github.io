@@ -1,9 +1,8 @@
 
 
 $(document).ready(function(){
-    var dropdownName;
-    var i;
     $('.btn-dropdown').bind('click',function(event){
+        var dropdownName;
         var $this   = $(this);
         dropdownName = $this.attr('data-dropdown');//获取用户的输入标记
         $('.dropdown-list').slideUp(200);
