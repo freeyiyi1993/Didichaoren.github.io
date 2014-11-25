@@ -113,11 +113,11 @@ input:focus,textarea:focus,select:focus,span:focus{
 
 .form .checkbox,
 .form .radio {
-  display: block;
   font-size: 100%;
   font-family: @font-family;
   margin: 0.5em 0;
 }
+
 .form .checkbox-inline,
 .form .radio-inline {
   display: inline-block;
@@ -299,7 +299,11 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 
 .form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
-  margin: 1.5em 0 0 10em;
+   margin: 1.5em 0 0 10em;
+ }
+.form-aligned .controls .checkbox,
+.form-aligned .controls .radio{
+  display: block;
 }
 
 //----------------------------form或期中input使用圆角-----------------------------------
