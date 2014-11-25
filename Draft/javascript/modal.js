@@ -1,6 +1,5 @@
 
-$(document).ready(function() {//规定弹窗动作但是没有进行绑定
-    //改变id为modal的按钮点击显示
+$(document).ready(function() {
 
     $('.btn-modal').click(function (event) {
         var $this = $(this);
