@@ -52,10 +52,13 @@
                 $('.list-touchmovable').on(touchEvents.touchstart,'.list-touchmoved>span', function (event) {
                     event.preventDefault();
                     //$(this).parents('.list-item').hide();
-                    methods.destroy($(this).parents('.list-item'));
+                    $(this).parents('.list-item').animate({height:0},200, function () {
+                        methods.destroy($(this));
+                    });
                 });
             });
         },
+        //什么算是destroy。再考虑下啊，，
         destroy: function (options) {
             options.hide();
         }

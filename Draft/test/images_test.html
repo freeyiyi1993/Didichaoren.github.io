@@ -7,46 +7,61 @@
     <link type="text/less" rel="stylesheet/less" href="../less/progressbars.less">
     <link type="text/less" rel="stylesheet/less" href="../less/grids.less">
     <link type="text/less" rel="stylesheet/less" href="../less/alerts.less">
-    <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
+    <link type="text/less" rel="stylesheet/less" href="../less/buttons.less">
+    <link type="text/css" rel="stylesheet" href="../fonts/dax/dax.css">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/progress.js"></script>
+    <style type="text/css">
+        body {
+            font-family: dax-regular;
+            margin: 0 12.5%;
+        }
+        .bgc-change {
+            background-image: url("../image/background.png");
+            background-size: cover;
+        }
+    </style>
 </head>
-<body>
-<img class="img" src="../image/background.png" alt="img" width="180px" height="180px">
-<img class="img img-circle" src="../image/background.png" alt="img3" width="180px" height="180px">
 
-<div class="img-bordered" style="text-align: center">
-    <img class="img" src="../image/background.png" alt="img3" width="180px" height="180px">
-    <p>2014/11/4</p>
+<body class="bgc-change">
+<h1>Collie-UI List-Group</h1>
+<button class="btn btn-fl skyblue ch-cli">切换背景</button>
+<br>
+<div class="pure-u">
+    <img class="img" src="../image/m1.jpg" alt="img" width="180px" height="180px">
+    <img class="img img-circle" src="../image/m2.jpg" alt="img3" width="180px" height="180px">
+
+    <div class="img-bordered" style="text-align: center">
+        <img class="img" src="../image/m1.jpg" alt="img3" width="180px" height="180px">
+        <p>2014/11/4</p>
+    </div>
+    <div class="img-bordered bgd-1" style="text-align: center">
+        <img class="img img-circle" src="../image/m2.jpg" alt="img" width="180px" height="180px">
+        <p>2014/11/4</p>
+    </div>
 </div>
-<div class="img-bordered bgd-1" style="text-align: center">
-    <img class="img img-circle" src="../image/background.png" alt="img" width="180px" height="180px">
-    <p>2014/11/4</p>
-</div>
+
 <div class="media-item pure-u-1-2">
-    <img  class="img" src="../image/background.png">
-    <p class="mi-header">UI Framework</p>
-    <div class="mi-content">简单易用，BLALADFJW2OIRUSLFJA;FKLJCF </div>
+    <img  class="img" src="../image/m2.jpg">
+    <div class="mi-content">
+        <p>MIMPI</p>
+        <div>A warm story.</div>
+    </div>
 </div>
-
 
 <div class="pure-u-1-2 img-group-4">
-    <img  class="img" src="../image/background.png">
-    <img  class="img" src="../image/background.png">
-    <img  class="img" src="../image/background.png">
-    <img  class="img" src="../image/background.png">
-    <img  class="img" src="../image/background.png">
-    <img  class="img" src="../image/background.png">
+    <img  class="img" src="../image/m1.jpg">
+    <img  class="img" src="../image/m2.jpg">
+    <img  class="img" src="../image/m1.jpg">
+    <img  class="img" src="../image/m2.jpg">
+    <img  class="img" src="../image/m1.jpg">
+    <img  class="img" src="../image/m2.jpg">
 </div>
 
-<div class="pure-u-1-2 progressbar">
+<div class="pure-u-1-2 progressbar active">
     <div></div>
 </div>
-
-<script>
-    $('.progressbar').progress({curValue:40,hasStrip:true}).progress("animate");
-</script>
 
 <div class="pure-u-1-2 progressbar">
     <div style="width: 1%">
@@ -103,6 +118,11 @@
         warning!sorry...
     </div>
 </div>
-<br>
+<script>
+    $('.progressbar.active').progress({curValue:40,hasStrip:true}).progress("animate");
+    $('.ch-cli').on('click', function () {
+        $('body').toggleClass('bgc-change');
+    });
+</script>
 </body>
 </html>
