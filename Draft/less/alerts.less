@@ -1,10 +1,13 @@
 .alert {
-  margin: .3em;
+  margin: .3em 0;
   padding: .8em 1em;
+  border-radius: 1.5em;
+}
+
+.alert-bgc {
   background-color: #73dcff;
   color: #ffffff;
   border: .3em solid #ffffff;
-  border-radius: 1.5em;
   &.green {
     background-color: #65e1a3;
   }
@@ -13,5 +16,23 @@
   }
   &.red {
     background-color: #ee3b3b;
+  }
+}
+
+.alert-yl {
+  background-color: transparent;
+  color: #73dcff;
+  border: .3em solid #73dcff;
+  &.green {
+    border-color: #65e1a3;
+    color: #65e1a3;
+  }
+  &.yellow {
+    border-color: #ffb24c;
+    color: #ffb24c;
+  }
+  &.red {
+    border-color: #ee3b3b;
+    color: #ee3b3b;
   }
 }
