@@ -6,6 +6,7 @@
     <link href="../less/forms.less" type="text/less" rel="stylesheet/less">
     <link href="../less/other-forms.less" type="text/less" rel="stylesheet/less">
     <link href="../less/buttons.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/buttongroups.less" type="text/less" rel="stylesheet\less">
     <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
     <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
     <link href="../fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
@@ -326,7 +327,7 @@
                     <input type="checkbox" id="inlineCheckbox3" value="option3">3
                 </label>
 
-            </div><br />
+            </div>
 
         </fieldset>
     </form>
@@ -365,9 +366,115 @@
                         <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">3
                     </label>
                 </div>
-            </fieldset>
-        </form>
+                </fieldset>
+            </form><br /><br />
 
+    <form class="form form-order">
+        <fieldset>
+            <legend>按钮组式Checkbox</legend>
+            <div class="btn-group">
+                <label class="btn btn-lu green" for="optiong">
+                    <input type="checkbox" name="optionsc" id="optiong" >checkbox 1 (preselected)
+                </label>
+                <label class="btn btn-lu green" for="optionh">
+                    <input type="checkbox" name="optionsc" id="optionh">checkbox 2
+                </label>
+                <label class="btn btn-lu green" for="optioni">
+                    <input type="checkbox" name="optionsc" id="optioni">checkbox 3
+                </label>
+            </div>
+            <label></label>
+            <div class="btn-group">
+                <label class="btn btn-fl btn-r green" for="optionj">
+                    <input type="checkbox" name="optionsd" id="optionj" >checkbox 1 (preselected)
+                </label>
+                <label class="btn btn-fl btn-r green" for="optionk">
+                    <input type="checkbox" name="optionsd" id="optionk">checkbox 2
+                </label>
+                <label class="btn btn-fl btn-r green" for="optionl">
+                    <input type="checkbox" name="optionsd" id="optionl">checkbox 3
+                </label>
+            </div>
+        </fieldset>
+    </form><br /><br />
+
+            <form class="form form-order">
+                <fieldset>
+                    <legend>按钮组式Radio</legend>
+                <div class="btn-group">
+                    <label class="btn btn-lu skyblue" for="optiona">
+                    <input type="radio" name="optionsa" id="optiona" >Radio 1 (preselected)
+                </label>
+                    <label class="btn btn-lu skyblue" for="optionb">
+                        <input type="radio" name="optionsa" id="optionb">Radio 2
+                    </label>
+                    <label class="btn btn-lu skyblue" for="optionc">
+                        <input type="radio" name="optionsa" id="optionc">Radio 3
+                    </label>
+                </div>
+                    <label></label>
+                    <div class="btn-group">
+                        <label class="btn btn-fl btn-r skyblue" for="optiond">
+                            <input type="radio" name="optionsb" id="optiond" >Radio 1 (preselected)
+                        </label>
+                        <label class="btn btn-fl btn-r skyblue" for="optione">
+                            <input type="radio" name="optionsb" id="optione">Radio 2
+                        </label>
+                        <label class="btn btn-fl btn-r skyblue" for="optionf">
+                            <input type="radio" name="optionsb" id="optionf">Radio 3
+                        </label>
+                    </div>
+            </fieldset>
+        </form><br /><br />
+
+    <form class="form form-order">
+        <fieldset>
+            <legend>按钮式checkbox、Radio</legend>
+            <label>Checkbox Without inline</label>
+            <label class="btn btn-lu green" for="options">
+                <input type="checkbox" name="optionsc" id="options" >checkbox 1 (preselected)
+            </label>
+            <label class="btn btn-lu green" for="optiont">
+                <input type="checkbox" name="optionsc" id="optiont">checkbox 2
+            </label>
+            <label class="btn btn-lu green" for="optionu">
+                <input type="checkbox" name="optionsc" id="optionu">checkbox 3
+            </label>
+            <label style="margin: 1em"></label>
+            <label class="btn btn-fl btn-r green" for="optionv">
+                <input type="checkbox" name="optionsd" id="optionv" >checkbox 1 (preselected)
+            </label>
+            <label class="btn btn-fl btn-r green" for="optionw">
+                <input type="checkbox" name="optionsd" id="optionw">checkbox 2
+            </label>
+            <label class="btn btn-fl btn-r green" for="optionx">
+                <input type="checkbox" name="optionsd" id="optionx">checkbox 3
+            </label><br />
+
+                <label>Radio with inline</label>
+                <label class="btn btn-lu skyblue radio-inline" for="optionm">
+                    <input type="radio" name="optionsa" id="optionm" >Radio 1 (preselected)
+                </label>
+                <label class="btn btn-lu skyblue radio-inline" for="optionn">
+                    <input type="radio" name="optionsa" id="optionn">Radio 2
+                </label>
+                <label class="btn btn-lu skyblue radio-inline radio-inline" for="optiono">
+                    <input type="radio" name="optionsa" id="optiono">Radio 3
+                </label>
+            <label></label>
+                <label class="btn btn-fl btn-r skyblue radio-inline" for="optionp">
+                    <input type="radio" name="optionsb" id="optionp" >Radio 1 (preselected)
+                </label>
+                <label class="btn btn-fl btn-r skyblue radio-inline" for="optionq">
+                    <input type="radio" name="optionsb" id="optionq">Radio 2
+                </label>
+                <label class="btn btn-fl btn-r skyblue radio-inline" for="optionr">
+                    <input type="radio" name="optionsb" id="optionr">Radio 3
+                </label><br /><br />
+
+
+        </fieldset>
+    </form>
 
 
     <br /><br />

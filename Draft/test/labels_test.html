@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Collie-UI Labels</title>
     <link href="../less/labels.less" type="text/less" rel="stylesheet/less" />
-    <link href="../less/forms.less" type="text/less" rel="stylesheet/less" />
-    <link href="../less/grids.less" type="text/less" rel="stylesheet/less" />
-    <link href="../less/buttons.less" type="text/less" rel="stylesheet/less" />
+    <link href="../less/forms.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/buttons.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/buttongroups.less" type="text/less" rel="stylesheet/less">
+    <link href="../less/grids.less" type="text/less" rel="stylesheet/less">
     <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
+    <link href="../fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/forms.js"></script>
     <style type="text/css">
         div#div1{
             position:fixed;
@@ -42,23 +46,23 @@
     <div class="form pure-u-3-8">
         <legend>在各种标题中使用</legend>
         <label><br /><br />
-            <h1>Example heading <span class="label label-primary">New</span></h1>
-            <h2>Example heading <span class="label label-primary">New</span></h2>
-            <h3>Example heading <span class="label label-primary">New</span></h3>
-            <h4>Example heading <span class="label label-primary">New</span></h4>
-            <h5>Example heading <span class="label label-primary">New</span></h5>
-            <h6>Example heading <span class="label label-primary">New</span></h6>
+            <h1>Example heading <span class="label label-skyblue">New</span></h1>
+            <h2>Example heading <span class="label label-skyblue">New</span></h2>
+            <h3>Example heading <span class="label label-skyblue">New</span></h3>
+            <h4>Example heading <span class="label label-skyblue">New</span></h4>
+            <h5>Example heading <span class="label label-skyblue">New</span></h5>
+            <h6>Example heading <span class="label label-skyblue">New</span></h6>
         </label>
         </div>
     <div class="form pure-u-3-8">
         <legend>基础颜色类</legend>
         <label>
             <h1><span class="label label-default">New</span> Default</h1>
-            <h1><span class="label label-primary">New</span> Primary</h1>
-            <h1><span class="label label-info">New</span> Info</h1>
-            <h1><span class="label label-success">New</span> Success</h1>
-            <h1><span class="label label-warning">New</span> Warning</h1>
-            <h1><span class="label label-error">New</span> Error</h1>
+            <h1><span class="label label-skyblue">New</span> skyblue</h1>
+            <h1><span class="label label-blue">New</span> blue</h1>
+            <h1><span class="label label-green">New</span> green</h1>
+            <h1><span class="label label-orange">New</span> orange</h1>
+            <h1><span class="label label-red">New</span> red</h1>
         </label>
     </div>
     <div class="pure-u-1-8"></div>
@@ -77,22 +81,11 @@
     <div class="pure-u-1-8"></div>
     <div class="form pure-u-3-4">
         <legend>Labels with Buttons</legend><br /><br />
-        <button class="btn-lu-s btn-lu-primary">Default <span class="label label-success">New!</span></button>
+        <button class="btn btn-lu skyblue">Default <span class="label label-green">New!</span></button>
     </div>
-    <div class="pure-u-1-8"></div>
+        <div class="pure-u-1-8"></div>
 </div><br /><br /><br /><br /><br /><br />
 
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
-    </label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-    </label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-    </label>
-</div>
 
 </body>
 </html>
