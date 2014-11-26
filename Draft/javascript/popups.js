@@ -11,8 +11,10 @@ $(document).ready(function() {
         }else{
             $(this).css({'left': + width1 + 'px'});
         }
-        if($(this).find('.popup-header').length===0) {
-            $(this).find('.popup-triangle').css({'color': 'white'})
+        if($(this).find('.popup-header').length!==0) {
+            $(this).find('.popup-triangle').css({'display': 'none'});
+            $(this).prepend('<span class="popup-triangle"></span>');
+            $(this).find('.popup-triangle').css({'color':'#d6d6d6'});
         }
     });
     $('.popup-top').each(function(){
@@ -23,15 +25,12 @@ $(document).ready(function() {
         }else{
             $(this).css({'left': + width2 + 'px'});
         }
-        if($(this).find('.popup-header').length===0) {
-            $(this).find('.popup-triangle').css({'color': 'white'})
-        }
     });
     $('.popup-left').each(function(){
         var $width3 = $(this).parent('.popup').outerWidth();
-        $(this).css({'right':(($width3)+16)+'px'});
+        $(this).css({'right':(($width3)+18)+'px'});
         var $height1 = $(this).outerHeight();
-        $(this).find('.popup-triangle').css({'top':((($height1)-34)/2)+'px'});
+        $(this).find('.popup-triangle').css({'top':((($height1)-30)/2)+'px'});
         var $height2 = $(this).parent('.popup').outerHeight();
         var height2 = Math.abs(((($height1)-($height2))/2));
         if($height1>$height2) {
@@ -42,9 +41,9 @@ $(document).ready(function() {
     });
     $('.popup-right').each(function(){
         var $width4 = $(this).parent('.popup').outerWidth();
-        $(this).css({'left':(($width4)+16)+'px'});
+        $(this).css({'left':(($width4)+18)+'px'});
         var $height3 = $(this).outerHeight();
-        $(this).find('.popup-triangle').css({'top':((($height3)-34)/2)+'px'});
+        $(this).find('.popup-triangle').css({'top':((($height3)-30)/2)+'px'});
         var $height4 = $(this).parent('.popup').outerHeight();
         var height4 = Math.abs(((($height3)-($height4))/2));
         if($height3>$height4) {
@@ -63,7 +62,8 @@ $(document).ready(function() {
         }
         event.stopPropagation();
     });
-    $(document).bind('click',function(e){//点击空白区域隐藏弹出模态框
+
+    $(document).bind('click',function(e){//点击空白区域隐藏(仍有问题)
         var target  = $(e.target);
         if(target.closest('.popup-list').length == 0){
             $('.popup-list').fadeOut(300);

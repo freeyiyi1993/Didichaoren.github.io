@@ -1,7 +1,21 @@
 .alert {
+  position: relative;
   margin: .3em 0;
-  padding: .8em 1em;
+  padding: .5em 1em .5em .5em;
   border-radius: 1.5em;
+  word-break: normal;
+  word-wrap:break-word;
+  box-sizing: border-box;
+  i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: .5em;
+    font-family: FontAwesome;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translate(0, -50%);  /* 50%为自身尺寸的一半 */
+  }
 }
 
 .alert-bgc {
@@ -35,4 +49,9 @@
     border-color: #ee3b3b;
     color: #ee3b3b;
   }
+}
+
+.alert-hide {
+  position: absolute;
+  display: none;
 }
