@@ -10,22 +10,15 @@
     <link type="text/css" rel="stylesheet" href="../fonts/dax/dax.css">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
-    <style type="text/css">
-        body {
-            font-family: dax-regular;
-            margin: 0 12.5%;
-        }
-        .bgc-change {
-            background-image: url("../image/background.png");
-            background-size: cover;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="testpage/testpage.css">
+    <script src="testpage/testpage.js"></script>
 </head>
 
 <body class="bgc-change">
-<h1>Collie-UI List-Group</h1>
-<button class="btn btn-fl skyblue ch-cli">切换背景</button>
-<br>
+<div>
+    <img class="ch-cli" src="../image/Collie%20logo.png">
+    <h1 class="title">-UI Images</h1>
+</div>
 <div class="pure-u">
     <img class="img" src="../image/m1.jpg" alt="img" width="180px" height="180px">
     <img class="img img-circle" src="../image/m2.jpg" alt="img3" width="180px" height="180px">
@@ -56,11 +49,5 @@
     <img  class="img" src="../image/m1.jpg">
     <img  class="img" src="../image/m2.jpg">
 </div>
-
-<script>
-    $('.ch-cli').on('click', function () {
-        $('body').toggleClass('bgc-change');
-    });
-</script>
 </body>
 </html>

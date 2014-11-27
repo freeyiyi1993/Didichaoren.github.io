@@ -14,9 +14,10 @@
     <script src="testpage/testpage.js"></script>
 </head>
 <body class="bgc-change">
-<h1>Collie-UI List-Group</h1>
-<button class="btn btn-fl skyblue ch-cli">切换背景</button>
-<br>
+<div>
+    <img class="ch-cli" src="../image/Collie%20logo.png">
+    <h1 class="title">-UI Progress</h1>
+</div>
 
 <div class="pure-u-1-2 progressbar active">
     <div></div>
@@ -63,9 +64,6 @@
 
 <script>
     $('.progressbar.active').progress({curValue:40,hasStrip:true}).progress("animate");
-    $('.ch-cli').on('click', function () {
-        $('body').toggleClass('bgc-change');
-    });
 </script>
 </body>
 </html>

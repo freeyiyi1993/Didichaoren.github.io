@@ -6,12 +6,12 @@
         cycle: function (options) {
             var defaults = {
                 pgn: '.pgn-circle', //pager的容器
-                pgnEle: '',   //如果不是默认，页码的特征
+                pgnStyle: '.pgn-choosed', //页码被选中后的类名
                 pgnChoosed: 1,  //默认选中的页码
                 leftButton: '.pgn-pre', //向左的按钮
                 rightButton: '.pgn-next', //向右的按钮
                 autoPlay: 'false', //自动播放
-                timeCircle: 10000 //自动播放的时间
+                timeCircle: 5000 //自动播放的时间
             };
             var settings = $.extend(defaults, options);
             var touchEvents = {
@@ -76,6 +76,13 @@
                     else if((startX-endX)<-40) {
                         leftToRight();
                     }
+                });
+
+                $(settings.leftButton).bind('click', function () {
+                    rightToLeft();
+                });
+                $(settings.rightButton).bind('click', function () {
+                    leftToRight();
                 });
             });
         },

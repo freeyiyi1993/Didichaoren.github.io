@@ -12,18 +12,9 @@
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/tabs.js"></script>
+	<link type="text/css" rel="stylesheet" href="testpage/testpage.css">
+    <script src="testpage/testpage.js"></script>
     <style type="text/css">
-        body {
-            font-family: dax-regular;
-            padding: 0 12.5%;
-        }
-        .bgc-change {
-            background-image: url("../image/background.png");
-            background-size: cover;
-        }
-        .divide {
-            margin: 1em 0;
-        }
         .example .tab-item {
             height: 10em;
             width: 30em;
@@ -32,9 +23,10 @@
     </style>
 </head>
 <body class="bgc-change">
-<h1>Collie-UI Alert</h1>
-<button class="btn btn-fl skyblue ch-cli">切换背景</button>
-<br>
+<div>
+    <img class="ch-cli" src="../image/Collie%20logo.png">
+    <h1 class="title">-UI Tabs</h1>
+</div>
 
 <div class="tab-horizontal tab-bgc example divide">
     <ul class="tabs removeTextNodes">
@@ -155,9 +147,6 @@
 </div>
 <script>
     $('.tab-vertical').tabs('init',{defaultIndex:3});
-    $('.ch-cli').on('click', function () {
-        $('body').toggleClass('bgc-change');
-    });
 </script>
 </body>
 </html>

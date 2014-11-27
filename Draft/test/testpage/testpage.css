@@ -9,3 +9,10 @@ body {
 .divide {
     margin: 1em 0;
 }
+.title {
+    display: inline-block;
+    -webkit-transform: translate(0,-60%);
+    -moz-transform: translate(0,-60%);
+    -ms-transform: translate(0,-60%);
+    transform: translate(0,-60%);
+}
