@@ -7,20 +7,8 @@
     <link href="../less/forms.less" type="text/less" rel="stylesheet" />
     <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
     <style type="text/css">
-        div#div1{
-            position:fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            z-index:-1;
-        }
-        div#div1 > img {
-            height:100%;
-            width:100%;
-            border:0;
-        }
         .skyblue{
             font-size: 120%;
             font-weight: bold;
@@ -30,20 +18,35 @@
             line-height: 60px;
             text-align: center;
         }
+        .bgc-change {
+            background-image: url("../image/background.png");
+            background-size: contain;
+        }
     </style>
+    <script>
+        $(document).ready(function(){
+            $('.ch-cli').on('click', function () {
+                $('body').toggleClass('bgc-change');
+            });
+        });
+    </script>
 </head>
-<body>
-<div id="div1"><img src="../image/background.png"></div>
-<form class="form">
 
-    <div class="grids-16">
-        <div class="g-2"></div>
-        <div class="g-10 form"><br />
-              <h1>Collie-UI Grids</h1>
-        </div>
-        <div class="g-2"></div>
+<body class="bgc-change">
+<div class="grids-16">
+    <div class="g-2"></div>
+    <div class="form g-12"><br />
+        <div style="float:left; z-index:-100">
+            <img src="../image/Collie%20logo.png" class="ch-cli">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label style="position:absolute;top: 135px;">
+            <h1>UI Grids</h1>
+        </label>
     </div>
+    <div class="g-2"></div>
+</div><br />
 
+<form class="form">
     <legend style="text-align: center"><h4>Unresponsive(Normal) Grids</h4></legend><br />
 <!--普通栅格-->
   <div class="grids-5"><!--5栅格-->

@@ -8,36 +8,35 @@
     <link rel="stylesheet/less" type="text/less" href="../less/forms.less">
     <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
     <script src="../less/less-1.7.4.min.js"></script>
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
     <style type="text/css">
-        div#div1{
-            position:fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            z-index:-1;
-        }
-        div#div1 > img {
-            height:100%;
-            width:100%;
-            border:0;
+        .bgc-change {
+            background-image: url("../image/background.png");
+            background-size: contain;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $('.ch-cli').on('click', function () {
+                $('body').toggleClass('bgc-change');
+            });
+        });
+    </script>
 </head>
-<body>
-<div id="div1"><img src="../image/background.png" /></div>
-<!--===============================================按钮全部样式测试===============================================-->
+
+<body class="bgc-change">
 <div class="pure-g">
     <div class="pure-u-1-8"></div>
-
     <div class="form pure-u-3-4"><br />
-        <label>
-            <h1>Collie-UI Buttons</h1>
+        <div style="float:left; z-index:-100">
+            <img src="../image/Collie%20logo.png" class="ch-cli">
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label style="position:absolute;top: 135px;">
+            <h1>UI Buttons</h1>
         </label>
     </div>
-<!-- 空div -->
-<div class="pure-u-1-8"></div>
-</div>
+    <div class="pure-u-1-8"></div>
+</div><br />
 
 <div class="pure-g">
     <div class="pure-u-1-8"></div>

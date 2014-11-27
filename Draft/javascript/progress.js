@@ -48,7 +48,7 @@
                         duration:settings.duration
                     });
                     setInterval(function () {
-                        pro.text(parseInt((pro.width()/pro.parent().width())*100) + '%');
+                        pro.text(parseInt((pro.innerWidth()/pro.parent().width())*100) + '%');
                     },settings.duration/(settings.end-settings.start));
                 }
             });

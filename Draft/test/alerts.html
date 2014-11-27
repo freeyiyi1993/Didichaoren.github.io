@@ -12,19 +12,8 @@
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <script src="../javascript/alerts.js"></script>
-    <style type="text/css">
-        body {
-            font-family: dax-regular;
-            padding: 0 12.5%;
-        }
-        .bgc-change {
-            background-image: url("../image/background.png");
-            background-size: cover;
-        }
-        .divide {
-            margin: 1em 0;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="testpage/testpage.css">
+    <script src="testpage/testpage.js"></script>
 </head>
 <body class="bgc-change">
 <h1>Collie-UI Alert</h1>
@@ -68,9 +57,6 @@
 </div>
 
 <script>
-    $('.ch-cli').on('click', function () {
-        $('body').toggleClass('bgc-change');
-    });
     $('.alert').alert('close');
     $('.test-alert').click(function () {
         $('.alert-hide').alert();
