@@ -1,0 +1,11 @@
+body {
+    font-family: dax-regular;
+    padding: 0 12.5%;
+}
+.bgc-change {
+    background-image: url("../../image/background.png");
+    background-size: cover;
+}
+.divide {
+    margin: 1em 0;
+}
