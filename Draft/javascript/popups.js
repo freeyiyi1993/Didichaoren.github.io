@@ -2,7 +2,6 @@
 
 $(document).ready(function() {
 
-
     $('.popup-bottom').each(function(){
         var $width1 = $(this).parent('.popup').outerWidth();
         var width1 = Math.abs(((240-($width1))/2));//解决超长按钮居中问题
@@ -17,6 +16,7 @@ $(document).ready(function() {
             $(this).find('.popup-triangle').css({'color':'#d6d6d6'});
         }
     });
+
     $('.popup-top').each(function(){
         var $width2 = $(this).parent('.popup').outerWidth();
         var width2 = Math.abs(((240-($width2))/2));//解决超长按钮居中问题

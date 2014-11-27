@@ -4,60 +4,50 @@
     <meta charset="UTF-8">
     <title>Collie-UI Buttons</title>
     <link rel="stylesheet/less" type="text/less" href="../less/buttons.less">
-    <link rel="stylesheet/less" type="text/less" href="../less/grids.less">
+    <link rel="stylesheet/less" type="text/less" href="../less/collie-grids.less">
     <link rel="stylesheet/less" type="text/less" href="../less/forms.less">
-    <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
+    <link href="../fonts/dax/dax.css" type="text/css" rel="stylesheet">
     <script src="../less/less-1.7.4.min.js"></script>
     <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="testpage/testpage.js"></script>
     <style type="text/css">
         .bgc-change {
             background-image: url("../image/background.png");
             background-size: contain;
         }
     </style>
-    <script>
-        $(document).ready(function(){
-            $('.ch-cli').on('click', function () {
-                $('body').toggleClass('bgc-change');
-            });
-        });
-    </script>
 </head>
 
 <body class="bgc-change">
-<div class="pure-g">
-    <div class="pure-u-1-8"></div>
-    <div class="form pure-u-3-4"><br />
-        <div style="float:left; z-index:-100">
+<header class="grids-16 gutter-bottom">
+    <div class="g-2"></div>
+    <div class="g-12 form"><br>
+        <div style="float:left;">
             <img src="../image/Collie%20logo.png" class="ch-cli">
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         <label style="position:absolute;top: 135px;">
             <h1>UI Buttons</h1>
         </label>
-    </div>
-    <div class="pure-u-1-8"></div>
-</div><br />
+        </div>
+    <div class="g-2"></div>
+    </header>
 
-<div class="pure-g">
-    <div class="pure-u-1-8"></div>
-
-    <div class="form pure-u-3-4"><br />
-<!--大小测试-->
-
-<label><h3>「Lucency系列按钮」大小示例</h3></label>
-<br />
+    <section class="grids-16">
+        <div class="g-2"></div>
+    <div class="g-12 gutter-horizontal form">
+    <label><h3>「Lucency系列按钮」大小示例</h3></label>
 <button class="btn btn-xl btn-lu btn-r default">Default中文</button>
 <button class="btn btn-lg btn-lu btn-r default">Default中文</button>
 <button class="btn btn-lu btn-r default">Default中文</button>
 <button class="btn btn-sm btn-lu btn-r default">Default中文</button>
 <button class="btn btn-xs btn-lu btn-r default">Default中文</button>
-<br /><br />
+        <br><br>
 <button class="btn btn-xl btn-lu default">Default中文</button>
 <button class="btn btn-lg btn-lu default">Default中文</button>
 <button class="btn btn-lu default">Default中文</button>
 <button class="btn btn-sm btn-lu default">Default中文</button>
 <button class="btn btn-xs btn-lu default">Default中文</button>
-<br /><br />
+        <br><br>
 
 <label><h3>「Flat系列按钮」大小示例</h3></label>
 <button class="btn btn-xl btn-fl btn-r skyblue">skyblue</button>
@@ -65,15 +55,14 @@
 <button class="btn btn-fl btn-r skyblue">skyblue</button>
 <button class="btn btn-sm btn-fl btn-r skyblue">skyblue</button>
 <button class="btn btn-xs btn-fl btn-r skyblue">skyblue</button>
-<br /><br />
+<br><br>
 <button class="btn btn-xl btn-fl skyblue">skyblue</button>
 <button class="btn btn-lg btn-fl skyblue">skyblue</button>
 <button class="btn btn-fl skyblue">skyblue</button>
 <button class="btn btn-sm btn-fl skyblue">skyblue</button>
 <button class="btn btn-xs btn-fl skyblue">skyblue</button>
-<br /><br />
+<br><br>
 
-<!--清透按钮测试-->
 <label><h3>「Lucency系列按钮」全预设样式示例</h3></label>
 <button class="btn btn-lu btn-r default">Default中文</button>
 <button class="btn btn-lu btn-r blue">blue</button>
@@ -82,7 +71,7 @@
 <button class="btn btn-lu btn-r orange">orange</button>
 <button class="btn btn-lu btn-r red">red</button>
 <button class="btn btn-link">Link</button>
-<br /><br />
+<br><br>
 <button class="btn btn-lu default">Default中文</button>
 <button class="btn btn-lu blue">blue</button>
 <button class="btn btn-lu skyblue">skyblue</button>
@@ -90,9 +79,8 @@
 <button class="btn btn-lu orange">orange</button>
 <button class="btn btn-lu red">red</button>
 <button class="btn btn-link">Link</button>
-<br /><br />
+<br><br>
 
-<!--扁平化按钮测试-->
 <label><h3>「Flat系列按钮」全预设样式示例</h3></label>
 <button class="btn btn-fl btn-r default">Default中文</button>
 <button class="btn btn-fl btn-r blue">blue</button>
@@ -101,7 +89,7 @@
 <button class="btn btn-fl btn-r orange">orange</button>
 <button class="btn btn-fl btn-r red">red</button>
 <button class="btn btn-link">Link</button>
-<br /><br />
+<br><br>
 
 <button class="btn btn-fl default">Default中文</button>
 <button class="btn btn-fl blue">blue</button>
@@ -110,9 +98,9 @@
 <button class="btn btn-fl orange">orange</button>
 <button class ="btn btn-fl red">red</button>
 <button class="btn btn-link">Link</button>
-<br /><br />
+<br><br>
 
-        <br />
+        <br>
         <label><h3>「幽霊系列按钮」示例</h3></label>
         <button class="btn btn-xl btn-yl">Default中文</button>
         <button class="btn btn-lg btn-yl">Default中文</button>
@@ -121,15 +109,11 @@
         <button class="btn btn-xs btn-yl">Default中文</button>
         <br/><br/>
 
-        <!--这个部分感觉是最近网页设计中很时尚的元素，-->
-        <!--背景基本是使用“高斯模糊”滤镜化之后的全局背景，-->
-        <!--白色纤细线条看起来高端大气，-->
-        <!--所以并不像其他功能按钮开发其他颜色。-->
 <label><h3>btn-block测试</h3></label>
-<button class="btn btn-fl green btn-block">green</button><br /><br />
+<button class="btn btn-fl green btn-block">green</button><br><br>
         <button class="btn-yl btn-block">green</button>
         <br/><br/>
-<!--清透按钮disabled="disabled"测试-->
+
 <label><h3>「Lucency系列按钮」disabled="disabled"示例</h3></label>
 <button class="btn btn-lu btn-r default" disabled="disabled">Default中文</button>
 <button class="btn btn-lu btn-r blue" disabled="disabled">blue</button>
@@ -138,7 +122,7 @@
 <button class="btn btn-lu btn-r orange" disabled="disabled">orange</button>
 <button class="btn btn-lu btn-r red" disabled="disabled">red</button>
 <button class="btn btn-link" disabled="disabled">Link</button>
-<br /><br />
+<br><br>
 <button class="btn btn-lu default" disabled="disabled">Default中文</button>
 <button class="btn btn-lu blue" disabled="disabled">blue</button>
 <button class="btn btn-lu skyblue" disabled="disabled">skyblue</button>
@@ -146,11 +130,10 @@
 <button class="btn btn-lu orange" disabled="disabled">orange</button>
 <button class="btn btn-lu red" disabled="disabled">red</button>
 <button class="btn btn-link" disabled="disabled">Link</button>
-<br /><br />
+<br><br>
 
 
 
-<!--扁平化按钮disabled="disabled"测试-->
 <label><h3>「Flat系列按钮」disabled="disabled"示例</h3></label>
 <button class="btn btn-fl btn-r default" disabled="disabled">Default中文</button>
 <button class="btn btn-fl btn-r blue" disabled="disabled">blue</button>
@@ -160,7 +143,7 @@
 <button class="btn btn-fl btn-r red" disabled="disabled">red</button>
 <button class="btn btn-link" disabled="disabled">Link</button>
 
-<br /><br />
+<br><br>
 <button class="btn btn-fl default" disabled="disabled">Default中文</button>
 <button class="btn btn-fl blue" disabled="disabled">blue</button>
 <button class="btn btn-fl skyblue" disabled="disabled">skyblue</button>
@@ -169,40 +152,34 @@
 <button class ="btn btn-fl red" disabled="disabled">red</button>
 <button class="btn btn-link" disabled="disabled">Link</button>
 
-        <br /><br />
+        <br><br>
         <label><h3>「Flat系列按钮」disabled="disabled"示例</h3></label>
         <label>Disabled<br/><br/></label>
         <button class="btn btn-xl btn-yl" disabled="disabled">Default中文</button>
 
-        <label>
-            <h3>「按钮类」示例</h3></label>
-        <label> "a"标签</label><br /><br />
+        <label><h3>「按钮类」示例</h3></label>
+        <label> "a"标签</label><br><br>
             <a class="btn btn-xl btn-yl" href="#" role="button">Link</a>
-            <br /><br />
             <a class="btn btn-lg btn-yl" href="#" role="button">Link</a>
-            <br /><br />
             <a class="btn btn-yl" href="#" role="button">Link</a>
-            <br /><br />
             <a class="btn btn-sm btn-yl" href="#" role="button">Link</a>
-            <br /><br />
             <a class="btn btn-xs btn-yl" href="#" role="button">Link</a>
-            <br /><br />
-
-        <label>普通连接样式对比</label>
-<a href="#">Link</a><br /><br />
-        <label>submit按钮<br /><br /></label>
+            <br><br>
+        <label>submit按钮</label><br><br>
 <button class="btn btn-fl btn-r default" type="submit">Button</button>
         <button class="btn btn-yl" type="submit">Button</button>
-<br /><br />
-        <label>input<br /><br /></label>
+<br><br>
+        <label>input</label><br><br>
 <input class="btn btn-lu green" type="button" value="Input">
 <input class="btn btn-lu btn-r skyblue" type="submit" value="Submit">
         <input class="btn btn-yl" type="button" value="Input">
         <input class="btn btn-yl" type="submit" value="Submit">
-        <br /><br />
+        <br><br>
     </div>
-    <!-- 空div -->
-    <div class="pure-u-1-8"></div>
-</div>
+    <div class="g-2"></div>
+</section>
+<footer>
+    <div style="padding-bottom:100px"></div>
+</footer>
 </body>
 </html>
