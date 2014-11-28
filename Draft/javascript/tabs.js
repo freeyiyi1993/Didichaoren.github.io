@@ -34,6 +34,9 @@ $(document).ready(function () {
         }
     };
     $.fn.tabs = function (options) {
+        $('.removeTextNodes').contents().filter(function() {
+            return this.nodeType === 3;
+        }).remove();
         var method = arguments[0];
         if ( methods[method] ) {
             return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));

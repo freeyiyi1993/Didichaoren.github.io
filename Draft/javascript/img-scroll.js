@@ -1,6 +1,4 @@
-/**
- * Created by DAC-Chen on 2014/11/24.
- */
+
 (function ($) {
     var methods = {
         cycle: function (options) {
@@ -84,47 +82,6 @@
                 $(settings.rightButton).bind('click', function () {
                     leftToRight();
                 });
-            });
-        },
-        scroll: function (options) {
-            var defaults = {
-                pgn: '.pgn-circle', //pager的容器
-                pgnEle: '',   //如果不是默认，页码的特征
-                pgnChoosed: 1,  //默认选中的页码
-                leftButton: '.pgn-pre', //向左的按钮
-                rightButton: '.pgn-next', //向右的按钮
-                autoPlay: 'false', //自动播放
-                timeCircle: 10000 //自动播放的时间
-            };
-            var settings = $.extend(defaults, options);
-            var imgs = [];
-            var i = 0;
-            $(this).find('img[src]').each(function () {
-                imgs[i] = $(this).offset().left;
-                i++;
-            });
-            return this.each(function () {
-                var $this = $(this);
-                var curPage = settings.pgnChoosed;
-                $(settings.page).children().eq(settings.pgnChoosed).addClass('pgn-choosed');
-                $(settings.leftButton).bind('click', function () {
-                    $this.animate({scrollLeft:imgs[curPage-2]},500);
-                    curPage--;
-                });
-                $(settings.rightButton).bind('click', function () {
-                    //$this.scrollLeft($this.find('img[src]').width());
-                    //console.log($this.find('img[src]').offset.left);
-                    $this.animate({scrollLeft:imgs[curPage]},500);
-                    curPage++;
-                });
-                if(settings.pgnEle !== '') {
-
-                }
-                else {
-                    $(settings.pgn).children().bind('click', function () {
-
-                    });
-                }
             });
         },
         stop: function (options) {
