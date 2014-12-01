@@ -11,6 +11,7 @@
     <link type="text/less" rel="stylesheet" href="../less/tabs.less">
     <link type="text/less" rel="stylesheet" href="../less/buttons.less">
     <link type="text/less" rel="stylesheet" href="../less/buttongroups.less">
+    <link type="text/less" rel="stylesheet" href="../less/badges.less">
     <link type="text/less" rel="stylesheet" href="../less/pagination.less">
     <link type="text/less" rel="stylesheet" href="../less/labels.less">
     <link type="text/less" rel="stylesheet" href="../less/tables.less">
@@ -32,9 +33,22 @@
     <script src="../javascript/forms.js"></script>
     <style>
         body {
-            background-color: #e3fcff;
+            background-color: #e6e6e6;
             margin: 1em;
             font-family: dax-regular;
+        }
+        div.background{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        div.background > img {
+            height:100%;
+            width:100%;
+            border:0;
         }
         .info,
         .demo-content {
@@ -47,31 +61,12 @@
         .info i {
             margin: .5em 1em;
         }
-        .left-p,
-        .right-p {
-            position: absolute;
-            top: 0;
-            height: 30em;
-            width: 2em;
-            background-color: rgba(0,0,0,0.5);
-            line-height: 30em;
-        }
-        .right-p {
-            left: 38em;
-        }
-        .test-img {
-            position: relative;
-            width: 40em;
-            margin: auto;
-        }
-        .tab-content {
-            border: 1px solid #efefef;
-        }
     </style>
 </head>
 <body>
+<div class="background"><img src="../image/background.png" /></div>
 <header>
-    <nav class="nav nav-primary nav-padding">
+    <nav class="nav nav-inverse nav-padding">
         <ul>
             <li><a href="#"><span class="fa fa-heart"></span>Collie-UI</a></li>
             <li><a href="#">更新ログ</a></li>
@@ -98,8 +93,8 @@
                 </div>
                 <div class="modal-body grids-16">
                     <form class="form form-order g-8">
-                        <label for="email1">Email</label>
-                        <input class="pure-u-1-3" id="email1" type="email" placeholder="Email">
+                        <label for="email1">Search</label>
+                        <input class="pure-u-1-3" id="email1" type="search" placeholder="Email">
 
                         <label for="password1">Password</label>
                         <input class="pure-u-1-3" id="password1" type="password" placeholder="Password">
@@ -129,23 +124,16 @@
         </div><!-- content -->
     </div><!-- /.modal -->
 </header>
+
 <section class="grids-16 gutter-vertical">
     <div class="g-sm-4 list-group list info">
         <div class="list-item">
             <div class="center">
                 <img class="img img-circle" src="../image/m2.jpg" alt="img3" width="100px" height="100px">
                 <h1>Collie</h1>
-                <button class="btn btn-fl btn-r skyblue">Follow</button>
-                <button class="btn btn-fl btn-r skyblue">Contact</button>
-            </div>
-        </div>
-        <div class="list-item grids-16">
-            <div class="g-8 ">
-
-            </div>
-            <div class="g-8">
-
-            </div>
+                <button class="btn btn-lu skyblue">Follow</button>
+                <button class="btn btn-lu skyblue">Contact</button>
+            </div><br>
         </div>
         <div class="list-item">
             <a class="block" href="#"><i class="fa fa-envelope"></i>collie@dreamarts.co.jp</a>
@@ -158,11 +146,11 @@
     </div>
     <div class="g-sm-10">
         <div class="demo-content">
-            <div class="tab-horizontal tab-triangle gutter">
+            <div class="tab-horizontal tab-line gutter">
                 <ul class="tabs">
                     <li>最近更新</li>
                     <li>話し合い</li>
-                    <li>Others</li>
+                    <li>Others<span class="badge">99+</span></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-item">
@@ -180,7 +168,7 @@
                         <div class="list-group">
                             <div class="list-item">
                                 <div class="media-item pure-u-1-2">
-                                    <img  class="img" src="../image/Collie%20logo.png">
+                                    <img  class="img" src="../image/title%20logo.png">
                                     <div class="mi-content">
                                         <p>logo的更新</p>
                                         <div>形状诠释意义，同时融入色彩元素</div>
@@ -336,7 +324,7 @@
             </div>
         </div>
     </div>
-    <div class="g-sm-2 center">
+    <div class="g-sm-2">
         <div class="modal" id="modal1">
             <div class="content">
                 <div class="modal-main">
@@ -357,14 +345,13 @@
                 </div><!-- /.modal-fl -->
             </div><!-- content -->
         </div><!-- /.modal -->
-        <button class="btn btn-lu skyblue set-margin-tb btn-modal" data-modal="#modal1">部品<span class="label label-skyblue">New!</span></button>
-        <button class="btn btn-lu green set-margin-tb">插件<span class="label label-green">New!</span></button>
-        <button class="btn btn-lu orange set-margin-tb">文档<span class="label label-orange">New!</span></button>
-        <button class="btn btn-lu red set-margin-tb">颜色<span class="label label-red">New!</span></button>
+        <button class="btn btn-lu skyblue set-margin-tb btn-modal" data-modal="#modal1" style="width: 100%">部品<span class="label label-skyblue">New!</span></button>
+        <button class="btn btn-lu green set-margin-tb" style="width: 100%">插件</button>
+        <button class="btn btn-lu orange set-margin-tb" style="width: 100%">文档</button>
+        <button class="btn btn-lu red set-margin-tb" style="width: 100%">颜色</button>
     </div>
 </section>
 <footer>
-
 </footer>
 <script>
     $('.tab-horizontal').tabs();
