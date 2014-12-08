@@ -1,13 +1,13 @@
 (function ($) {
     var methods = {
-        organ: function () {
+        organ: function (options) {
             var organs,organ;
             return this.each(function () {
                 organs = $(this).children('.list-item');
                 organs.click(function () {
                     organ = $(this);
-                    organ.siblings('.list-content').not($(this).next()).hide();
-                    organ.next().toggle();
+                    organ.siblings('.list-content').not($(this).next()).slideUp(200);
+                    organ.next().slideToggle(200);
                 });
             });
         },

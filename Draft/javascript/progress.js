@@ -6,13 +6,8 @@
 
     var methods = {
         init: function (options) {
-            var defaults = {
-                curValue: 10,
-                hasText: true,
-                hasStrip: false,
-                hasAnimatedStrip: false
-            };
-            var settings = $.extend(defaults, options);
+
+            var settings = this.settings;
             return this.each(function () {
                 var pro = $(this).children();
                 pro.css('width', settings.curValue + '%');
@@ -34,12 +29,7 @@
         //
         //},
         animate: function (options) {
-            var defaults = {
-                start: 0,
-                end: 100,
-                duration: 8000
-            };
-            var settings = $.extend(defaults,options);
+            var settings = this.settings;
             return this.each(function () {
                 var pro = $(this).children();
                 if(settings.start < settings.end){
@@ -47,15 +37,28 @@
                         width:settings.end+'%'},{
                         duration:settings.duration
                     });
-                    setInterval(function () {
-                        pro.text(parseInt((pro.innerWidth()/pro.parent().width())*100) + '%');
-                    },settings.duration/(settings.end-settings.start));
+                    if(settings.hasText === 'true'){
+                        setInterval(function () {
+                            pro.text(parseInt((pro.innerWidth()/pro.parent().width())*100) + '%');
+                        },settings.duration/(settings.end-settings.start));
+                    }
                 }
             });
         }
     };
     
     $.fn.progress = function (options) {
+        this.defaults = {
+            curValue: 10,
+            hasText: true,
+            hasStrip: false,
+            hasAnimatedStrip: false,
+
+            start: 0,
+            end: 100,
+            duration: 8000
+        };
+        this.settings = $.extend({}, this.defaults, options);
         var method = arguments[0];
         if ( methods[method] ) {
             return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
