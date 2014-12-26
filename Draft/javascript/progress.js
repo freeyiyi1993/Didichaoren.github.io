@@ -49,14 +49,14 @@
     
     $.fn.progress = function (options) {
         this.defaults = {
-            curValue: 10,
+            curValue: 0,
             hasText: true,
             hasStrip: false,
             hasAnimatedStrip: false,
 
             start: 0,
             end: 100,
-            duration: 8000
+            duration: 7000
         };
         this.settings = $.extend({}, this.defaults, options);
         var method = arguments[0];

@@ -53,7 +53,7 @@
         $(document).ready(function () {
             $('header').hide();
             $('section').hide();
-            $('.progressbar.active').progress({curValue:0,hasStrip:true}).progress("animate");
+            $('.progressbar.active').progress("animate",{curValue:0,hasStrip:true});
             setTimeout(function () {
                 $('header').show();
                 $('section').show();
@@ -64,7 +64,7 @@
 </head>
 <body>
 <div class="progressbar active">
-    <div class="probar-stripe animate-stripe" style="width: 20%"></div>
+    <div class="probar-stripe animate-stripe" style="width: 0"></div>
 </div>
 <header>
     <nav class="nav nav-primary nav-padding">
@@ -129,7 +129,7 @@
     <div class="g-sm-4 list-group list info">
         <div class="list-item">
             <div class="center">
-                <img class="img img-circle" src="../image/m2.jpg" alt="img3" width="100px" height="100px">
+                <img class="img img-circle" src="../image/m2.jpg" alt="img3" style="width: 100px;height: 100px">
                 <h1>Collie</h1>
                 <button class="btn btn-fl btn-r skyblue">Follow</button>
                 <button class="btn btn-fl btn-r skyblue">Contact</button>
@@ -363,5 +363,6 @@
     $('.tab-horizontal').tabs();
     $('.images').imgScroll('cycle',{leftButton:'.left-p',rightButton:'.right-p'});
 </script>
+
 </body>
 </html>
