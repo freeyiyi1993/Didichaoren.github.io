@@ -44,7 +44,7 @@
     width: 146px;
     height: auto;
     margin-left: 0.9em;
-    margin-top: 0.8em
+    margin-top: 1.5em
 }
 #Nav nav ul:not(:first-child){
     border-top: none;
@@ -53,10 +53,30 @@
 #Nav nav ul li .loading{
     height: 2.6em;
     padding-left: 1em;
+}#Nav nav ul li .loading-radius{
+    height: 2.6em;
+    padding-left: 1.8em;
+    padding-top: 0.6em;
+    box-sizing: border-box;
 }
 #Nav nav ul li .loading-round{
     height: 2.6em;
     padding-left: 1.5em;
     padding-top: 1em;
     box-sizing: border-box;
+}
+
+#Nav nav ul{
+    position: relative;
+}
+#Nav nav ul img{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 26px;
+    right: 30px;
+}
+.nav-vertical.nav-padding > ul{
+    padding: 3em 0;
+    margin-top: 30px;
 }
