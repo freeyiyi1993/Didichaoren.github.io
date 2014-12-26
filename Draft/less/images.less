@@ -1,7 +1,7 @@
 .img {
   display: inline-block;
-  border: .6em solid white;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
 }
 
 .img-responsive {
@@ -10,20 +10,34 @@
 }
 
 .img-circle {
+  border: .6em solid white;
   border-radius: 50%;
+}
+
+.img-under {
+  border: .1em solid #ffffff;
+  background-color: rgba(194, 194, 194, 0.50);
+  :not(img) {
+    text-align: center;
+  }
 }
 
 .img-above {
   position: relative;
-  >*:not(img) {
+  :not(img) {
     display: none;
+    text-align: center;
   }
-  >img:hover {
-    +*:not(img) {
+  &:hover {
+    :not(img) {
       display: block;
       position: absolute;
       bottom: .5em;
+      width: 100%;
+      padding: .5em;
       color: #ffffff;
+      background-color: rgba(0,0,0,0.8);
+      box-sizing: border-box;
     }
   }
 }

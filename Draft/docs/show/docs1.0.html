@@ -11,78 +11,59 @@
     <link href="../../less/navs.less" type="text/less" rel="stylesheet/less">
     <link href="../../fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
     <link href="../../fonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+    <link href="../../less/progressbars.less" type="text/css" rel="stylesheet/less">
+    <link href="docs1.0.css" type="text/css" rel="stylesheet">
     <script src="../../less/less-1.7.4.min.js"></script>
     <script src="../../javascript/jquery-2.1.1.min.js"></script>
     <script src="../../javascript/forms.js"></script>
     <script src="../../javascript/navs.js"></script>
     <script src="../../javascript/other-forms.js"></script>
     <script src="../../javascript/scrollmonitor.js"></script>
-    <style type="text/css">
-        .new-padding >ul>li >a{
-            padding: 0.85em 1em;
-            padding-left: 1.5em;
-        }
-        .new-padding >ul>li >a:hover,
-        .new-padding >ul>li >a:active,
-        .new-padding >ul>li >a:focus{
-           padding-left: 2.1em;
-            color: #000000;
-        }
-
-        .new-padding >ul>li >a:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-        .new-padding >ul>li >a:active,
-        .new-padding >ul>li >a:focus{
-            background-color: white;
-        }
-        .header {
-            margin: 60px auto 0;
-            width: 600px;
-            text-align: center;
-        }
-        .second-title{
-            max-width: 600px;
-            margin: 0 auto 0;
-        }
-        .btn-center {
-            text-align: center;
-        }
-        .btn-center .btn{
-            margin: 1em 0.5em;
-        }
-    </style>
 </head>
 <body>
 <div class="grids-12">
     <div class="g-2 gutter-right">
-    <div style="background-image: url('../../image/blurblack.jpg');background-size: cover">
-    <img src="../../image/Nav%20logo2.png" style="width: 86%;height:86%;margin-left: 0.9em;margin-top: 0.8em">
+    <div id="Nav">
+        <a href="#base"><img src="../../image/Nav%20logo2.png"></a>
     <nav class="nav-yl nav-vertical nav-padding new-padding">
-        <ul style="padding-left: 1em;border-bottom: none;margin-bottom: 0;">
-            <li><a href="#base">Begin</a></li>
+        <ul>
+            <li>
+                <div class="loading-radius"><span></span></div>
+            </li>
+            <!--<li><a href="#">Grids</a></li>-->
+            <!--<li><a href="#">Buttons</a></li>-->
+            <!--<li><a href="#">Forms</a></li>-->
+            <!--<li><a href="#">Tables</a></li>-->
+            <!--<li><a href="#">Images</a></li>-->
         </ul>
-        <ul style="padding-left: 1em;margin-top: 0;">
-            <li><a href="#">Grids</a></li>
-            <li><a href="#">Buttons</a></li>
-            <li><a href="#">Forms</a></li>
-            <li><a href="#">Tables</a></li>
-            <li><a href="#">Images</a></li>
+        <ul>
+            <li>
+                <div class="loading-round">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+            <!--<li><a href="#">ButtonGroups</a></li>-->
+            <!--<li><a href="#">Tabs</a></li>-->
+            <!--<li><a href="#">Navs</a></li>-->
+            <!--<li><a href="#">ListGroups</a></li>-->
+            <!--<li><a href="#">InputGroups</a></li>-->
+            <!--<li><a href="#">Badges</a></li>-->
         </ul>
-        <ul style="padding-left: 1em;border-top: none;margin-top: 0;">
-            <li><a href="#">ButtonGroups</a></li>
-            <li><a href="#">Tabs</a></li>
-            <li><a href="#">Navs</a></li>
-            <li><a href="#">ListGroups</a></li>
-            <li><a href="#">InputGroups</a></li>
-            <li><a href="#">Badges</a></li>
-        </ul>
-        <ul style="padding-left: 1em;border-top: none;margin-top: 0;">
-            <li><a href="#">Modals</a></li>
-            <li><a href="#">DropDowns</a></li>
-            <li><a href="#">Progress</a></li>
-            <li><a href="#">ImgScrolls</a></li>
-            <li><a href="#">Tooltips</a></li>
+        <ul>
+            <li>
+                <div class="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+            <!--<li><a href="#">Modals</a></li>-->
+            <!--<li><a href="#">DropDowns</a></li>-->
+            <!--<li><a href="#">Progress</a></li>-->
+            <!--<li><a href="#">ImgScrolls</a></li>-->
+            <!--<li><a href="#">Tooltips</a></li>-->
         </ul>
     </nav>
     </div><!--background-->

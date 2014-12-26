@@ -249,6 +249,50 @@
     }
   }
 }
+
+.loading-radius{
+  >span {
+    position: relative;
+    display: inline-block;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0;
+    background: none repeat scroll 0% 0% #73dcff;
+    -webkit-animation: 6s ease 0s normal none 1 running load-radius;
+    animation: 6s ease 0s normal none 1 running load-radius;
+  }
+
+}
+
+@-webkit-keyframes load-radius {
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load-radius {
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @-webkit-keyframes load-r1 {
   25% {
     right: 1em;

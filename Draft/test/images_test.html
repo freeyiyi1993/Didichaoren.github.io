@@ -12,6 +12,7 @@
     <script src="../javascript/jquery-2.1.1.min.js"></script>
     <link type="text/css" rel="stylesheet" href="testpage/testpage.css">
     <script src="testpage/testpage.js"></script>
+
 </head>
 
 <body class="bgc-change">
@@ -21,13 +22,22 @@
 </div>
 
 <div class="pure-u">
-    <img class="img" src="../image/m1.jpg" alt="img" width="180px" height="180px">
-    <img class="img img-circle" src="../image/m2.jpg" alt="img3" width="180px" height="180px">
+    <figure class="img-under pure-u-1-4">
+        <img class="img" src="../image/m1.jpg" alt="img">
+        <p>hihihi</p>
+    </figure>
+    <figure class="pure-u-1-4">
+        <img class="img img-circle" src="../image/m1.jpg" alt="img">
+    </figure>
 
-    <div class="img-above">
-        <img src="../image/m1.jpg" alt="img" width="180px" height="180px">
+    <figure class="img-above pure-u-1-4">
+        <img class="img" src="../image/m1.jpg" alt="img">
         <div>2012/2/2</div>
-    </div>
+    </figure>
+    <figure class="img-above pure-u-1-4">
+        <img class="img" src="../image/m1.jpg" alt="img">
+        <div>走过路过千万不要错过啊啊啊啊啊</div>
+    </figure>
 </div>
 
 <p>
@@ -35,13 +45,13 @@
 </p>
 <div class="media-item pure-u-1-2">
     <img  class="img" src="../image/m2.jpg">
-    <div class="mi-content">
+    <div class="mi-content" id="sortable">
         <h3>MIMPI</h3>
         <div>
             A warm story.A warm storyA warm storyA warm storyA warm storyA warm storyA warm story
             A warm storyA warm storyA warm story
         </div>
-        <div class="media-item">
+        <div class="media-item ui-state-default">
             <img  class="img" src="../image/m2.jpg">
             <div class="mi-content">
                 <h3>MIMPI</h3>
@@ -49,7 +59,7 @@
                     A warm storyA warm storyA warm story A warm story.A warm storyA warm storyA warm storyA warm storyA warm story</div>
             </div>
         </div>
-        <div class="media-item media-center">
+        <div class="media-item media-center ui-state-default">
             <img  class="img" src="../image/m2.jpg">
             <div class="mi-content">
                 <h3>MIMPI</h3>
@@ -57,7 +67,7 @@
                     A warm storyA warm storyA warm story A warm story.A warm storyA warm storyA warm storyA warm storyA warm story</div>
             </div>
         </div>
-        <div class="media-item media-end">
+        <div class="media-item media-end ui-state-default">
             <img  class="img" src="../image/m2.jpg">
             <div class="mi-content">
                 <h3>MIMPI</h3>
@@ -67,8 +77,6 @@
         </div>
     </div>
 </div>
-
-
 <p>
     如果图片和内容的位置需要交换，直接改代码顺序即可。。
 </p>
