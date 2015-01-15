@@ -611,9 +611,11 @@ a.btn-yl.active {
 .grids-16,
 .grids-12,
 .grids-5 {
+  /*定义五套栅格系统*/
   letter-spacing: -0.31em;
   word-spacing: -0.43em;
   text-rendering: optimizespeed;
+  /*不要忘记写字体，这里才是所有字体的初始化*/
   display: -webkit-flex;
   display: -ms-flexbox;
   -webkit-flex-flow: row wrap;
@@ -3554,19 +3556,19 @@ label.btn .checkbox-input {
   width: 1.6em;
   height: 1.6em;
   border-radius: 0;
-  background: none repeat scroll 0% 0% #73dcff;
-  -webkit-animation: 6s ease 0s normal none 1 running load-radius;
-  animation: 6s ease 0s normal none 1 running load-radius;
+  background: none repeat scroll 0 0 #73dcff;
+  -webkit-animation: load-radius 5s ease-in-out 0s normal none infinite running;
+  animation: load-radius 5s ease-in-out 0s normal none infinite running;
 }
 @-webkit-keyframes load-radius {
   25% {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(120deg);
   }
   75% {
-    transform: rotate(0deg);
+    transform: rotate(240deg);
   }
   100% {
     transform: rotate(360deg);
@@ -3577,10 +3579,10 @@ label.btn .checkbox-input {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(120deg);
   }
   75% {
-    transform: rotate(0deg);
+    transform: rotate(240deg);
   }
   100% {
     transform: rotate(360deg);
