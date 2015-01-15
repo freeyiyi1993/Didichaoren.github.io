@@ -6,35 +6,40 @@
     <link rel="stylesheet" type="text/css" href="css/collieUI.min.css" />
     <link href="fonts/dax/dax.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
-        div#div1{
-            position:fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            z-index:-1;
-        }
-        div#div1 > img {
-            height:100%;
-            width:100%;
-            border:0;
-        }
          .center{
              padding-left: 0;
              padding-right: 0;
              text-align:center;
          }
+         .nav-yl > ul > li > a{
+             transition: 0.3s ease-in-out;
+         }
+         .nav-yl > ul > li > a:hover{
+             color: #fff;
+         }
+        .grids-16 .g-3{
+            width: 120px;
+        }
+        #logo{
+            width: 120px;
+            height: auto;
+            margin-top: -26px;
+            padding-bottom: 36px;
+        }
     </style>
 </head>
-<body>
-<div id="div1"><img src="image/background.png" /></div>
+<body style="/*background: -webkit-radial-gradient(#555,black);*/background-color:#000">
 <br /><br /><br /><br /><br /><br /><br />
 <div class="grids-16">
 <div class="g-2"></div>
 
 <div class="form g-12"><br />
-<h1>Collie-UI Test</h1>
-<hr />
+    <div class="g-3">
+        <img id="logo" src="image/Nav%20logo.png">
+    </div>
+    <div class="g-9">
+        <h1 style="color: #fff">Collie-UI Test</h1>
+    </div>
 <br />
 </div>
 <!-- 空div -->
@@ -116,7 +121,7 @@
 <div class="g-2"></div>
 <!-- 留白 -->
 
-<div class=" form g-12" style="text-align:right;margin-top: 100px;">
+<div class=" form g-12" style="text-align:right;margin-top: 100px;color: #a0a0a0">
     @Didichaoren &nbsp; & &nbsp; ckitakishi
 </div>
 
