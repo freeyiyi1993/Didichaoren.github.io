@@ -21,6 +21,47 @@
   Sitepoint只是给出了语言代码的大类，比如说中文就只给出了ZH，但是没有区分香港，台湾，大陆等。
   而微软给出的一份细分了zh-cn,zh-hk,zh-tw, Head to Microsoft for a [detail list of language codes](https://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx).
 
+##IE 兼容模式
+- Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个页面应当支持的IE的版本。除非另有规定，最好用最新的支持的模式。
+(更多信息, [阅读这个 Stack Overflow 文章.](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)
+不同doctype在不同浏览器下的不同渲染模式，[诡异模式总结](https://hsivonen.fi/doctype/)的很到位.)
+
+##字符编码
+- 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。
+
+##引入 CSS 和 JavaScript
+- 根据 HTML5 规范, 通常在引入 CSS 和 JavaScript 时不需要指明 `type`，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
+- HTML5 规范链接:[使用 link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element),[使用 style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element),[使用 script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)。
+
+##实用高于完美
+- 尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
+
+##属性顺序
+HTML 属性应该按照特定的顺序出现以保证易读性。
+
+- `id`
+- `class`
+- `name`
+- `data-*`
+- `src`, `for`, `type`, `href`
+- `title`, `alt`
+- `aria-*`, `role`
+
+Classes 是为高可复用组件设计的，理论上他们应处在第一位。Ids 更加具体而且应该尽量少使用（例如, 页内书签），所以他们处在第二位。但为了突出id的重要性， 把id放到了第一位。
+
+##Boolean 属性
+Boolean 属性指不需要声明取值的属性。XHTML 需要每个属性声明取值，但是 HTML5 并不需要。
+
+了解更多内容，参考 WhatWG section on boolean attributes:
+
+    一个元素中 Boolean 属性的存在表示取值 true，不存在则表示取值 false。
+
+如果你必须为属性添加并不需要的取值，参照 WhatWG 的指引:
+
+    如果属性存在，他的取值必须是空字符串或者 [...] 属性的规范名称，不要在首尾包含空白字符。
+
+简而言之，不要为 Boolean 属性添加取值。
+
 ##缩进
 - 每一行的层级由2个空格缩进,禁止使用Tab
 
