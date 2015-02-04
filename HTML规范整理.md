@@ -2,7 +2,7 @@
 ----
 
 ##HTML文件命名
-- 多个单词组成时，采用中划线连接方式，比如说: `error-report.html`
+多个单词组成时，采用中划线连接方式，比如说: `error-report.html`
 
 ##语法
 - 使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。
@@ -24,7 +24,7 @@
 </html>
 ```
 ##HTML5 doctype
-- 在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。(虽然doctype不区分大小写，但是按照惯例，doctype大写。
+在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。(虽然doctype不区分大小写，但是按照惯例，doctype大写。
 [关于html属性，大写还是小写的一片文章](http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname))
 ```html
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
 ```
 
 ##IE 兼容模式
-- Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个页面应当支持的IE的版本。除非另有规定，最好用最新的支持的模式。
+Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个页面应当支持的IE的版本。除非另有规定，最好用最新的支持的模式。
 (更多信息, [阅读这个 Stack Overflow 文章.](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)
 不同doctype在不同浏览器下的不同渲染模式，[诡异模式总结](https://hsivonen.fi/doctype/)的很到位.)
 ```html
@@ -55,7 +55,7 @@
 ```
 
 ##字符编码
-- 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。
+通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。
 ```html
 <head>
     <meta charset="UTF-8">
@@ -79,7 +79,7 @@
 ```
 
 ##实用高于完美
-- 尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
+尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
 ##属性顺序
 HTML 属性应该按照特定的顺序出现以保证易读性。
@@ -119,7 +119,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 ```
 
 ##减少标签数量
-- 在编写 HTML 代码时，需要尽量避免多余的父节点。很多时候，需要通过迭代和重构来使 HTML 变得更少。
+在编写 HTML 代码时，需要尽量避免多余的父节点。很多时候，需要通过迭代和重构来使 HTML 变得更少。
 ```html
 <!-- Not so great -->
 <span class="avatar">
@@ -131,7 +131,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 ```
 
 ##JavaScript 生成标签
-- 在 JavaScript 文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
+在 JavaScript 文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
 ##缩进
 - 每一行的层级由2个空格缩进,禁止使用Tab
