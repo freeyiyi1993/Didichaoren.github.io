@@ -183,7 +183,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 	<!-- 推荐 -->
 	<a href="/">Home</a>
 ##语句
-####头部元素
+>####头部元素
 - title 每个页面必须有且仅有一个 title 元素;   
 - base 可用场景：首页、频道等大部分链接都为新窗口打开的页面;   
 - link 用于引入 css 资源时, 可省去 media(默认为all);   
@@ -203,7 +203,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 		<!-- 推荐 -->
 		<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 
-####文本元素
+>####文本元素
 
 - a a 存在 href 属性时表示链接, 无 href 属性但有 name 属性表示锚点;   
 - em,strong em 表示句意强调, 加与不加会引起语义变化, 可用于表示不同的心情或语调; strong 表示重要性强调, 可用于局部或全局, strong强调的是重要性, 不会改变句意;   
