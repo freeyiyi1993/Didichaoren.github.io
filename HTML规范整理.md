@@ -5,21 +5,21 @@
 多个单词组成时，采用中划线连接方式，比如说: `error-report.html`
 
 ##语法
-- 使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。
-- 嵌套的节点应该缩进（四个空格）。
+- 每次缩进两个空格，不要使用tab键进行缩进，也不要把tab键以及空格混合起来进行缩进。单纯的使用空格进行缩进。
+- 嵌套的节点应该缩进（两个空格）。
 - 在属性上，使用双引号，不要使用单引号。
 - 不要在自动闭合标签结尾处使用斜线 - [HTML5 规范](http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag) 指出他们是可选的。
 - 不要忽略可选的关闭标签（例如，`</li>` 和 `</body>`）。
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Page title</title>
-    </head>
+  <head>
+      <title>Page title</title>
+  </head>
 <body>
-    <img src="images/company-logo.png" alt="Company">
+  <img src="images/company-logo.png" alt="Company">
 
-    <h1 class="hello-world">Hello, world!</h1>
+  <h1 class="hello-world">Hello, world!</h1>
 </body>
 </html>
 ```
@@ -29,8 +29,8 @@
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
+  <head>
+  </head>
 </html>
 ```
 
@@ -42,7 +42,7 @@
   而微软给出的一份细分了zh-cn,zh-hk,zh-tw, Head to Microsoft for a [detail list of language codes](https://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx).
 ```html
 <html lang="en-us">
-    <!-- ... -->
+  <!-- ... -->
 </html>
 ```
 
@@ -58,7 +58,7 @@ Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个�
 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。
 ```html
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 </head>
 ```
 
@@ -95,7 +95,7 @@ HTML 属性应该按照特定的顺序出现以保证易读性。
 Classes 是为高可复用组件设计的，理论上他们应处在第一位。Ids 更加具体而且应该尽量少使用（例如, 页内书签），所以他们处在第二位。但为了突出id的重要性， 把id放到了第一位。
 ```html
 <a id="..." class="..." data-modal="toggle" href="#">
-    Example link
+  Example link
 </a>
 
 <input class="form-control" type="text">
@@ -114,7 +114,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 <input type="checkbox" value="1" checked>
 
 <select>
-    <option value="1" selected>1</option>
+  <option value="1" selected>1</option>
 </select>
 ```
 
@@ -123,7 +123,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 ```html
 <!-- Not so great -->
 <span class="avatar">
-    <img src="...">
+  <img src="...">
 </span>
 
 <!-- Better -->
