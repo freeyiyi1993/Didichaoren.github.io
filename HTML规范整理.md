@@ -64,7 +64,7 @@ Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个�
 
 ##引入 CSS 和 JavaScript
 - 根据 HTML5 规范, 通常在引入 CSS 和 JavaScript 时不需要指明 `type`，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
-- HTML5 规范链接:[使用 link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element),[使用 style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element),[使用 script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)。
+- HTML5 规范链接:[使用 link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element), [使用 style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element), [使用 script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)。
 ```html
 <!-- External CSS -->
 <link rel="stylesheet" href="code-guide.css">
