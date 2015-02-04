@@ -1,5 +1,18 @@
 #HTML 编码规范  
 ----
+
+##HTML文件命名
+- 多个单词组成时，采用中划线连接方式，比如说: error-report.html
+
+##语法
+
+- 使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。
+- 嵌套的节点应该缩进（四个空格）。
+- 在属性上，使用双引号，不要使用单引号。
+- 不要在自动闭合标签结尾处使用斜线 - [HTML5 规范](http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag) 指出他们是可选的。
+- 不要忽略可选的关闭标签（例如，&lt;/li&gt; 和 &lt;/body&gt;）。
+
+
 ##缩进
 - 每一行的层级由2个空格缩进,禁止使用Tab
 
