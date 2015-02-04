@@ -62,22 +62,6 @@ Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个�
 </head>
 ```
 
-##引入 CSS 和 JavaScript
-- 根据 HTML5 规范, 通常在引入 CSS 和 JavaScript 时不需要指明 `type`，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
-- HTML5 规范链接:[使用 link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element), [使用 style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element), [使用 script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)。
-```html
-<!-- External CSS -->
-<link rel="stylesheet" href="code-guide.css">
-
-<!-- In-document CSS -->
-<style>
-    /* ... */
-</style>
-
-<!-- JavaScript -->
-<script src="code-guide.js"></script>
-```
-
 ##实用高于完美
 尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
@@ -190,18 +174,28 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 - link 用于引入 css 资源时, 可省去 media(默认为all);   
 - style type 默认为 text/css, 可以省去;   
 - script type 属性可以省去; 不赞成使用lang属性; 不要使用古老的<!– //–>这种hack脚本, 它用于阻止第一代浏览器(Netscape 1和Mosaic)将脚本显示成文字;
+- 根据 HTML5 规范, 通常在引入 CSS 和 JavaScript 时不需要指明 `type`，因为 `text/css` 和 `text/javascript` 分别是他们的默认值。
+- HTML5 规范链接:[使用 link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element), [使用 style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element), [使用 script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)。
+
+		<!-- External CSS -->
+		<link rel="stylesheet" href="code-guide.css">
+
+		<!-- In-document CSS -->
+		<style>
+		  /* ... */
+		</style>
+
+		<!-- JavaScript -->
+		<script src="code-guide.js"></script>
 
 		<!-- 不推荐 -->
 		<link rel="stylesheet" href="//www.google.com/css/maia.css"
 		  type="text/css">
-		
-		<!-- 不推荐 -->
 		<script src="//www.google.com/js/gweb/analytics/autotrack.js"
 		  type="text/javascript"></script>
+
 		<!-- 推荐 -->
 		<link rel="stylesheet" href="//www.google.com/css/maia.css">
-		
-		<!-- 推荐 -->
 		<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 
 > ####文本元素
