@@ -5,7 +5,6 @@
 - 多个单词组成时，采用中划线连接方式，比如说: error-report.html
 
 ##语法
-
 - 使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。
 - 嵌套的节点应该缩进（四个空格）。
 - 在属性上，使用双引号，不要使用单引号。
@@ -14,6 +13,13 @@
 
 ##HTML5 doctype
 - 在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。(虽然doctype不区分大小写，但是按照惯例，doctype大写 [关于html属性，大写还是小写的一片文章](http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname))
+
+##语言属性
+- 针对HTML5:作者应在html的跟元素上加上这个文件的语言。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
+[阅读更多有关 lang 属性](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element)
+- 通过Sitepoint 得到一个[语言代码列表](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/).
+  Sitepoint只是给出了语言代码的大类，比如说中文就只给出了ZH，但是没有区分香港，台湾，大陆等。
+  而微软给出的一份细分了zh-cn,zh-hk,zh-tw, Head to Microsoft for a [detail list of language codes](https://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx).
 
 ##缩进
 - 每一行的层级由2个空格缩进,禁止使用Tab
