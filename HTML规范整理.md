@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Page title</title>
+    <title>Page title</title>
   </head>
 <body>
   <img src="images/company-logo.png" alt="Company">
