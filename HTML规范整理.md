@@ -190,18 +190,18 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 >style type 默认为 text/css, 可以省去;   
 >script type 属性可以省去; 不赞成使用lang属性; 不要使用古老的<!– //–>这种hack脚本, 它用于阻止第一代浏览器(Netscape 1和Mosaic)将脚本显示成文字;
 
->		<!-- 不推荐 -->
->		<link rel="stylesheet" href="//www.google.com/css/maia.css"
->		  type="text/css">
->		
->		<!-- 不推荐 -->
->		<script src="//www.google.com/js/gweb/analytics/autotrack.js"
->		  type="text/javascript"></script>
->		<!-- 推荐 -->
->		<link rel="stylesheet" href="//www.google.com/css/maia.css">
->		
->		<!-- 推荐 -->
->		<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+		<!-- 不推荐 -->
+		<link rel="stylesheet" href="//www.google.com/css/maia.css"
+		  type="text/css">
+		
+		<!-- 不推荐 -->
+		<script src="//www.google.com/js/gweb/analytics/autotrack.js"
+		  type="text/javascript"></script>
+		<!-- 推荐 -->
+		<link rel="stylesheet" href="//www.google.com/css/maia.css">
+		
+		<!-- 推荐 -->
+		<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 
 - 文本元素
 
@@ -217,10 +217,10 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 
 >img 请勿将img元素作为定位布局的工具, 不要用他显示空白图片; 给img元素增加alt属性;例如
 >
->		<!-- 不推荐 -->
->		<img src="spreadsheet.png">
->		<!-- 推荐 -->
->		<img src="spreadsheet.png" alt="Spreadsheet screenshot.">
+		<!-- 不推荐 -->
+		<img src="spreadsheet.png">
+		<!-- 推荐 -->
+		<img src="spreadsheet.png" alt="Spreadsheet screenshot.">
 
 - 列表元素
 
