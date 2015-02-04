@@ -138,12 +138,14 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 		<table>
 		  <thead>
 		    <tr>
-		      <th scope="col">Income
-		      <th scope="col">Taxes
+		      <th scope="col">Income</th>
+		      <th scope="col">Taxes</th>
+		    </tr>
 		  <tbody>
 		    <tr>
-		      <td>$ 5.00
-		      <td>$ 4.50
+		      <td>$ 5.00</td>
+		      <td>$ 4.50</td>
+		    </tr>
 		</table>
 
 ##空格
