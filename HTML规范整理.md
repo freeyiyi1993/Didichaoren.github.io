@@ -12,6 +12,8 @@
 - 不要在自动闭合标签结尾处使用斜线 - [HTML5 规范](http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag) 指出他们是可选的。
 - 不要忽略可选的关闭标签（例如，&lt;/li&gt; 和 &lt;/body&gt;）。
 
+##HTML5 doctype
+- 在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。(虽然doctype不区分大小写，但是按照惯例，doctype大写 [关于html属性，大写还是小写的一片文章](http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname))
 
 ##缩进
 - 每一行的层级由2个空格缩进,禁止使用Tab
