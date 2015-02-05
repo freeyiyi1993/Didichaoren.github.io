@@ -347,7 +347,7 @@ var order = [
     6.border-radius
 
 - 大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。
-- Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 shorthand properties 的文章。
+- Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) 的文章。
 ```css
 /* Bad example */
 .element {
@@ -474,3 +474,4 @@ span { ... }
 - 在文件结尾添加一个空白行。
 
 参照文档，将这些设置应用到项目的 `.editorconfig` 文件。 例如，[Bootstrap 中的 `.editorconfig` 文件](https://github.com/twbs/bootstrap/blob/master/.editorconfig)。 通过 [关于 EditorConfig](http://editorconfig.org/) 了解更多内容。
+
