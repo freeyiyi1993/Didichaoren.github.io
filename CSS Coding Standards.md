@@ -3,7 +3,7 @@
 
 [2.声明顺序](#user-content-2声明顺序)
 
-[3.不要使用@import](#user-content-3不要使用@import)
+[3.不要使用@import](#user-content-3不要使用-import)
 
 [4.媒体查询位置](#user-content-4媒体查询位置)
 
