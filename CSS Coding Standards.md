@@ -443,10 +443,10 @@ span { ... }
 
 ##13.编辑器配置
 根据以下的设置来配置你的编辑器，来避免常见的代码不一致和丑陋的 diffs。
-    
-    - 使用四个空格的 soft-tabs。
-    - 在保存时删除尾部的空白字符。
-    - 设置文件编码为 UTF-8。
-    - 在文件结尾添加一个空白行。
 
-参照文档，将这些设置应用到项目的 `.editorconfig` 文件。 例如，Bootstrap 中的 `.editorconfig` 文件。 通过 关于 EditorConfig 了解更多内容。
+- 使用四个空格的 soft-tabs。
+- 在保存时删除尾部的空白字符。
+- 设置文件编码为 UTF-8。
+- 在文件结尾添加一个空白行。
+
+参照文档，将这些设置应用到项目的 `.editorconfig` 文件。 例如，[Bootstrap 中的 `.editorconfig` 文件](https://github.com/twbs/bootstrap/blob/master/.editorconfig)。 通过 [关于 EditorConfig](http://editorconfig.org/) 了解更多内容。
