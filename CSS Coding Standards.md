@@ -1,29 +1,29 @@
 #CSS编码规范
-[1.语法]
+[1.语法](#user-content-1语法)
 
-[2.声明顺序]
+[2.声明顺序](#user-content-2声明顺序)
 
-[3.不要使用@import]
+[3.不要使用@import](#user-content-3不要使用@import)
 
-[4.Media query 的位置]
+[4.媒体查询位置](#user-content-4媒体查询位置)
 
-[5.前缀属性]
+[5.前缀属性](#user-content-5前缀属性)
 
-[6.单行声明的规则]
+[6.单行声明的规则](#user-content-6单行声明的规则)
 
-[7.属性简写]
+[7.属性简写](#user-content-7属性简写)
 
-[8.LESS 和 SASS 中的嵌套]
+[8.LESS 和 SASS 中的嵌套](#user-content-8less-和-sass-中的嵌套)
 
-[9.代码注释]
+[9.代码注释](#user-content-9代码注释)
 
-[10.Class 命名]
+[10.Class 命名](#user-content-10class-命名)
 
-[11.选择器]
+[11.选择器](#user-content-11选择器)
 
-[12.代码组织]
+[12.代码组织](#user-content-12代码组织)
 
-[13.编辑器配置]
+[13.编辑器配置](#user-content-13编辑器配置)
 
 ------
 
