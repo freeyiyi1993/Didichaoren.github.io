@@ -9,7 +9,7 @@
 
 [5.前缀属性](#user-content-5前缀属性)
 
-[6.单行声明的规则](#user-content-6单行声明的规则)
+[6.单条声明的声明块](#user-content-6单条声明的声明块)
 
 [7.属性简写](#user-content-7属性简写)
 
