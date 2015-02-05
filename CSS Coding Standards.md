@@ -43,13 +43,13 @@
 
 - 相关的属性声明应该以下面的顺序分组处理：
 
-　1.Positioning
-　
-　2.Box model 盒模型
-　
-　3.Typographic 排版
-　
-　4.Visual 外观
+    1.Positioning
+    
+    2.Box model 盒模型
+    
+    3.Typographic 排版
+    
+    4.Visual 外观
 
 - Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。盒模型紧跟其后，因为他决定了一个组件的大小和位置。
 - 其他属性只在组件 内部 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。
@@ -310,18 +310,143 @@ var order = [
 
 - 坚持限制属性取值简写的使用，属性简写需要你必须显式设置所有取值。常见的属性简写滥用包括:
 
-　1.padding
-　
-　2.margin
-　
-　3.font
-　
-　4.background
-　
-　5.border
-　
-　6.border-radius
+    1.padding
+    
+    2.margin
+    
+    3.font
+    
+    4.background
+    
+    5.border
+    
+    6.border-radius
 
 - 大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。
 - Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 shorthand properties 的文章。
+```css
+/* Bad example */
+.element {
+    margin: 0 0 10px;
+    background: red;
+    background: url("image.jpg");
+    border-radius: 3px 3px 0 0;
+}
 
+/* Good example */
+.element {
+    margin-bottom: 10px;
+    background-color: red;
+    background-image: url("image.jpg");
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+```
+
+##8.LESS 和 SASS 中的嵌套
+
+避免不必要的嵌套。可以进行嵌套，不意味着你应该这样做。只有在需要给父元素增加样式并且同时存在多个子元素时才需要考虑嵌套。
+```css
+// Without nesting
+.table > thead > tr > th { … }
+.table > thead > tr > td { … }
+
+// With nesting
+.table > thead > tr {
+    > th { … }
+    > td { … }
+}
+```
+
+##9.代码注释
+
+代码是由人来编写和维护的。保证你的代码是描述性的，包含好的注释，并且容易被他人理解。好的代码注释传达上下文和目标。不要简单地重申组件或者 class 名称。*Be sure to write in complete sentences or larger comments and succinct phrases for general notes.*
+```css
+/* Bad example */
+/* Modal header */
+.modal-header {
+    ...
+}
+
+/* Good example */
+/* Wrapping element for .modal-title and .modal-close */
+.modal-header {
+    ...
+}
+```
+
+##10.Class 命名
+- 保持 Class 命名为全小写，可以使用短划线（不要使用下划线和 camelCase 命名）。短划线应该作为相关类的自然间断。(例如，`.btn` 和 `.btn-danger`)。
+- 避免过度使用简写。`.btn` 可以很好地描述 *button*，但是 `.s` 不能代表任何元素。
+- Class 的命名应该尽量短，也要尽量明确。
+- 使用有意义的名称；使用结构化或者作用目标相关，而不是抽象的名称。
+- 命名时使用最近的父节点或者父 class 作为前缀。
+- 使用 `.js-*` classes 来表示行为(相对于样式)，但是不要在 CSS 中包含这些 classes。
+```css
+/* Bad example */
+.t { ... }
+.red { ... }
+.header { ... }
+
+/* Good example */
+.tweet { ... }
+.important { ... }
+.tweet-header { ... }
+```
+
+##11.选择器
+
+- 使用 classes 而不是通用元素标签来优化渲染性能。
+- 避免在经常出现的组件中使用一些属性选择器 (例如，`[class^="..."]`)。浏览器性能会受到这些情况的影响。
+- 减少选择器的长度，每个组合选择器选择器的条目应该尽量控制在 3 个以内。
+- 只在必要的情况下使用后代选择器 (例如，没有使用带前缀 classes 的情况).
+
+扩展阅读:
+    [Scope CSS classes with prefixes](http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
+    [Stop the cascade](http://markdotto.com/2012/03/02/stop-the-cascade/)
+```css
+/* Bad example */
+span { ... }
+.page-container #stream .stream-item .tweet .tweet-header .username { ... }
+.avatar { ... }
+
+/* Good example */
+.avatar { ... }
+.tweet-header .username { ... }
+.tweet .avatar { ... }
+```
+
+##12.代码组织
+- 以组件为单位组织代码。
+- 制定一个一致的注释层级结构。
+- 使用一致的空白来分割代码块，这样做在查看大的文档时更有优势。
+- 当使用多个 CSS 文件时，通过组件而不是页面来区分他们。页面会被重新排列，而组件移动就可以了。
+```css
+/*
+ * Component section heading
+ */
+
+.element { ... }
+
+
+/*
+ * Component section heading
+ *
+ * Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.
+ */
+
+.element { ... }
+
+/* Contextual sub-component or modifer */
+.element-heading { ... }
+```
+
+##13.编辑器配置
+根据以下的设置来配置你的编辑器，来避免常见的代码不一致和丑陋的 diffs。
+    
+    - 使用四个空格的 soft-tabs。
+    - 在保存时删除尾部的空白字符。
+    - 设置文件编码为 UTF-8。
+    - 在文件结尾添加一个空白行。
+
+参照文档，将这些设置应用到项目的 `.editorconfig` 文件。 例如，Bootstrap 中的 `.editorconfig` 文件。 通过 关于 EditorConfig 了解更多内容。
