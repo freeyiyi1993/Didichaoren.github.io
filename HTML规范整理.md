@@ -1,11 +1,11 @@
 #HTML 编码规范  
-[1 HTML文件命名](#user-content-1-代码格式)
+[1.HTML文件命名](#user-content-1-代码格式)
 ----
 
-##1 HTML文件命名
+##1.HTML文件命名
 多个单词组成时，采用下划线连接方式，比如说: `error_report.html`
 
-##2 语法
+##2.语法
 
 ###2.1 通用
 - 在属性上，使用双引号，不要使用单引号。
@@ -150,7 +150,7 @@
 - blockquote 表示引用, 可以包含多个段落. 请勿纯粹为了缩进而使用 blockquote, 大部分浏览器默认将 blockquote 渲染为带有左右缩进;   
 - pre 表示一段格式化好的文本;
 
-##3 HTML5 doctype
+##3.HTML5 doctype
 在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。(虽然doctype不区分大小写，但是按照惯例，doctype大写。
 [关于html属性，大写还是小写的一片文章](http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname))
 ```html
@@ -161,7 +161,7 @@
 </html>
 ```
 
-##4 语言属性
+##4.语言属性
 - 针对HTML5:作者应在html的跟元素上加上这个文件的语言。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
 [阅读更多有关 lang 属性](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element)
 - 通过Sitepoint 得到一个[语言代码列表](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/).
@@ -173,7 +173,7 @@
 </html>
 ```
 
-##5 IE 兼容模式
+##5.IE 兼容模式
 Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个页面应当支持的IE的版本。除非另有规定，最好用最新的支持的模式。
 (更多信息, [阅读这个 Stack Overflow 文章.](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)
 不同doctype在不同浏览器下的不同渲染模式，[诡异模式总结](https://hsivonen.fi/doctype/)的很到位.)
@@ -181,7 +181,7 @@ Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个�
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 ```
 
-##6 字符编码
+##6.字符编码
 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。
 ```html
 <head>
@@ -189,10 +189,10 @@ Internet Explorer 支持使用一个文档属性标签 `<meta>` 来指出这个�
 </head>
 ```
 
-##7 实用高于完美原则
+##7.实用高于完美原则
 尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
-##8 属性顺序
+##8.属性顺序
 HTML 属性应该按照特定的顺序出现以保证易读性。
 
 - `id`
@@ -214,7 +214,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 <img src="..." alt="...">
 ```
 
-##9 Boolean 属性
+##9.Boolean 属性
 - Boolean 属性指不需要声明取值的属性。XHTML 需要每个属性声明取值，但是 HTML5 并不需要。
 - 了解更多内容，参考 [WhatWG section on boolean attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#boolean-attributes): 一个元素中 Boolean 属性的存在表示取值 true，不存在则表示取值 false。
 - 如果你必须为属性添加并不需要的取值，参照 WhatWG 的指引: 如果属性存在，他的取值必须是空字符串或者 &#91;...&#93; 属性的规范名称，不要在首尾包含空白字符。
@@ -229,7 +229,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 </select>
 ```
 
-##10 减少标签数量
+##10.减少标签数量
 在编写 HTML 代码时，需要尽量避免多余的父节点。很多时候，需要通过迭代和重构来使 HTML 变得更少。
 ```html
 <!-- Not so great -->
@@ -241,10 +241,10 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 <img class="avatar" src="...">
 ```
 
-##11 JavaScript 生成标签
+##11.JavaScript 生成标签
 在 JavaScript 文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
-##12 最佳实践
+##12.最佳实践
 - 协议 如果链接和当前页面一致则忽略链接的协议部分
 
 		<!-- 不推荐 -->
@@ -304,7 +304,7 @@ Classes 是为高可复用组件设计的，理论上他们应处在第一位。
 		  my website that is presentational.
 		<p>It’s awesome!
 
-##13 Sample
+##13.Sample
 	<!doctype html>
 	<html>
 	    <head>
