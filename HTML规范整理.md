@@ -1,5 +1,5 @@
 #HTML 编码规范  
-[1.HTML文件命名](#user-content-1html文件命名-1)
+[1.HTML文件命名](#user-content-1html文件命名)
 
 [2.语法](#user-content-2语法)
 
