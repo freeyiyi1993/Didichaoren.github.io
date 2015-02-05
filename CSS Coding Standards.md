@@ -44,8 +44,11 @@
 - 相关的属性声明应该以下面的顺序分组处理：
 
 　1.Positioning
+　
 　2.Box model 盒模型
+　
 　3.Typographic 排版
+　
 　4.Visual 外观
 
 - Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。盒模型紧跟其后，因为他决定了一个组件的大小和位置。
@@ -307,12 +310,17 @@ var order = [
 
 - 坚持限制属性取值简写的使用，属性简写需要你必须显式设置所有取值。常见的属性简写滥用包括:
 
-　1.`padding`
-　2.`margin`
-　3.`font`
-　4.`background`
-　5.`border`
-　6.`border-radius`
+　1.padding
+　
+　2.margin
+　
+　3.font
+　
+　4.background
+　
+　5.border
+　
+　6.border-radius
 
 - 大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。
 - Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 shorthand properties 的文章。
