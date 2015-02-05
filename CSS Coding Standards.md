@@ -307,12 +307,12 @@ var order = [
 
 - 坚持限制属性取值简写的使用，属性简写需要你必须显式设置所有取值。常见的属性简写滥用包括:
 
-　*padding
-　*margin
-　*font
-　*background
-　*border
-　*border-radius
+　1.`padding`
+　2.`margin`
+　3.`font`
+　4.`background`
+　5.`border`
+　6.`border-radius`
 
 - 大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。
 
