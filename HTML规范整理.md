@@ -4,27 +4,17 @@
 [2.语法](#user-content-2语法)
 
 　　　　[2.1 通用](#user-content-21-通用)
-	
 　　　　[2.2 缩进](#user-content-22-缩进)
-	
 　　　　[2.3 空格](#user-content-23-空格)
-	
 　　　　[2.4 注释](#user-content-24-注释)
-	
 　　　　[2.5 命名](#user-content-25-命名)
-	
 　　　　[2.6 语句](#user-content-26-语句)
 	
 　　　　　　　　[2.6.1 头部元素](#user-content-261-头部元素)
-　　　　　　　　
 　　　　　　　　[2.6.2 文本元素](#user-content-262-文本元素)
-　　　　　　　　
 　　　　　　　　[2.6.3 媒体元素](#user-content-263-媒体元素)
-　　　　　　　　
 　　　　　　　　[2.6.4 列表元素](#user-content-264-列表元素)
-　　　　　　　　
 　　　　　　　　[2.6.5 表单元素](#user-content-265-表单元素)
-　　　　　　　　
 　　　　　　　　[2.6.6 结构性元素](#user-content-266-结构性元素)
 　　　　　　　　
 [3.HTML5 doctype](#user-content-3html5-doctype)
