@@ -1,4 +1,29 @@
 #CSS编码规范
+[1.语法]
+
+[2.声明顺序]
+
+[3.不要使用@import]
+
+[4.Media query 的位置]
+
+[5.前缀属性]
+
+[6.单行声明的规则]
+
+[7.属性简写]
+
+[8.LESS 和 SASS 中的嵌套]
+
+[9.代码注释]
+
+[10.Class 命名]
+
+[11.选择器]
+
+[12.代码组织]
+
+[13.编辑器配置]
 
 ------
 
@@ -17,8 +42,7 @@
 - 尽可能使用短的十六进制数值，例如使用 `#fff` 替代 `#ffffff`。
 - 为选择器中的属性取值添加引号，例如 `input[type="text"]`。 [他们只在某些情况下可有可无，所以都使用引号可以增加一致性](https://mathiasbynens.be/notes/unquoted-attribute-values#css)。
 - 不要为 0 指明单位，比如使用 `margin: 0;` 而不是 `margin: 0px;`。
-
-对这里提到的规则有问题吗？参考 Wikipedia 中的 [CSS 语法部分](http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax)。
+- 对这里提到的规则有问题吗？参考 Wikipedia 中的 [CSS 语法部分](http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax)。
 ```css
 /* Bad CSS */
 .selector, .selector-secondary, .selector[type=text] {
