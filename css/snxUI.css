@@ -2771,6 +2771,7 @@ label.btn .checkbox-input {
 }
 .nav-padding > ul {
   padding: 0 1em;
+  margin: 0;
 }
 .nav-vertical.nav-padding > ul {
   padding: 1em 0;
@@ -2802,48 +2803,48 @@ label.btn .checkbox-input {
   padding-right: 2em;
   border-left: 0;
 }
-.nav-primary > ul {
+.nav-skyblue > ul {
   background-color: #73dcff;
 }
-.nav-primary > ul > li > a {
+.nav-skyblue > ul > li > a {
   color: white;
   background-color: #73dcff;
 }
-.nav-success > ul {
+.nav-green > ul {
   background-color: #65e1a3;
 }
-.nav-success > ul > li > a {
+.nav-green > ul > li > a {
   color: white;
   background-color: #65e1a3;
 }
-.nav-inverse > ul {
+.nav-black > ul {
   background-color: #555;
 }
-.nav-inverse > ul > li > a {
+.nav-black > ul > li > a {
   color: white;
   background-color: #555;
 }
-.nav-inverse > ul > li > a:active,
-.nav-inverse > ul > li > a:focus {
+.nav-black > ul > li > a:active,
+.nav-black > ul > li > a:focus {
   text-decoration: none;
 }
-.nav-inverse > ul > li > a:hover {
+.nav-black > ul > li > a:hover {
   background-color: rgba(0, 0, 0, 0.16);
 }
-.nav-primary > ul > li.disabled > a,
-.nav-success > ul > li.disabled > a,
-.nav-inverse > ul > li.disabled > a {
+.nav-skyblue > ul > li.disabled > a,
+.nav-green > ul > li.disabled > a,
+.nav-black > ul > li.disabled > a {
   color: rgba(255, 255, 255, 0.5);
 }
-.nav-primary > ul > li.disabled > a:hover,
-.nav-success > ul > li.disabled > a:hover,
-.nav-inverse > ul > li.disabled > a:hover,
-.nav-primary > ul > li.disabled > a:active,
-.nav-success > ul > li.disabled > a:active,
-.nav-inverse > ul > li.disabled > a:active,
-.nav-primary > ul > li.disabled > a:focus,
-.nav-success > ul > li.disabled > a:focus,
-.nav-inverse > ul > li.disabled > a:focus {
+.nav-skyblue > ul > li.disabled > a:hover,
+.nav-green > ul > li.disabled > a:hover,
+.nav-black > ul > li.disabled > a:hover,
+.nav-skyblue > ul > li.disabled > a:active,
+.nav-green > ul > li.disabled > a:active,
+.nav-black > ul > li.disabled > a:active,
+.nav-skyblue > ul > li.disabled > a:focus,
+.nav-green > ul > li.disabled > a:focus,
+.nav-black > ul > li.disabled > a:focus {
   color: rgba(255, 255, 255, 0.5);
 }
 .nav-path > ol {
@@ -3207,6 +3208,7 @@ label.btn .checkbox-input {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .popup {
+  display: inline-block;
   position: relative;
   /*position是定位的关键*/
   list-style: none;
@@ -3434,7 +3436,7 @@ label.btn .checkbox-input {
 .progressbar.green > div {
   background-color: #65e1a3;
 }
-.progressbar.yellow > div {
+.progressbar.orange > div {
   background-color: #ffb24b;
 }
 .progressbar.red > div {
@@ -3444,8 +3446,8 @@ label.btn .checkbox-input {
 .progresscircle.green .pie-left {
   background-color: #65e1a3;
 }
-.progresscircle.yellow .pie-right,
-.progresscircle.yellow .pie-left {
+.progresscircle.orange .pie-right,
+.progresscircle.orange .pie-left {
   background-color: #ffb24b;
 }
 .progresscircle.red .pie-right,
@@ -3653,7 +3655,7 @@ tr {
 .table {
   width: 100%;
   padding: 0;
-  margin: .5em 0 0;
+  margin: 0;
   font-family: dax-regular;
   font-size: 100%;
   white-space: nowrap;
@@ -3680,7 +3682,7 @@ tr {
 .table-underline {
   width: 100%;
   padding: 0;
-  margin: .5em 0 0;
+  margin: 0;
   font-family: dax-regular;
   font-size: 100%;
   white-space: nowrap;
@@ -3710,7 +3712,7 @@ tr {
 .table-bordered {
   width: 100%;
   padding: 0;
-  margin: .5em 0 0;
+  margin: 0;
   font-family: dax-regular;
   font-size: 100%;
   white-space: nowrap;
@@ -3766,12 +3768,10 @@ tr {
   box-shadow: 0 .15em .2em #bbbbbb;
 }
 .table-responsive {
-  margin: 0 .5em;
   width: auto;
   overflow-y: auto;
 }
 .table-headfixed {
-  margin: 0 .5em;
   max-height: 12.5em;
   overflow-x: auto;
 }
@@ -3786,22 +3786,22 @@ tr {
   width: auto;
   margin: 0;
 }
-.info {
+table .gray {
   background-color: #d0d0d0;
 }
-.active {
+table .skyblue {
   background-color: #dcf2f5;
 }
-.success {
+table .green {
   background-color: #d7f0cc;
 }
-.secondary {
+table .blue {
   background-color: #d0e5f5;
 }
-.warning {
+table .orange {
   background-color: #ffeed9;
 }
-.error {
+table .red {
   background-color: #f2dada;
 }
 
@@ -3933,6 +3933,7 @@ tr {
 }
 
 .tooltip {
+  display: inline-block;
   position: relative;
   /*position是定位的关键*/
   list-style: none;

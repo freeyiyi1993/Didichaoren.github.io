@@ -1,4 +1,2 @@
-ui
-==
-
-ui
+# snx-ui
+snx-ui
