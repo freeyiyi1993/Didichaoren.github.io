@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Collie-UI</title>
-    <link href="../css/snxUI.min.css" type="text/css" rel="stylesheet">
+    <link href="../dist/css/snxUI.min.css" type="text/css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../fonts/dax/dax.css">
     <link type="text/css" rel="stylesheet" href="../fonts/SourceCodePro/SourceCodePro.css">
     <link type="text/css" rel="stylesheet" href="../fonts/Raleway/Raleway.css">
@@ -11,31 +11,26 @@
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="docs.js"></script>
-    <script src="../javascript/forms.js"></script>
-    <script src="../javascript/alerts.js"></script>
-    <script src="../javascript/other-forms.js"></script>
-    <script src="../javascript/navs.js"></script>
-    <script src="../javascript/scrollmonitor.js"></script>
-    <script src="../javascript/list-groups.js"></script>
-    <script src="../javascript/tables.js"></script>
-    <script src="../javascript/tabs.js"></script>
-    <script src="../javascript/dropdowns.js"></script>
-    <script src="../javascript/progress.js"></script>
-    <script src="../javascript/modal.js"></script>
-    <script src="../javascript/img-scroll.js"></script>
-    <script src="../javascript/popups.js"></script>
-    <script src="../javascript/tooltips.js"></script>
+    <script src="../dist/javascript/snxUI.min.js"></script>
     <link rel="stylesheet" href="styles/monokai_sublime.css">
     <script src="styles/highlight.pack.js"></script>
     <script>
         hljs.tabReplace = ' ' ;// 4 spaces
         hljs.initHighlightingOnLoad();
     </script>
+    <style>
+        .list-touchmoved > span{
+            line-height: 80px;
+        }
+        .media-item > img{
+            margin: 0 0.5em 0 0;
+        }
+    </style>
 </head>
 <body>
 <header>
     <div id="headNav" class="nav nav-padding">
-        <img id="logo" src="../image/Snx3.png">
+        <img id="logo" src="image/CollieUI-title.png">
       <ul>
         <li><a href="docs_started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
         <li><a href="docs.html"><i class="fa fa-css3"></i> CSS</a></li>
@@ -85,7 +80,7 @@
                         <div class="tab-content" style="border: 1px solid #e3e3e3">
                             <div class="tab-item">
                                 <div class="media-item">
-                                    <img class="img" src="../image/m2.jpg">
+                                    <img class="img" src="image/m2.jpg">
                                     <div class="mi-content">
                                         <p>MIMPI</p>
                                         <div>A warm story.</div>
@@ -229,7 +224,7 @@
                         <div class="tab-content" style="height: 120px">
                             <div class="tab-item">
                                 <div class="media-item">
-                                    <img class="img" src="../image/m2.jpg">
+                                    <img class="img" src="image/m2.jpg">
                                     <div class="mi-content">
                                         <p>MIMPI</p>
                                         <div>A warm story.</div>
@@ -238,7 +233,7 @@
                             </div>
                             <div class="tab-item">
                                 <div class="media-item">
-                                    <img class="img" src="../image/m1.jpg">
+                                    <img class="img" src="image/m1.jpg">
                                     <div class="mi-content">
                                         <p>MIMPI</p>
                                         <div>A warm story.</div>
@@ -247,7 +242,7 @@
                             </div>
                             <div class="tab-item">
                                 <div class="media-item">
-                                    <img class="img" src="../image/m2.jpg">
+                                    <img class="img" src="image/m2.jpg">
                                     <div class="mi-content">
                                         <p>MIMPI</p>
                                         <div>A warm story.</div>
@@ -618,7 +613,7 @@
                     <div class="list-group list-chooseable list-touchmovable">
                         <div class="list-item">
                             <div class="media-item">
-                                <img class="img" src="../image/m1.jpg">
+                                <img class="img" src="image/m1.jpg">
                                 <div class="mi-content">
                                     <p>MIMPI</p>
                                     <div>A warm story.</div>
@@ -627,7 +622,7 @@
                         </div>
                         <div class="list-item">
                             <div class="media-item">
-                                <img class="img" src="../image/m2.jpg">
+                                <img class="img" src="image/m2.jpg">
                                 <div class="mi-content">
                                     <p>MIMPI</p>
                                     <div>A warm story.</div>
@@ -636,7 +631,7 @@
                         </div>
                         <div class="list-item">
                             <div class="media-item">
-                                <img class="img" src="../image/m1.jpg">
+                                <img class="img" src="image/m1.jpg">
                                 <div class="mi-content">
                                     <p>MIMPI</p>
                                     <div>A warm story.</div>
@@ -726,7 +721,7 @@
                     <div class="list-group list-organ">
                         <div class="list-item">
                             <div class="media-item g-8">
-                                <img class="img" src="../image/m2.jpg">
+                                <img class="img" src="image/m2.jpg">
                                 <div class="mi-content">
                                     <p>MIMPI</p>
                                     <div>A warm story.</div>
@@ -1843,11 +1838,11 @@
                         插件的使用方法参看参数与方法部分。该部分存在尺寸问题，请先使用固定尺寸。
                     </p>
                     <div class="images">
-                        <img class="img-choosed" src="../image/m1.jpg">
-                        <img src="../image/m2.jpg">
-                        <img src="../image/background.png">
-                        <img src="../image/m1.jpg">
-                        <img src="../image/m2.jpg">
+                        <img class="img-choosed" src="image/m1.jpg">
+                        <img src="image/m2.jpg">
+                        <img src="image/background.png">
+                        <img src="image/m1.jpg">
+                        <img src="image/m2.jpg">
                         <div class="imgscroll-left"></div>
                         <div class="imgscroll-right"></div>
                     </div>
