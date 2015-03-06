@@ -1406,9 +1406,9 @@ label.btn .checkbox-input {
   width: 12px;
   height: 6px;
   background: transparent;
-  top: 1px;
-  left: 2.5px;
-  border: 2.95px solid #fff;
+  top: .5px;
+  left: 2px;
+  border: 3px solid #fff;
   border-top: none;
   border-right: none;
   -webkit-transition: all .3s ease;
