@@ -289,8 +289,8 @@ input:focus,textarea:focus,select:focus,span:focus{
 }
 
 .form-aligned .controls {//定制特殊样式，一般用于表单中的checkbox等
-   margin: 1.5em 0 0 10em;
- }
+  margin: 1.5em 0 0 10em;
+}
 .form-aligned .controls .checkbox,
 .form-aligned .controls .radio{
   display: block;
@@ -508,13 +508,13 @@ input:focus,textarea:focus,select:focus,span:focus{
   &:focus{
     border: 1px solid #8fe1fd;
     box-shadow: 0px 0px 10px rgba(143, 225, 253, 0.6);;//这里的focus<span>中不使用tabindex不起作用 js解决
-     }
   }
+}
 
 .file+label{
-   margin-top:0;
-   font-size:80%;
-   color:#333333;
+  margin-top:0;
+  font-size:80%;
+  color:#333333;
 }
 .fbtn {
   width: 125px;
@@ -525,7 +525,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   top: 0;
   opacity: 0;
   filter: alpha(opacity=0);
-  }
+}
 
 .form div.input-xl,
 .form input.input-xl,
@@ -624,15 +624,12 @@ label.btn .checkbox-input{
 .checkbox-input{
   display: inline-block;
   margin: 0 0.3em;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   vertical-align: middle;
   background: #ddd;
   position: relative;
   border-radius: 100%;
-  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   &[disabled]{
     cursor:not-allowed;
   }
@@ -640,31 +637,28 @@ label.btn .checkbox-input{
 .checkbox-input label{
   cursor: pointer;
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   margin: 0;
-  top: 2px;
-  left: 2px;
-  background: #333;
+  top: 2.5px;
+  left: 2.5px;
+  background: #fff;
   border-radius: 2em;
-  -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
-  box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
   &[disabled]{
     cursor: not-allowed;
   }
 }
 
 .checkbox-input label:after {
-  opacity: 0.3;
+  opacity: 0;
   content: '';
   position: absolute;
-  width: 11px;
-  height: 5px;
-  background: transparent;
-  top: 1px;
-  left: 1px;
-  border: 3px solid #73dcff;
+  width: 12px;
+  height: 6px;
+  background: #33ace0;
+  top: 1.5px;
+  left: 1.5px;
+  border: 3px solid #fff;
   border-top: none;
   border-right: none;
   -webkit-transition: all .3s ease;
