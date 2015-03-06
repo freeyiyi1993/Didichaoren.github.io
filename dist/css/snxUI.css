@@ -1403,7 +1403,7 @@ label.btn .checkbox-input {
   opacity: 0;
   content: '';
   position: absolute;
-  width: 13px;
+  width: 14px;
   height: 6px;
   background: transparent;
   top: .5px;
