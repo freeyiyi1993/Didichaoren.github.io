@@ -389,12 +389,12 @@ $(document).ready(function () {
 //    样式覆盖
     var inputNumber = $('input[type="number"]');
     $('<div class="number"><input type="text" value="0"><div><div>▲</div><div>▼</div></div></div>')
-        .insertAfter(inputNumber);
+      .insertAfter(inputNumber);
     inputNumber.hide();
 
     var inputColor = $('input[type="color"]');
     $('<div class="color"><div><div></div></div><div>▼</div></div>')
-        .insertAfter(inputColor);
+      .insertAfter(inputColor);
     inputColor.hide();
 
     var inputDate = $('input[type="date"]');
@@ -416,10 +416,47 @@ $(document).ready(function () {
 //    .color
 
     $('<div class="colors"></div>').appendTo('.color');
-    var x = 201, y = 193 , z = 225;
+    var arrColor = [
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225},
+        {r:201,g:193,b:225}
+    ];
     for(var i = 0; i < 36; i++) {
 
-        $('<span></span>').appendTo('.colors').css('background-color','rgb('+x+','+y+','+z+')');
+        $('<span></span>').appendTo('.colors').css('background-color','rgb('+arrColor[i].r+','+arrColor[i].g+','+arrColor[i].b+')');
     }
     $('<div></div>').appendTo('.colors');
 
@@ -442,8 +479,8 @@ $(document).ready(function () {
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
     $('<div class="calendar"><div></div><table><thead><tr><td>Sun</td><td>Mon</td><td>Tue</td>' +
-        '<td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td></tr></thead>' +
-        '<tbody></tbody></table></div>').appendTo('.date');
+    '<td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td></tr></thead>' +
+    '<tbody></tbody></table></div>').appendTo('.date');
     $('.calendar').hide();
 
 //    获取今天的日期
@@ -460,13 +497,13 @@ $(document).ready(function () {
 
     $.calPanel = function (date) {
         var tDate = date || new Date(),
-            tYear = tDate.getFullYear(),
-            tMonth = tDate.getMonth(),
-            currentDays = new Date(tYear,tMonth+1,0).getDate(),
-            preDays = new Date(tYear,tMonth,0).getDate(),
-            firstDay = new Date(tYear,tMonth,1),
-            firstCell = firstDay.getDay() === 0 ? 7 : firstDay.getDay(),
-            lastCell = 42 - currentDays - firstCell;
+          tYear = tDate.getFullYear(),
+          tMonth = tDate.getMonth(),
+          currentDays = new Date(tYear,tMonth+1,0).getDate(),
+          preDays = new Date(tYear,tMonth,0).getDate(),
+          firstDay = new Date(tYear,tMonth,1),
+          firstCell = firstDay.getDay() === 0 ? 7 : firstDay.getDay(),
+          lastCell = 42 - currentDays - firstCell;
         var preMonth = [];
         for(var i = firstCell; i >0; i--) {
             preMonth.push(new Date(tYear,tMonth-1,preDays-i+1));
@@ -495,9 +532,9 @@ $(document).ready(function () {
         curYear = calpanel[7].getFullYear();
         curMonth = calpanel[7].getMonth();
         current.children('div').append('<i class="fa fa-2x fa-chevron-circle-left"></i><span>'+
-            months[calpanel[7].getMonth()]+'</span>'+
-            '<span>'+calpanel[7].getFullYear()+'</span>' +
-            '<i class="fa fa-2x fa-chevron-circle-right"></i>');
+        months[calpanel[7].getMonth()]+'</span>'+
+        '<span>'+calpanel[7].getFullYear()+'</span>' +
+        '<i class="fa fa-2x fa-chevron-circle-right"></i>');
 
         var curRow,curDay;
         for(var i = 0; i<42; i++){
