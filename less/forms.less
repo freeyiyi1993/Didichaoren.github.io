@@ -62,7 +62,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   padding: 0.5em 1em;
   display: inline-block;
   border: 1px solid #333333;
-  border-radius: 0px;
+  border-radius: 0;
   font-size: 100%;
   font-family: @font-family;
   -webkit-tap-highlight-color: transparent;/*苹果设备的点击阴影屏蔽，使效果统一*/
@@ -81,7 +81,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   &:focus {
     background-color: #000000;
     border: 1px solid #8fe1fd;
-    box-shadow: 0px 0px 10px rgba(143,225,253,0.6);
+    box-shadow: 0 0 10px rgba(143,225,253,0.6);
     .transition-setting(box-shadow ease-in-out 0.3s);//transition竟然不支持box-shadow的过度!疯了@！
   }
   &[disabled]{
@@ -398,7 +398,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   text-align: center;
   display: inline-block;
   border: 1px solid #e6e6e6;
-  border-radius: 0px;
+  border-radius: 0;
   font-family: @font-family;
   box-shadow: none;
   background-color: #e6e6e6;
@@ -507,7 +507,7 @@ input:focus,textarea:focus,select:focus,span:focus{
   }
   &:focus{
     border: 1px solid #8fe1fd;
-    box-shadow: 0px 0px 10px rgba(143, 225, 253, 0.6);;//这里的focus<span>中不使用tabindex不起作用 js解决
+    box-shadow: 0 0 10px rgba(143, 225, 253, 0.6);;//这里的focus<span>中不使用tabindex不起作用 js解决
   }
 }
 
@@ -573,9 +573,9 @@ input[type=radio] {
   background: #ddd;
   border-radius: 100%;
   position: relative;//子元素寻找定位
-  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   &[disabled]{
     cursor: not-allowed;
   }
@@ -605,9 +605,9 @@ input[type=radio] {
   left: 2px;
   z-index: 1;
   background: #333;
-  -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
-  box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+  box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
 }
 
 
